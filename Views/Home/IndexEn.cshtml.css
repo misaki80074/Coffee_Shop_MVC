@@ -1,0 +1,109 @@
+﻿/* world map */
+.app-svg-map--world svg {
+    top: 60px;
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+path {
+    fill: rgba(224, 234, 224, 1);
+    stroke: #ffffff;
+    opacity: 1;
+    stroke-opacity: 1;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    transform: matrix(0.3474, 0, 0, 0.3474, 0, 0);
+    fill-opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+path {
+    opacity: 1;
+    display: block;
+    z-index: 1;
+}
+
+    path:hover {
+        fill: #2e724a;
+    }
+
+text {
+    min-width: 30px;
+    min-height: 30px;
+    font-size: 14px;
+    fill: #8fbc8f;
+    animation: jump 2.3s infinite;
+    stroke: #8fbc8f;
+}
+
+    text:hover {
+        cursor: default;
+    }
+
+@keyframes jump {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 1px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/* 商品圖輪播 */
+.prodTitle {
+    padding-top: 10px;
+    padding-left: 25px;
+    color: #ffffff;
+    font-size: 1.8em;
+}
+
+.recommend {
+    height: 350px;
+    background-color: #2e724a;
+    /* overflow-x: hidden; */
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    height: 280px;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #2e724a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    /* map */
+    .map_area {
+        display: none;
+    }
+
+    /* Product */
+    .recommend {
+        height: 100%;
+        background-color: white;
+    }
+
+    .prodTitle {
+        color: #2e724a;
+        margin-bottom: 10px;
+    }
+}

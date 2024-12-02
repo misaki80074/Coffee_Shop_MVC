@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hachi Cafe</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" /> *@
+</head>
+<body>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <header>
+        <nav>
+            <!-- 導覽列左邊 -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="menu" style="padding:0;">
+                <li><a href="/List">商品分類</a></li>
+                <li><a href="/Account">會員專區</a></li>
+                <li><a href="?Cart">購物車</a></li>
+            </ul>
+            <div id="logo">
+                <a href="/Home/Index"><img src="~/img/logo_white.png"></a>
+            </div>
+
+
+            <!-- 導覽列右邊 -->
+            <div id="nav-right">
+                <!-- 會員 -->
+                <a href="/Account"><img src="~/img/customer_white.png" id="customer_icon"></a>
+
+                <!-- 購物車 -->
+                <input type="checkbox" id="chart-toggle">
+                <label for="chart-toggle"><img src="~/img/shopping-cart_white.png" id="chart_icon"></label>
+                <div class="shoppingList">
+                    <div class="wanttobuy_div">
+                        <div id="wantToBuy">
+                            <p><br>空空如也</p>
+                        </div>
+
+                        <hr style="margin:0;">
+
+                        <div id="checkoutArea">
+                            <button class="checkoutBtn"><a href="#" class="chechoutLink"></a>結帳</button>
+                            @* <a href="#" class="chechoutLink"><button class="checkoutBtn">結帳</button></a> *@
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 切換語言 -->
+                <input type="checkbox" id="language-toggle">
+                <label for="language-toggle"><img src="~/img/translate_white.png"></label>
+                <ul class="language" style="padding: 0;">
+                    <li><a href="/Home/IndexEn">English</a></li>
+                    <li><a href="/Home/IndexJp">日本語</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p>CopyRight Reserved</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

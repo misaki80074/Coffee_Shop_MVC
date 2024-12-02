@@ -1,0 +1,151 @@
+﻿@* @model IEnumerable<Coffee.Models.Orderheader>
+ *@
+@model List<Coffee.Views.Account.HeaderViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+	.flexQQ {
+		display: flex;
+	}
+
+	body {
+		background-color: #f9f9f9;
+	}
+</style>
+
+<h1>訂單查詢</h1>
+<hr />
+
+<div class="flexQQ">
+	<div>@await Html.PartialAsync("_PartialItem")</div>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						訂單編號
+					</th>
+					<th>
+						訂單日期
+					</th>
+					<th>
+						付款方式
+					</th>
+					<th>
+						訂單總額
+					</th>
+					<th>
+						訂單狀態
+					</th>
+					<th>
+						出貨狀態
+					</th>
+					<th>
+						購買內容
+					</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>
+							@item.OrderId
+						</td>
+						<td>
+							@item.OrderDate
+						</td>
+						<td>
+							@item.Payment
+						</td>
+						<td>
+							@item.Total
+						</td>
+						@{
+							if (item.OrderStatus == "N")
+							{
+								<td>訂單成立</td>
+							}
+							else if (item.OrderStatus == "B")
+							{
+								<td>賣家已確認</td>
+							}
+							else if (item.OrderStatus == "S")
+							{
+								<td>付款完成</td>
+							}
+							else if (item.OrderStatus == "Y")
+							{
+								<td>已完成</td>
+							}
+							else
+							{
+								<td>@item.OrderStatus</td>
+							}
+						}
+						@{
+							if (item.ShipStatus == "A")
+							{
+								<td>已出貨</td>
+							}
+							else if (item.ShipStatus == "B")
+							{
+								<td>已送達</td>
+							}
+							else if (item.ShipStatus == "S")
+							{
+								<td>已取貨</td>
+							}
+							else if (item.ShipStatus == "Y")
+							{
+								<td>已完成</td>
+							}
+							else
+							{
+								<td>@item.ShipStatus</td>
+							}
+						}
+						
+						@* <td id="shipStatus_@item.OrderId">@item.ShipStatus</td> *@
+						<td>
+							@foreach (var detail in item.Orderdetails)
+							{
+								<p>@detail.ProductName</p>
+							}
+						</td>
+						<td><a asp-action="Details" asp-route-id="@item.OrderId">明細</a></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+@* <script>
+    // 每10秒鐘向後端發送請求，獲取最新的訂單資料
+    setInterval(function() {
+        $.ajax({
+            url: '/Home/ShipData',  // 請替換為您的 API 路徑
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // 更新每一行的 ShipStatus
+                $.each(data, function(index, order) {
+                    // 尋找對應 OrderId 的 ShipStatus 欄位並更新它
+                    var shipStatusCell = $('#shipStatus_' + order.OrderId);
+                    if (shipStatusCell.length > 0) {
+                        shipStatusCell.text(order.ShipStatus);
+                    }
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error loading ShipData: " + error);
+            }
+        });
+    }, 10000);  // 每 10 秒鐘請求一次
+</script> *@

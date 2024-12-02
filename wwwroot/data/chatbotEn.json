@@ -1,0 +1,93 @@
+{
+  "Branding Story": {
+    "Branding Timeline": [
+      {
+        "year": "2024.10.15",
+        "title": "Assembling a founding team",
+        "description": "We’re excited to be building this new brand together with a team of like-minded individuals."
+      },
+      {
+        "year": "2024.10.30",
+        "title": "Branding",
+        "description": "Our brand is officially launched! We are fully committed to providing our customers with premium specialty coffee."
+      },
+      {
+        "year": "2024.11.04",
+        "title": "Website Setup",
+        "description": "We're starting to design and develop our brand's website, focusing on an intuitive and attractive online shopping experience for specialty coffee."
+      },
+      {
+        "year": "2024.11.30",
+        "title": "Officially Launched",
+        "description": "Our website is now live, featuring our full product line. The response has been fantastic!"
+      }
+    ],
+    "About our team": [
+      {
+        "name": "Syu",
+        "position": "Order system coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": "Responsible for designing and developing the order processing system and workflow, including the shopping cart function."
+      },
+      {
+        "name": "Wei",
+        "position": "Product pages & charbot coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": "Responsible for designing product detail pages and developing a flow-based chatbot for user interaction."
+      },
+      {
+        "name": "Liang",
+        "position": "Back-font system coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": "Responsible for developing the back-end system and integrating all website functions."
+      },
+      {
+        "name": "Chen",
+        "position": "Product catalog coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": "Responsible for designing the product catalog and implementing quick filtering and sorting functions."
+      },
+      {
+        "name": "Lin",
+        "position": "Account system coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": "Responsible for member registration, login, management, and the design of the membership permission system."
+      },
+      {
+        "name": "Chiang",
+        "position": "Homepage coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": "Responsible for the overall design and planning of the homepage, including the collection of coffee materials."
+      }
+    ]
+  },
+  "選豆指南": {
+    "口味偏好": {
+      "喜歡酸多一點": "好的。推薦以下產品 http://localhost:5001/Product/Detail/22",
+      "喜歡甜多一點": "好的。推薦以下產品 https://localhost:XXXX/products/page/2",
+      "喜歡苦多一點": "好的。推薦以下產品 https://localhost:XXXX/products/page/3"
+    },
+    "風味偏好": {
+      "花香": "推薦產品: 花香咖啡。",
+      "果香": "推薦產品: 果香咖啡。",
+      "茶香": "推薦產品: 茶咖啡。",
+      "酒香": "推薦產品: 酒香咖啡。",
+      "堅果香": "推薦產品: 堅果咖啡。",
+      "巧克力香": "推薦產品: 巧克力咖啡。"
+    }
+  },
+  "Trivia of Coffee": {
+    "Random 10 Trivias": [
+      "Trivia 1：Coffee bean isn't bean, it's actually a type of fruit. It's often called coffee cherry because it resemble cherry and is red when ripe. Coffee beans are the seeds found inside the coffee berry.",
+      "Trivia 2：The world's most expensive coffee, civet coffee, is made from coffee beans that have been eaten and excreted by the Asian palm civet. These beans have a unique flavor but come at a high price of $160 per pound. Due to its high value, many manufacturers force-feed coffee beans to civets, leading to animal cruelty.",
+      "Trivia 3：It's astonishing to learn that some coffee trees can live for more than two hundred years!",
+      "Trivia 4：The worst coffee? Gotta be mine! No contest! 🤣 And then there are these crazy coffee trends like Japan's garlic coffee and Thailand's durian coffee.",
+      "Trivia 5：The Dutch are the world's biggest coffee lovers! They guzzle down about 2 cups a day and roast nearly 12 kilos of coffee beans each year. BTW, Taiwan comes in at number 72 in global coffee consumption.",
+      "Trivia 6：For Italians, coffee is a morning thing, like a tradition. So, in a classic Italian coffee shop, ordering a cappuccino after 11 AM is a bit strange. But hey, the younger crowd doesn't really care what time it is to grab a cup of coffee.",
+      "Trivia 7：Who knows coffee can be a plant doctor? Mixing used coffee grounds with sugar and watering your plants with it can work wonders! It's like giving your plants a second chance at life.",
+      "Trivia 8：Ever used coffee to soothe a headache? Well, you're not alone! Pharma companies have been adding caffeine to their painkillers for years because it can make them up to 40% more effective!",
+      "Trivia 9：Coffee is the world's biggest beverage business after oil! It's a huge export for many countries and keeps millions of people in business.",
+      "Trivia 10：Legend has it that around 1500 years ago, a shepherd noticed his goats were bouncing off the walls after snacking on some berries. Intrigued, he tried them himself and found he could stay up all night. He shared this amazing discovery with some monks who were looking for a way to stay awake during long prayers. Soon, coffee was born!"
+    ]
+  }
+}

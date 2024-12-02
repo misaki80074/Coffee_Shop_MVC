@@ -1,0 +1,214 @@
+@model IEnumerable<Coffee.Models.Product>
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>訂單資訊</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            display: inline-block;
+            width: 48%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        td, th {
+            padding: 10px;
+            vertical-align: top;
+        }
+        .form-section, .order-section {
+            width: 48%;
+        }
+        .section-title {
+            font-weight: bold;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        .input-field, .input-area {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .input-area {
+            height: 100px;
+            resize: none;
+        }
+        .total-price {
+            font-weight: bold;
+            text-align: right;
+        }
+        .order-summary {
+            font-weight: bold;
+            font-size: 1.1em;
+            text-align: right;
+        }
+        .container {
+            background-color: white;
+            justify-content: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function PAY() {
+            let pay = document.getElementById("paymentmethod").value;
+            if (pay == "Pay0001") {
+                $("#PayMethod").css("display", "block");
+            }
+            if (pay == "Pay0002") {
+                $("#PayMethod").css("display", "none");
+            }
+        }
+    </script>
+
+    <div class="container">
+        <form action="~/Cart/OrderFormData" method="post">
+            @*原本的Product替換為Cart*@
+        <!-- 帳單 -->
+        <table class="form-section">
+            <tr>
+                <td>
+                    <div class="section-title">帳單資訊</div>
+                    <label for="name">姓名 *</label>
+                    <br>
+                    <input type="text" id="name" class="input-field" name="name" value="賴清德" required>
+                    <br>
+                    <label for="email">電子郵件地址 *</label>
+                    <br>
+                    <input type="email" id="email" class="input-field" name="email" value="a791s@gmail.com" required>
+                    <br>
+                    <label for="phone">聯絡電話 *</label>
+                    <br>
+                    <input type="tel" id="phone" class="input-field" name="phone" value="0977709978" required>
+                    <br>
+                    
+                    <div class="section-title">額外資訊</div>
+                    <label for="comment">訂單備註 (選填)</label>
+                    <br>
+                    <input type="text" style="height:100px" id="comment" class="input-field" name="comment" value="This is a 備註">
+
+
+                </td>
+            </tr>
+        </table>
+        <!-- 訂單 -->
+        <table class="order-section">
+            <tr>
+                <td>
+                    <div class="section-title">您的訂單</div>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <th style="text-align: left;"><nobr>商品</nobr></th>
+                            <th style="text-align: left;"></th>
+                            <th style="text-align: right;"><nobr>數量&nbsp</nobr></th>
+                            <th style="text-align: right;"><nobr>單價&nbsp</nobr></th>
+                            <th style="text-align: right;"><nobr>總計&nbsp</nobr></th>
+                        </tr>
+                        <hr>
+                        <!-- 資料庫帶出來 -->
+                        @for (int i = 0; i < @ViewBag.ID.Count; i++)
+                        {
+                            <tr>
+                                <input type="hidden" name="itemNO" value="@ViewBag.ID[i]" />
+                                <input type="hidden" name="itemQTY" value="@ViewBag.QTY[i]" />
+                                <input type="hidden" name="itemProuductID" value="@ViewBag.ProductID[i]" />
+                                <input type="hidden" name="itemPrice" value="@ViewBag.Price[i]" />
+                                <input type="hidden" name="itemTotle" value="@ViewBag.itemtotle[i]" />
+                                <td><img src="@ViewBag.IMG[i]" alt="@ViewBag.Name[i]" style="width:50px;hight:50px;" /></td>
+                                <td><nobr> @ViewBag.Name[i] </nobr></td>
+                                <td style="text-align:right"> <nobr> @ViewBag.QTY[i] </nobr> </td>
+                                <td style="text-align:right"> <nobr> $@string.Format("{0:N0}", Convert.ToInt32(ViewBag.Price[i])) </nobr> </td>
+                                <td style="text-align:right"> <nobr> $@string.Format("{0:N0}", Convert.ToInt32(ViewBag.itemtotle[i])) </nobr> </td>
+                            </tr>
+                        }
+                        <tr>
+                            <td>總計:</td>
+                            <td colspan="3" style="text-align:right">
+                                <input type="hidden" name="totle" value="@ViewBag.Alltotle" />
+                                $@string.Format("{0:N0}", Convert.ToInt32(ViewBag.Alltotle))
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <label for="Shipping-method">
+                        運送方式:
+                        <select id="Shipping-method" class="input-field" name="transportmethod">
+                            <option value="tran0001">超商取貨</option>
+                            <option value="tran0002">宅配到府</option>
+                            <option value="tran0003">店家取貨</option>
+                        </select>
+                    </label>
+                    @* 新增一個新增信用卡資料 *@
+                    @* 動態頁面，資料填寫完往下帶 *@
+                    @* div 原本是空的 *@
+                    @* 信用卡資料驗證 *@
+                    @* or *@
+                    @* 按鈕 => onclick => div(信用卡輸入) => API驗證 => response結果*@
+                    @* 底下傳到 API *@
+                    <label for="paymentmethod">付款方式:
+                        <select id="paymentmethod" class="input-field" name="paymentmethod" onchange="PAY()">
+                            <option value="Pay0001">信用卡</option>
+                            <option value="Pay0002">貨到付款</option>
+                        </select>
+                    </label>
+                    @* 卡號(1個文字框) 、 有效期限(2個文字框) 、 後三碼*@
+                    <div style="display:none" id="PayMethod">
+                        <table>
+                            <tr>
+                                <td><nobr><label for="VisaID">信用卡卡號：</labe></nobr></td>
+                                <td><input name="VisaID" id="VisaID" value="" maxlength="15"/></td>
+                            </tr>
+                            <tr>
+                                <td><nobr><label for="deadlineMonth">有效期限：</labe></nobr></td>
+                                <td>
+                                    <nobr>
+                                    <select name="deadlineMonth" id="deadlineMonth">
+                                            
+                                            @for (int i =1; i<32; i++)
+                                            {
+                                                <option value="@i">@i</option>
+                                            }
+                                    </select>
+                                    月(Month) &nbsp;
+                                    @{
+                                        string ToYear = DateTime.Now.ToString("yyyy").Substring(2);
+                                        int Yearrange = Convert.ToInt32(ToYear) - 15;
+                                    }
+                                    <select name="deadlineYear" id="deadlineYear">
+                                        @for (int i = 1; i < 31; i++)
+                                        {
+                                            <option value="@(Yearrange+i)">@(Yearrange+i)</option>
+                                        }
+                                    </select>
+                                    年(Year)
+                                    </nobr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><nobr>卡片末三碼：</nobr></td>
+                                <td><input name="VisaLast" id="VisaLast" value="" maxlength="3"/></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit">下訂單</button></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</body>
+</html>

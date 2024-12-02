@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WebApplication1_1105_TSET_member5.props" />
+</Project>

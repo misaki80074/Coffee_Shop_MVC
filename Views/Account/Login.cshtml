@@ -1,0 +1,60 @@
+﻿@using Coffee.Views.Account
+
+@model LoginViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+	/* 內部白色背景的 div */
+	.squre2 {
+		width: 60%;
+		background-color: #ffffff;
+		border-radius: 10px; /* 圓角 */
+		padding: 30px; /* 內邊距，讓內容不會緊貼邊框 */
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+	}
+
+	/* 外層 div 圓角和背景顏色 */
+	.squre3 {
+		background-color: #2E724A;
+		border-radius: 15px; /* 設置圓角 */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 60vh; /* 使容器至少佔滿整個視口 */
+		width: 70%; /* 設定寬度為 70% */
+		margin: 0 auto; /* 使容器居中 */
+	}
+
+	body {
+		background-color: #f9f9f9;
+	}
+</style>
+
+<h2 class="text-center">歡迎光臨!</h2>
+<div class="squre3">
+	<div class="squre2">
+		<div class="p-5">
+			<form asp-action="Login" method="post" class="user">
+				<div class="form-group">
+					<input asp-for="UserId" class="form-control form-control-user"
+						   placeholder="使用者帳號" />
+					<span asp-validation-for="UserId"></span>
+				</div>
+				<div class="form-group">
+					<input asp-for="Password" type="password"
+						   class="form-control form-control-user"
+						   placeholder="密碼包含大小寫、數字" />
+					<span asp-validation-for="Password"></span>
+				</div>
+
+				<button type="submit">登入</button>
+				<a class="small" asp-area="" asp-controller="Account" asp-action="Register">尚未註冊會員</a>
+				<a href=# class="small">忘記密碼</a>
+			</form>
+		</div>
+	</div>
+</div>
