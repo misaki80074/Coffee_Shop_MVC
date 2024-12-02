@@ -1,0 +1,9 @@
+﻿h1 {
+    max-width:fit-content;
+    margin: 90px auto 20px;
+}
+
+form {
+    max-width: fit-content;
+    margin 0 auto 0;
+}

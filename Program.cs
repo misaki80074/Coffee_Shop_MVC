@@ -10,14 +10,14 @@ builder.Services.AddScoped<ProductServiceJp>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//°O±o¥[-----------------
+//ï¿½Oï¿½oï¿½[-----------------
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-//°O±o¥[-----------------
+//ï¿½Oï¿½oï¿½[-----------------
 
 
 
@@ -47,9 +47,9 @@ app.UseRouting();
 app.UseAuthorization();
 
 
-//°O±o¥[-----------------
+//ï¿½Oï¿½oï¿½[-----------------
 app.UseSession();
-//°O±o¥[-----------------
+//ï¿½Oï¿½oï¿½[-----------------
 
 
 

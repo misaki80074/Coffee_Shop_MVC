@@ -1,3 +1,7 @@
+body[b-g4ihlm84sv] {
+    overflow-x: hidden;
+}
+
 .formDiv[b-g4ihlm84sv] {
     position:relative;
     display: flex;
@@ -7,19 +11,101 @@
     margin: auto;
 }
 
-h1[b-g4ihlm84sv]{
-    text-align: center;
-    margin: 20px;
-}
+    .formDiv > div[b-g4ihlm84sv] {
+        width: 230px;
+    }
+
+    h1[b-g4ihlm84sv] {
+        text-align: center;
+        margin: 20px;
+    }
 
 .userIdDiv[b-g4ihlm84sv],
 .passwordDiv[b-g4ihlm84sv] {
     margin-bottom: 10px;
 }
 
-span[b-g4ihlm84sv],
-#UserId[b-g4ihlm84sv]::-webkit-input-placeholder {
-    font-size: 20px;
+input[b-g4ihlm84sv] {
+    height: 23px;
+    border-style: none;
+    border-bottom: 1px solid #2e724a;
+    width: 230px;
+    margin-bottom: 10px;
 }
 
+input:focus[b-g4ihlm84sv] {
+    outline: none;
+}
 
+    input[b-g4ihlm84sv]::-webkit-input-placeholder{
+        font-size: 16px;
+        justify-content: center;
+        margin: auto;
+    }
+
+    span[b-g4ihlm84sv] {
+        font-size: 20px;
+    }
+
+.forgetPw[b-g4ihlm84sv] {
+    text-decoration: none;
+    color: #2e724a;
+    font-size: 12px;
+    text-align: left;
+}
+
+.loginBtn[b-g4ihlm84sv] {
+    width: 230px;
+    font-size: 20px;
+    background-color: #2e724a;
+    border: 1px solid #2e724a;
+    color: white;
+    border-radius: 3px;
+    padding: 1.5px 0;
+    font-weight: bold;
+}
+
+.registerBtn[b-g4ihlm84sv] {
+    width: 230px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid #2e724a;
+    border-radius: 3px;
+    padding: 1.5px 0;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    margin-bottom: 180px;
+}
+
+    .registerBtn a[b-g4ihlm84sv] {
+        text-decoration: none;
+        margin: auto;
+        color: #2e724a;
+        width: 230px;
+    }
+
+    hr[b-g4ihlm84sv] {
+        border: 0;
+        height: 1px;
+        margin: 40px 0;
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    }
+
+.loginTitle[b-g4ihlm84sv] {
+    margin-top: 90px;
+}
+
+.loginBtn:hover[b-g4ihlm84sv],
+.registerBtn:hover[b-g4ihlm84sv]{
+    cursor: pointer;
+}
+
+.loginBtn:hover[b-g4ihlm84sv] {
+    background-color: transparent;
+    color: #2e724a;
+}
+
+.registerBtn:hover[b-g4ihlm84sv] {
+    background-color: #b6d7a8;
+}

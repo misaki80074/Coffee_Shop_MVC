@@ -1,102 +1,17 @@
-﻿@model Coffee.Models.Customer
+﻿<h1>註冊會員</h1>
 
-@{
-    ViewData["Title"] = "Register";
-}
+<form action="">
+    <label for="UserId">帳號：</label>
+    <input type="text" id="UserId" name="UserId"><br />
+    <label for="password">密碼：</label>
+    <input type="text" id="password" name="password" /><br />
+    <label for="passwordCheck">再次輸入密碼：</label>
+    <input type="text" id="passwordCheck" name="passwordCheck" /><br />
+    <label for="userName">姓名：</label>
+    <input type="text" id="userName" name="userName"><br />
+    <label for="phone">手機號碼：</label>
+    <input type="tel" id="phone" name="phone"><br />
+    <label for="emailAddr">電子信箱：</label>
+    <input type="email" id="emailAddr" name="emailAddr"><br />
+</form>
 
-<h1>Register</h1>
-
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Register" method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @* <div class="form-group">
-                <label asp-for="CustomerId" class="control-label"></label>
-                <input asp-for="CustomerId" class="form-control" />
-                <span asp-validation-for="CustomerId" class="text-danger"></span>
-            </div> *@
-            <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" type="email" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
-                <span asp-validation-for="Gender" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Birthday" class="control-label"></label>
-                <input asp-for="Birthday" class="form-control" />
-                <span asp-validation-for="Birthday" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ImgSrc" class="control-label"></label>
-                <input asp-for="ImgSrc" class="form-control" type="file" />
-                <span asp-validation-for="ImgSrc" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Language" class="control-label"></label>
-                <input asp-for="Language" class="form-control" />
-                <span asp-validation-for="Language" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ReceiverAddress" class="control-label"></label>
-                <input asp-for="ReceiverAddress" class="form-control" />
-                <span asp-validation-for="ReceiverAddress" class="text-danger"></span>
-            </div>
-            @* <div class="form-group">
-                <label asp-for="CreateUser" class="control-label"></label>
-                <input asp-for="CreateUser" class="form-control" />
-                <span asp-validation-for="CreateUser" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdateUser" class="control-label"></label>
-                <input asp-for="UpdateUser" class="form-control" />
-                <span asp-validation-for="UpdateUser" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdateDate" class="control-label"></label>
-                <input asp-for="UpdateDate" class="form-control" />
-                <span asp-validation-for="UpdateDate" class="text-danger"></span>
-            </div> *@
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

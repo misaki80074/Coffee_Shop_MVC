@@ -1,23 +1,21 @@
-﻿@using Coffee.Views.Account
-
-@model LoginViewModel
-
-<br />
-<br />
-<h1>登入</h1>
+﻿<h1 class="loginTitle">登&nbsp;&nbsp;入</h1>
 <div class="formDiv">
 		<div class="userIdDiv">
-			<span>帳號：</span><input asp-for="UserId" placeholder="帳號" />
-			<span asp-validation-for="UserId"></span>
+		<input placeholder="使用者帳號" />
+			@* <span asp-validation-for="UserId"></span> *@
 		</div>
 		<div class="passwordDiv">
-			<span>密碼：</span><input asp-for="Password" type="password" placeholder="密碼" />
-			<span asp-validation-for="Password"></span>
+		<input type="password" placeholder="密碼" />
+			@* <span asp-validation-for="Password"></span> *@
 		</div>
-		<a href="">忘記密碼</a><br />
-		<button type="submit">開始購物吧！</button>
+		<div>
+		<a href="" class="forgetPw">忘記密碼?</a>
+		</div>
+		<br />
+		<button type="submit" class="loginBtn">開始購物吧！</button>
 </div>
 
-<br />
+<hr>
+
 <h1>還不是會員？</h1>
-<button><a href="">註冊會員</a></button>
+<button class="registerBtn"><a href="">註冊會員</a></button>
