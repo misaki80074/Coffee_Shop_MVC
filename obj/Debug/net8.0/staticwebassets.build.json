@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+m0sVq/UUHREcyIZFk1cppdtAa60oUEcXUuQybLWRl0=",
+  "Hash": "AHnxbgJ9fv7BYs3jE5rvoXyg5W53+8m4eJcz5VaxfaY=",
   "Source": "Coffee",
   "BasePath": "_content/Coffee",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Coffee\\wwwroot",
       "Source": "Coffee",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Coffee.styles.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Coffee.styles.css",
       "SourceId": "Coffee",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "Coffee.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\Desktop\\main\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Coffee.styles.css"
+      "OriginalItemSpec": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Coffee.styles.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Coffee.bundle.scp.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Coffee.bundle.scp.css",
       "SourceId": "Coffee",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "Coffee.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\Desktop\\main\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Coffee.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Coffee.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\css\\Detail.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\css\\Detail.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "css/Detail.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Detail.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\css\\List.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\css\\List.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "css/List.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\List.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\css\\site.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\data\\chatbot.json",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\data\\chatbot.json",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "data/chatbot.json",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\data\\chatbot.json"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\data\\chatbotEn.json",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\data\\chatbotEn.json",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "data/chatbotEn.json",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\data\\chatbotEn.json"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\data\\chatbotJp.json",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\data\\chatbotJp.json",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "data/chatbotJp.json",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\data\\chatbotJp.json"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\favicon.ico",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\images\\kitty.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\images\\kitty.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "images/kitty.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kitty.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_1.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_1.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_1.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_1.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_2.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_2.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_2.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_2.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_3.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_3.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_3.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_3.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_4.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_4.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_4.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_4.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_5.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_5.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_5.jpg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_5.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_6.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_6.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_6.jpg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_6.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_7.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_7.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_7.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_7.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\coffee_8.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\coffee_8.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/coffee_8.jpg",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\img\\coffee_8.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\customer.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\customer.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/customer.png",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\img\\customer.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\customer_white.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\customer_white.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/customer_white.png",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\img\\customer_white.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\logo.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\logo.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\logo_white.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\logo_white.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/logo_white.png",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo_white.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\menu.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\menu.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/menu.png",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\img\\menu.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB001.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB001.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB001.jpg",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB001.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB002.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB002.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB002.jpg",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB002.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB003.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB003.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB003.jpg",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB003.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB004.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB004.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB004.jpg",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB004.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB005.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB005.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB005.jpg",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB005.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB006.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB006.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB006.jpg",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB006.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB007.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB007.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB007.jpg",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB007.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB008.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB008.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB008.jpg",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB008.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB009.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB009.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB009.jpg",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB009.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB010.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB010.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB010.jpg",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB010.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB011.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB011.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB011.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB011.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB012.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB012.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB012.jpg",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB012.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB013.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB013.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB013.jpg",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB013.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB014.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB014.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB014.jpg",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB014.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB015.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB015.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB015.jpg",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB015.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB016.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB016.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB016.jpg",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB016.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB017.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB017.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB017.jpg",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB017.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB018.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB018.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB018.jpg",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB018.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB019.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB019.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB019.jpg",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB019.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CB020.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CB020.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CB020.jpg",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CB020.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD001.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD001.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD001.jpg",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD001.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD002.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD002.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD002.jpg",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD002.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD003.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD003.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD003.jpg",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD003.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD004.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD004.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD004.jpg",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD004.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD005.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD005.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD005.jpg",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD005.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD006.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD006.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD006.jpg",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD006.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD007.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD007.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD007.jpg",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD007.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD008.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD008.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD008.jpg",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD008.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD009.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD009.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD009.jpg",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD009.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD010.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD010.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD010.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD010.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD011.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD011.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD011.jpg",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD011.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD012.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD012.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD012.jpg",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD012.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD013.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD013.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD013.jpg",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD013.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD014.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD014.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD014.jpg",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD014.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD015.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD015.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD015.jpg",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD015.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD016.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD016.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD016.jpg",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD016.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD017.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD017.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD017.jpg",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD017.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD018.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD018.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD018.jpg",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD018.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD019.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD019.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD019.jpg",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD019.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\CD020.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\CD020.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/CD020.jpg",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\CD020.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\product_img_1.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\product_img_1.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/product_img_1.jpg",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\product_img_1.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\Product\\product_img_2.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\Product\\product_img_2.jpg",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/Product/product_img_2.jpg",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Product\\product_img_2.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\shopping-cart.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\shopping-cart.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/shopping-cart.png",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\img\\shopping-cart.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\shopping-cart_white.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\shopping-cart_white.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/shopping-cart_white.png",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\img\\shopping-cart_white.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\translate.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\translate.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/translate.png",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\img\\translate.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\translate_white.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\translate_white.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/translate_white.png",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\img\\translate_white.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\水量.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\水量.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/水量.png",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\img\\水量.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\水溫.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\水溫.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/水溫.png",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\img\\水溫.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\沖煮時間.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\沖煮時間.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/沖煮時間.png",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\img\\沖煮時間.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\咖啡粉.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\咖啡粉.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/咖啡粉.png",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\img\\咖啡粉.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\研磨粗細.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\研磨粗細.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/研磨粗細.png",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\img\\研磨粗細.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\悶蒸水量.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\悶蒸水量.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/悶蒸水量.png",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\img\\悶蒸水量.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\悶蒸時間.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\悶蒸時間.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/悶蒸時間.png",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\img\\悶蒸時間.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\img\\萃取係數.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\img\\萃取係數.png",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "img/萃取係數.png",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\img\\萃取係數.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\Detail.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\Detail.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/Detail.js",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\js\\Detail.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\DetailEn.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\DetailEn.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/DetailEn.js",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\js\\DetailEn.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\DetailJp.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\DetailJp.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/DetailJp.js",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\js\\DetailJp.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\index.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\index.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/index.js",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\js\\index.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\indexEn.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\indexEn.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/indexEn.js",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\js\\indexEn.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\indexJp.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\indexJp.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/indexJp.js",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\js\\indexJp.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\List.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\List.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/List.js",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\js\\List.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\js\\site.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1879,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1898,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1917,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1936,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1974,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1993,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2012,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2031,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2050,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2069,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2088,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2107,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2126,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2145,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2183,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2202,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2297,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2316,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2335,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2354,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2373,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2392,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2411,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2430,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2449,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2468,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2487,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2506,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2525,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2544,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2563,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2582,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2620,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2639,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2658,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2677,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2696,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\main\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Coffee",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\main\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Coffee_Shop_MVC\\wwwroot\\",
       "BasePath": "_content/Coffee",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

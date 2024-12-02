@@ -1,0 +1,25 @@
+﻿.formDiv {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.userIdDiv,
+.passwordDiv {
+    margin-bottom: 10px;
+}
+
+span,
+#UserId::-webkit-input-placeholder {
+    font-size: 20px;
+}
+
+

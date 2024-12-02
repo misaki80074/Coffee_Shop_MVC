@@ -1,0 +1,25 @@
+.formDiv[b-g4ihlm84sv] {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h1[b-g4ihlm84sv]{
+    text-align: center;
+    margin: 20px;
+}
+
+.userIdDiv[b-g4ihlm84sv],
+.passwordDiv[b-g4ihlm84sv] {
+    margin-bottom: 10px;
+}
+
+span[b-g4ihlm84sv],
+#UserId[b-g4ihlm84sv]::-webkit-input-placeholder {
+    font-size: 20px;
+}
+
+
