@@ -106,52 +106,6 @@ namespace Coffee.Controllers
 
         }
 
-        // -------------------------------日文頁面
-        public async Task<IActionResult> AllJp()
-        {
-            //產品總數量
-            var totalcount = _context.Products.Count();
-            //所有產地
-            var country0 = await _context.Products
-                .Select(p => p.Country)
-                .Where(c => !string.IsNullOrEmpty(c))
-                .ToListAsync();
-            var country = country0
-                .SelectMany(c => c!.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                .Select(s => s.Trim())
-                .Distinct()
-                .ToArray();
-            //所有風味
-            var flavor0 = await _context.Products
-                .Select(p => p.Flavor)
-                .Where(c => !string.IsNullOrEmpty(c))
-                .ToListAsync();
-            var flavor = flavor0
-                .SelectMany(c => c!.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                .Select(s => s.Trim())
-                .Distinct()
-                .ToArray();
-            //所有烘焙程度
-            var baking = await _context.Products.Select(p => p.Baking)
-                .Distinct()
-                .ToArrayAsync();
-            //所有處理法
-            var method = await _context.Products.Select(p => p.Method)
-                .Distinct()
-                .ToArrayAsync();
-
-            return View("AllJp", new DocLoad()
-            {
-                TotalCount = totalcount,
-                Country = country,
-                Flavor = flavor,
-                Baking = baking!,
-                Method = method!
-            });
-
-
-        }
-
         public async Task<IActionResult> Query(string column, string? category)
         {
             // 分類
@@ -255,11 +209,11 @@ namespace Coffee.Controllers
             {
                 if (sort == "asc")
                 {
-                    query3 = query2.OrderBy(p => p.Price);
+                    query3 = query2.OrderByDescending(p => p.Price);
                 }
                 else if (sort == "desc")
                 {
-                    query3 = query2.OrderByDescending(p => p.Price);
+                    query3 = query2.OrderBy(p => p.Price);
                 }
             }
 

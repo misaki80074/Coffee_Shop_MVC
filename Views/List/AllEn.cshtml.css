@@ -72,6 +72,11 @@
     padding: 0 0 0 2rem;
 }
 
+    .accordion-body a:not([href]):not([class]):hover {
+        color: var(--font-color-hover);
+        text-decoration: none;
+    }
+
 .accordion-item {
     border: none;
     background-color: inherit;
@@ -89,6 +94,7 @@
     .accordion-button:not(.collapsed) {
         background-color: inherit;
         box-shadow: none;
+        color: var(--font-color);
     }
 
         .accordion-button:not(.collapsed)::after {

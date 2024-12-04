@@ -4,20 +4,18 @@ using Coffee.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ProductService>();
-builder.Services.AddScoped<ProductServiceEn>();
-builder.Services.AddScoped<ProductServiceJp>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//ï¿½Oï¿½oï¿½[-----------------
+//°O±o¥[-----------------
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-//ï¿½Oï¿½oï¿½[-----------------
+//°O±o¥[-----------------
 
 
 
@@ -47,9 +45,9 @@ app.UseRouting();
 app.UseAuthorization();
 
 
-//ï¿½Oï¿½oï¿½[-----------------
+//°O±o¥[-----------------
 app.UseSession();
-//ï¿½Oï¿½oï¿½[-----------------
+//°O±o¥[-----------------
 
 
 
@@ -64,11 +62,6 @@ app.MapControllerRoute(
     name: "GetModal",
     pattern: "List/ShowProductModal",
     defaults: new { controller = "List", action = "ShowProductModal" });
-
-app.MapControllerRoute(
-    name: "ProductJp",
-    pattern: "List/AllJp/{column?}/{category?}",
-    defaults: new { controller = "List", action = "AllJp" });
 
 app.MapControllerRoute(
     name: "ProductEn",
@@ -86,16 +79,6 @@ app.MapControllerRoute(
 	name: "Detail",
 	 pattern: "Detail/Detail/{id}",
 	 defaults: new { controller = "Detail", action = "Detail" });
-
-app.MapControllerRoute(
-	name: "DetailEn",
-	 pattern: "DetailEn/DetailEn/{id}",
-	 defaults: new { controller = "DetailEn", action = "DetailEn" });
-
-app.MapControllerRoute(
-	name: "DetailJp",
-	 pattern: "DetailJp/DetailJp/{id}",
-	 defaults: new { controller = "DetailJp", action = "DetailJp" });
 
 app.MapControllerRoute(
     name: "default",

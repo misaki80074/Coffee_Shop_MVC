@@ -129,8 +129,8 @@ label img {
     display: none;
     top: 46px;
     right: 0;
-/*    height: 85vh;*/
-    width: 14vw;
+    height: 85vh;
+    width: 28vw;
     border: 1px solid #2e724a;
     border-right: none;
     position: absolute;
@@ -141,23 +141,16 @@ label img {
     padding: 3px;
 }
 
-.wanttobuy_div {
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: center !important;
-}
-
-#wantToBuy hr {
-    margin: 0;
-}
-
 #wantToBuy {
-    height: 80vh !important;
-    overflow-y: auto !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80vh;
+    overflow-y: auto;
 }
 
     #wantToBuy::-webkit-scrollbar {
-        width: 10px !important;
+        display: none;
     }
 
     /* Track */
@@ -175,19 +168,79 @@ label img {
             background: #006000;
         }
 
+#shop .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.nameQty, .closeTotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shopname {
+    font-size: 1.3rem;
+}
+
+.shopqty {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+    .shopqty button {
+        font-size: 1.5rem;
+        border: .1rem solid grey;
+        background: inherit;
+        height: 1.8rem;
+        width: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .25rem;
+    }
+
+    .shopqty span {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.shopclose {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+    .shopclose button {
+        font-size: 1rem;
+        border: .1rem solid grey;
+        background: inherit;
+        height: 1.8rem;
+        width: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .25rem;
+    }
+
+.shoptotal {
+    font-size: 2rem;
+}
+
 #checkoutArea {
     margin-top: 4px;
 }
 
 .checkoutBtn {
-    width: 100px !important;
+    width: 100px;
     /* position: absolute; */
     /* bottom: 0; */
-    font-size: 20px !important;
-    background-color: white !important;
-    border: #2e724a 1px solid !important;
-    border-radius: 5px !important;
-    text-decoration: none !important;
+    font-size: 20px;
+    background-color: white;
+    border: #2e724a 1px solid;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
     .checkoutBtn:hover {
@@ -232,10 +285,6 @@ label img {
         display: block;
     }
 
-    .language ul {
-        padding: 0;
-    }
-
     .language li {
         list-style: none;
         display: block;
@@ -255,7 +304,7 @@ label img {
             }
 
 footer {
-    height: 25px;
+    height: 20px;
     bottom: 0;
     background-color: black;
     color: white;

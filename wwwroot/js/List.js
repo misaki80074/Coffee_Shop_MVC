@@ -112,11 +112,11 @@ $('.accordion a').on('click', function () {
     $(this).closest('.accordion-item').find('button').addClass('collapsed')
     $(this).closest('.col-12').find('.navbar-toggler').addClass('collapsed')
     if (text == "所有商品" || text == "濾掛系列") {
-        history.pushState({ pathname: "column" }, "", window.location.origin + `/List/${text}` + window.location.search)
+        history.pushState({ pathname: "column" }, "", window.location.origin + `/List/${text}`)
         getProData(getAjaxUrl())
     } else {
         var col_text = $(this).closest('.accordion-item').find('button').text()
-        history.pushState({ pathname: "column" }, "", window.location.origin + `/List/${col_text}/${text}` + window.location.search)
+        history.pushState({ pathname: "column" }, "", window.location.origin + `/List/${col_text}/${text}`)
         getProData(getAjaxUrl())
     }
     setBreadcrumb()
@@ -309,13 +309,16 @@ function setLsHtml(data) {
  * SetUI n getAjax
  */
 
+
 function setUI() {
     setBreadcrumb()
     setCheckbox("baking")
     setCheckbox("method")
     setRange()
     setPage()
+    setSortNItems()
 }
+
 function setBreadcrumb() {
     $('.breadcrumb').empty()
     var pathname = window.location.pathname.split('/')
@@ -385,6 +388,26 @@ function setPage() {
         setUrl("page", $(this).text())
     })
 }
+
+function setSortNItems() {
+    var queryMap = new URLSearchParams(window.location.search);
+    if (queryMap.get("sort") == null) {
+        $('.priceSort li').closest('div').find('button').text("綜合")
+    } else {
+        if (queryMap.get("sort") == "desc") {
+            $('.priceSort li').closest('div').find('button').text("價格:由低到高")
+        }
+        else if (queryMap.get("sort") == "asc") {
+            $('.priceSort li').closest('div').find('button').text("價格:由高到低")
+        }
+    }
+    if (queryMap.get("item") == null || queryMap.get("item") == "12") {
+        $('.itemShow li').closest('div').find('button').text("每頁顯示12個")
+    } else if (queryMap.get("item") == "18") {
+        $('.itemShow li').closest('div').find('button').text("每頁顯示18個")
+    }
+}
+
 function setUrl(key, value) {
     var queryMap = new URLSearchParams(window.location.search);
     queryMap.set(key, value)
@@ -440,7 +463,7 @@ function getProData(queryString) {
                         <div class="cardImgBody">
                             <img src=${jsonData.products[i].img} class="card-img-top">
                             <div>
-                                <a href="/Home/Index">
+                                <a href="Detail/Detail/${jsonData.products[i].id}">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="#464646" width="32" height="32" class="bi bi-share" viewBox="0 0 16 16">
                                         <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
                                     </svg>
@@ -453,7 +476,7 @@ function getProData(queryString) {
                             </div>
                         </div>
                         <div class="cardImgBody2">
-                            <a href="/Home/Index"><img src=${jsonData.products[i].img} class="card-img-top"></a>
+                            <a href="Detail/Detail/${jsonData.products[i].id}"><img src=${jsonData.products[i].img} class="card-img-top"></a>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title text-center">${jsonData.products[i].productName}</h5>

@@ -102,8 +102,5 @@ namespace Coffee.Controllers
 			// 返回JSON格式的研磨粗細
 			return Json(new { grindsize = grind_size, extractionconditions = extraction_conditions, addwater = add_water });
 		}
-
-
-		
 	}
 }

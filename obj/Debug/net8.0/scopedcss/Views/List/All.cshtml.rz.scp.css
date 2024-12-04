@@ -72,6 +72,13 @@
     padding: 0 0 0 2rem;
 }
 
+
+    .accordion-body a:not([href]):not([class]):hover[b-y6dn1fygd1] {
+        color: var(--font-color-hover);
+        text-decoration: none;
+    }
+
+
 .accordion-item[b-y6dn1fygd1] {
     border: none;
     background-color: inherit;
@@ -89,6 +96,7 @@
     .accordion-button:not(.collapsed)[b-y6dn1fygd1] {
         background-color: inherit;
         box-shadow: none;
+        color: var(--font-color);
     }
 
         .accordion-button:not(.collapsed)[b-y6dn1fygd1]::after {

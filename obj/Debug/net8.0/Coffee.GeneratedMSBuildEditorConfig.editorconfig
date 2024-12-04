@@ -17,147 +17,127 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Coffee
 build_property.RootNamespace = Coffee
-build_property.ProjectDir = C:\Users\User\Desktop\Coffee_Shop_MVC\
+build_property.ProjectDir = C:\Users\User\Desktop\for_merge\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\Coffee_Shop_MVC
+build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\for_merge
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Account/Details.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Account/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Account/Edit.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Account/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Account/Index.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Cart/commodity.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/for_merge/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/for_merge/Views/Cart/commodity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxjb21tb2RpdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Cart/Index.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Cart/Order.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Cart/Order.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Cart/Payment.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Cart/Payment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxQYXltZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Cart/shopping_cart.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Cart/shopping_cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxzaG9wcGluZ19jYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Cart/TRY.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Cart/TRY.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxUUlkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/DetailEn/DetailEn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsRW5cRGV0YWlsRW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/DetailJp/DetailJp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsSnBcRGV0YWlsSnAuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Detail/Detail.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Detail/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Detail/DetailJp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXERldGFpbEpwLmNzaHRtbA==
+[C:/Users/User/Desktop/for_merge/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Product/Index.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/Error.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_PartialChatBot.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/_PartialChatBot.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsQ2hhdEJvdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_PartialChatBotEn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsQ2hhdEJvdEVuLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_PartialChatBotJp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsQ2hhdEJvdEpwLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_PartialItem.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/_PartialItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsSXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_PartialProductModal.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/_PartialProductModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsUHJvZHVjdE1vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/_ViewImports.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/_ViewStart.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-g4ihlm84sv
-
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-or7bm71rte
-
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Home/Index.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-pacp4wtgdj
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Home/IndexEn.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Home/IndexEn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleEVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-mzljlsbva9
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Home/IndexJp.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Home/IndexJp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleEpwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-jdj6s78df6
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/List/All.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/List/All.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-y6dn1fygd1
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/List/AllEn.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/List/AllEn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxBbGxFbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-ep0d8qkpxw
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/List/AllJp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxBbGxKcC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-fpvaf6pfxl
-
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e9i5ae7jr7
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_LayoutEn.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/_LayoutEn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRFbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-mj16plinnq
 
-[C:/Users/User/Desktop/Coffee_Shop_MVC/Views/Shared/_LayoutJp.cshtml]
+[C:/Users/User/Desktop/for_merge/Views/Shared/_LayoutJp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRKcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-r4gkss1tzp

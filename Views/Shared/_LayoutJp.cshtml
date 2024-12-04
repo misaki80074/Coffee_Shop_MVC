@@ -9,7 +9,7 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
-    @* <link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" />
 </head>
 <body>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -22,8 +22,8 @@
                 <span></span>
                 <span></span>
             </label>
-            <ul class="menu" style="padding:0;">
-                <li><a href="/List/AllJp">カテゴリー</a></li>
+            <ul class="menu">
+                <li><a href="/List">カテゴリー</a></li>
                 <li><a href="/Account">アカウント</a></li>
                 <li><a href="?Cart">カート</a></li>
             </ul>
@@ -43,7 +43,11 @@
                 <div class="shoppingList">
                     <div class="wanttobuy_div">
                         <div id="wantToBuy">
-                            <p><br>カートに商品はありません</p>
+                            <table>
+                                <tbody id="shop">
+                                </tbody>
+                            </table>
+                            <p id="defulttext"></p>
                         </div>
 
                         <hr style="margin:0;">
@@ -79,9 +83,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
-
+    <script src="~/js/site.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 </html>
+<script>
+    AddCartHTML()
+</script>
