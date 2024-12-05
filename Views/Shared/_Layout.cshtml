@@ -9,7 +9,6 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" />
 </head>
 <body>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -22,10 +21,10 @@
                 <span></span>
                 <span></span>
             </label>
-            <ul class="menu">
-                <li><a href="/List">商品分類</a></li>
-                <li><a href="/Account">會員專區</a></li>
-                <li><a href="?Cart">購物車</a></li>
+            <ul class="menu" style="padding:0;">
+                <li><a href="/List/All">商品分類</a></li>
+                <li><a href="/Account/Login">會員專區</a></li>
+                <li><a href="/Cart/shopping_cart">購物車</a></li>
             </ul>
             <div id="logo">
                 <a href="/Home/Index"><img src="~/img/logo_white.png"></a>
@@ -35,32 +34,33 @@
             <!-- 導覽列右邊 -->
             <div id="nav-right">
                 <!-- 會員 -->
-                <a href="/Account"><img src="~/img/customer_white.png" id="customer_icon"></a>
+                <a href="/Account/Login"><img src="~/img/customer_white.png" id="customer_icon"></a>
 
                 <!-- 購物車 -->
                 <input type="checkbox" id="chart-toggle">
                 <label for="chart-toggle"><img src="~/img/shopping-cart_white.png" id="chart_icon"></label>
-                <div class="shoppingList">
-                    <div class="wanttobuy_div">
-                        <div id="wantToBuy">
-                            <table>
-                                <tbody id="shop">
-                                </tbody>
-                            </table>
-                            <p id="defulttext"></p>
+                
+                    <div class="shoppingList">
+                        <form action="/Cart/Payment" method="post">
+                        <div class="wanttobuy_div">
+                            <div id="wantToBuy">
+                                <table>
+                                    <tbody id="shop">
+                                    </tbody>
+                                </table>
+                                <p id="defulttext"></p>
+                            </div>
+                            <hr style="margin:0;">
+                            <div id="checkoutArea">
+                                <button class="checkoutBtn" type="submit">結帳</button>
+                                @* <a href="#" class="chechoutLink"><button class="checkoutBtn">結帳</button></a> *@
+                            </div>
                         </div>
-
-
-
-                        <hr style="margin:0;">
-
-                        <div id="checkoutArea">
-                            <button class="checkoutBtn"><a href="#" class="chechoutLink"></a>結帳</button>
-                            @* <a href="#" class="chechoutLink"><button class="checkoutBtn">結帳</button></a> *@
-                        </div>
+                    </form>
                     </div>
-                </div>
-
+                
+                
+                
                 <!-- 切換語言 -->
                 <input type="checkbox" id="language-toggle">
                 <label for="language-toggle"><img src="~/img/translate_white.png"></label>

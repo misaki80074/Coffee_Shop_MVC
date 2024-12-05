@@ -38,4 +38,6 @@ public partial class Orderheader
     public string? Comment { get; set; }
 
     public string? ShippingMethod { get; set; }
+
+    public string? Address { get; set; }
 }

@@ -118,7 +118,6 @@ namespace Coffee.Controllers
             return Json(json);
         }
 
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

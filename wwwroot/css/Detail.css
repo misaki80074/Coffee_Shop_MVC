@@ -1,4 +1,24 @@
-﻿/* ------------------------------------------------- 上方產品區塊相關  -------------------------------------------------*/
+﻿body {
+    overflow-x: hidden;
+}
+
+main {
+    margin: 0 50px;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 跳出位置 平移等... */
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 9999;
+}
+/* ------------------------------------------------- 上方產品區塊相關  -------------------------------------------------*/
 .carousel-inner img {
     max-height: 350px; /* 設定最大高度 */
     width: auto; /* 自動調整寬度，保持比例 */
@@ -93,7 +113,7 @@
 /*---------------------------------------------------------------------------------------------------------------------------*/
 /* 下方兩大標題-區塊 */
 .detail-title {
-    background-color: #bddbcc;
+    background-color: rgb(46, 114, 74,0.5);
     border-radius: 5px 30px;
     /* 字元間距 */
     letter-spacing: 2px;
@@ -244,42 +264,47 @@ canvas {
 /* 聊天按鈕樣式 */
 .chatbot-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #32cd56;
+    bottom: 1rem;
+    right: 3rem;
+    aspect-ratio: 1/1;
+    background-color: #2E724A;
     color: white;
-    padding: 10px;
-    border-radius: 50px;
+    border-radius: 50%;
     cursor: pointer;
     z-index: 100;
-    box-shadow: 5px 5px 5px lightgreen;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 聊天窗口樣式 */
 .chatbot-window {
     position: fixed;
     height: 550px;
-    bottom: 80px;
-    right: 20px;
+    bottom: 4.5rem;
+    right: 3rem;
     width: 35rem;
-    background-color: rgb(35, 144, 62, 0.8);
+    background-color: rgb(65, 164, 107,0.8);
     color: white;
     border-radius: 10px;
     z-index: 101;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 聊天窗口標題區域 */
 .chatbot-header {
     padding: 10px;
-    background-color: #32cd56;
+    background-color: rgb(46, 114, 74,0.8);
     border-bottom: 1px solid #1e7e34;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px 10px 0 0;
+    color: #464646;
 }
 
 /* 聊天消息顯示區域 */
@@ -346,6 +371,26 @@ canvas {
     color: white;
 }
 
+/* ------------------------------------------------- 回到上方的按鈕  -------------------------------------------------*/
+/*到頂部*/
+.topbtn {
+    background-color: #2E724A;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    position: fixed;
+    bottom: 4.5rem;
+    right: 3rem;
+    display: none;
+}
+
+.topbtn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 200ms ease-out;
+}
 
 
 /* ------------------------------------------------- 品牌時間軸  -------------------------------------------------*/

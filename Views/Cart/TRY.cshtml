@@ -4,45 +4,99 @@
 *@
 @{
 }
-
 <h1> @ViewBag.aaa </h1>
+
+
+
+
+
+<h1>門市選擇</h1>
+<!-- 開啟新視窗 -->
+<!-- 回傳將參數帶入畫面上 -->
+<button onclick="window.open('https://emap.presco.com.tw/c2cemap.ashx?eshopid=870&&servicetype=1&url=https://localhost:7199/Cart/TRY', '_blank', 'width=930,height=600')">
+    開啟門市選擇
+</button>
+<br />
+<h1>@ViewBag.StoreNAME</h1>
+
+
 
 
 @* <button id="addToCartButton" >加入購物車</button>
 <br /> *@
-<button onclick="SendJsonToDB()"> 登入觸發 </button>
-<br />
-<button onclick="GetCartData()"> 取得 </button>
-<br />
-<button onclick="PostCartData()"> 傳送 </button>
-<br />
-<br />
-<button onclick="mergesCart()"> 取得Cart </button>
+
+<button onclick="GetCartDATA();"> 取得ssssss </button>
 <br />
 
+<button onclick="aaa();">取得資料</button>
 
-<form action="/Cart/LOING" method="post">
-    @* 這邊原本是 form action="/Cart/LOING" method="post__ZHITAI" *@
-    <input type="text" name="login" value="A1111111" />
-    <input type="password" name="pass"  value="1111111" />
-    <button type="submit"> AAAAA </button>
-</form>
 <br />
 
+<button onclick="PostCartData();">傳送</button>
+
+<br />
+
+<button onclick="aaa();">AAA</button>
+
+<br />
+@{
+    string? userID = Context.Session.GetString("userid");
+}
+<button onclick="JsonToDB('@userID');">r加入購物車</button>
+<h1>@userID</h1>
 
 
 <script>
-    function aaa() { 
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        // 轉成控制器期望的格式
-        // let DetailCart = cart.map(item => ({
-        //     productID: ,
-        //     //productID: item.productID || "",
-        //     qty: item.qty,
-        //     unitPrice: item.price
-        // }));
-        console.log(cart);
+    function aaa() {
+        const V_userId = "@Context.Session.GetString("userid")";
+        console.log(V_userId);
     }
 
+
+
+
+
+    // 使用者登入後，更新購物車 POST
+    function PostCartData() {
+        var V_userId = "@Context.Session.GetString("userid")";
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        // 轉成控制器期望的格式
+        let DetailCart = cart.map(item => ({
+            productID: item.productId,
+            //productID: item.productID || "",
+            qty: item.qty,
+            unitPrice: item.price
+        }));
+        $.ajax({
+            url: "/Product/AddToCart",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                Hmodel: {
+                    UserId: V_userId
+                },
+                Dmodels: DetailCart
+            })
+        });
+    }
+
+    // 使用者登入後，取得 DB購物車資料 JSON ，並傳到 localStorage
+    function GetCartDATA() {
+        var V_userId = "@Context.Session.GetString("userid")";
+        $.ajax({
+            url: `/Product/get?userId=${V_userId}`,
+            type: "GET",
+            success: function (response) {
+                // console.log("回應資料:", response);
+                if (response.success) {
+                    localStorage.setItem("cart", JSON.stringify(response.items));
+                    //console.log(response.items);
+                    //alert("成功獲取資料 ! ");
+                } else {
+                    // alert("SERVER 回傳錯誤 !!!!! ");
+                }
+            }
+        });
+    }
 
 </script>

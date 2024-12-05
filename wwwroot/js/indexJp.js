@@ -16,14 +16,14 @@
             $('.recommend').append(`
                 <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_1.jpg"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_2.jpg"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_3.jpg"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_4.jpg"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_5.jpg"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_6.jpg"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_7.jpg"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="/img/coffee_8.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/1"><img src="/img/coffee_1.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/2"><img src="/img/coffee_2.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/3"><img src="/img/coffee_3.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/4"><img src="/img/coffee_4.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/5"><img src="/img/coffee_5.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/6"><img src="/img/coffee_6.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/7"><img src="/img/coffee_7.jpg"></a></div>
+                    <div class="swiper-slide"><a href="/DetailJp/DetailJp/8"><img src="/img/coffee_8.jpg"></a></div>
                 </div>
             </div>`);
 
@@ -158,14 +158,14 @@ function RWDprod() {
 
     $('.recommend').append(`<div id="recommendProd"></div>`);
     $('#recommendProd').append(`
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_1.jpg"></a></div>
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_2.jpg"></a></div>
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_3.jpg"></a></div>
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_4.jpg"></a></div>
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_5.jpg"></a></div>
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_6.jpg"></a></div>
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_7.jpg"></a></div>
-        <div class="prodDiv"><a href="#"><img src="/img/coffee_8.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/1"><img src="/img/coffee_1.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/2"><img src="/img/coffee_2.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/3"><img src="/img/coffee_3.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/4"><img src="/img/coffee_4.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/5"><img src="/img/coffee_5.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/6"><img src="/img/coffee_6.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/7"><img src="/img/coffee_7.jpg"></a></div>
+        <div class="prodDiv"><a href="/DetailJp/DetailJp/8"><img src="/img/coffee_8.jpg"></a></div>
         `);
 
     // CSS 設定

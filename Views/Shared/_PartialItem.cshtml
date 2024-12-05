@@ -15,6 +15,18 @@
 	}
 </style>
 
+<script>
+	function CheckLogin() {
+		// 清除本地儲存的登入狀態與購物車資料
+		localStorage.setItem("loginExecuted","false"); // 或設定為 "false" 視需求而定
+		localStorage.removeItem("cart");
+		localStorage.removeItem("cartID");
+		// 導向至登入頁面
+		location.href = "/Account/Logout";
+	}
+</script>
+
+
 <ul class="QQQ">
 	<li>
 		會員資料
@@ -25,6 +37,7 @@
 		<a asp-action="Index">訂單查詢</a>
 	</li>
 	<li>
-		<a asp-area="" asp-controller="Account" asp-action="Logout">登出</a>
+		@* <a asp-area="" asp-controller="Account" asp-action="Logout" href="javascript:CheckLogin()">登出</a> *@
+		<a href="javascript:CheckLogin()">登出</a>
 	</li>
 </ul>

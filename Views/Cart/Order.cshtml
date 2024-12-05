@@ -1,18 +1,186 @@
-﻿@model IEnumerable<Coffee.Models.VOrderheaderOrderdetail>
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Coffee.Models.OrderHistory;
 @{
+    var orderdescription = Model.OrderALL.FirstOrDefault();
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單資訊</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            font-size: 23px;
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        /* 表格標題樣式 */
+        #table-header {
+            background-color: #2d8c91;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        /* 子表格的樣式 */
+        .sub-table td {
+            border: none;
+            text-align: left;
+            padding: 5px 10px;
+        }
+        /* 關鍵字高亮顯示 */
+        .highlight {
+            color: #e63946;
+            font-weight: bold;
+        }
+        /* 出貨資訊標題 */
+        .section-title {
+            background-color: #a59e8c;
+            font-weight: bold;
+        }
+        /* 狀態箭頭樣式 */
+        .arrow {
+            color: #888;
+            font-size: 18px;
+        }
+        /* 訂單備註樣式 */
+        .note {
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
 
+    <table>
+        <!-- 訂單資訊標題 -->
+        <tr>
+            <td id="table-header" colspan="4"><b>訂單資訊</b></td>
+        </tr>
 
-<table>
-    @foreach (var item in Model)
-    {
-        <td>@Html.DisplayFor(modelitem => item.OrderId)</td>
-    }
+        <!-- 訂單基本資料 -->
+        <tr>
+            <td colspan="4" style="background-color:#e9ecef;">
+                <table class="sub-table" width="100%">
+                    <tbody>
+                        <tr>
+                            <td nowrap style="width:33%;text-align:center;"><b>訂單編號：</b><span class="highlight">@orderdescription.OrderId</span></td>
+                            <td nowrap style="width:33%;text-align:center;"><b>買家：</b><span class="highlight">@orderdescription.Name</span></td>
+                            <td nowrap style="width:33%;text-align:center;"><b>客戶手機：</b><span class="highlight">@orderdescription.Phone</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
 
+        <!-- 出貨資訊 -->
+        <tr class="section-title">
+            <td colspan="4"><b>出貨資訊</b></td>
+        </tr>
 
-</table>
+        <!-- 訂單狀態 -->
+        <tr>
+            <td colspan="4" style="padding: 15px;background-color:#e9ecef;">
+                <table class="sub-table" width="100%">
+                    <tbody>
+                        <tr>
+                            @{
+                                int tdwidth = 100 / ViewBag.OrderCount; // 訂單筆數
+                                int count = 0;
+                            }
+                            @foreach (var item in Model.Orderhistory)
+                            {
+                                <td style="border:none;padding:5px;width:@tdwidth%;background-color:#dad7cd;">
+                                    <table width="100%" style="">
+                                        <tr>
+                                            <td style="border:none;text-align:center;width:30%;background-color:#669bbc;" nowrap><b>@item.Name</b></td>
+                                        </tr>
+                                        @{
+                                            string[]? UPDate = item.Updatedate.ToString().Split(' '); // 年月日時分秒拆解
+                                        }
+                                        <tr>
+                                            <td style="border:none;text-align:center;width:30%;background-color:#e9ecef;" nowrap>@UPDate[0]</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border:none;text-align:center;width:30%;background-color:#e9ecef;" nowrap>@UPDate[1]@UPDate[2]</td>
+                                        </tr>
+                                    </table>
+                                    @{
+                                        count += 1;
+                                        if (count < ViewBag.OrderCount)
+                                        {
+                                        <td style="border:none;background-color:#dad7cd;">⇨</td>
+                                        }
+                                    }
+                </td>
+                            }
+        </tr>
+        </tbody>
+    </table>
+    </td>
+    </tr>
 
-
+    <tr>
+        <td colspan="4" class="section-title"><b>購買商品</b></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="background-color:#e9ecef;border:none;">
+            <table style="width:100%;background-color:#e9ecef;">
+                    <tr style="background-color:#669bbc;">
+                        <th>商品</th>
+                        <th>數量</th>
+                        <th>單價</th>
+                        <th>總和</th>
+                    </tr>
+                    @foreach (var item in Model.OrderALL)
+                    {
+                        <tr>
+                            <td><b>@item.ProductName</b></td>
+                            <td><b>@item.Qty</b></td>
+                            <td><b>@item.UnitPrice</b></td>
+                            <td><b>@item.Totle</b></td>
+                        </tr>
+                    }
+                
+            </table>
+        </td>
+    </tr>
+    <!-- 訂單金額與付款資訊 -->
+    <tr>
+        <td style="background-color:#e9ecef;"></td>
+        <td style="background-color:#e9ecef;"></td>
+        <td style="text-align:left;background-color:#e9ecef;"><b>訂單金額：</b><span class="highlight">$@string.Format("{0:N0}", Convert.ToInt32(orderdescription.Total))</span></td>
+        
+        <td style="text-align:left;background-color:#e9ecef;"><b>付款方式：</b><span class="highlight">@orderdescription.PayMathod</span></td>
+    </tr>
+    <!-- 取貨與配送方式 -->
+    <tr>
+        <td style="text-align:left;background-color:#e9ecef;"></td>
+        <td style="text-align:left;background-color:#e9ecef;"></td>
+        <td style="text-align:left;background-color:#e9ecef;"><b>取貨地點：</b><span class="highlight">@orderdescription.Address</span></td>
+        <td style="text-align:left;background-color:#e9ecef;"><b>運送方式：</b><span class="highlight">@orderdescription.ShipMethod</span></td>
+    </tr>
+    <!-- 備註 -->
+    <tr>
+        <td colspan="4" style="text-align:center;background-color:#e9ecef;"><b>備註：@orderdescription.Comment</b></td>
+    </tr>
+    </table>
+</body>
+</html>

@@ -4,18 +4,18 @@ using Coffee.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<ProductServiceEn>();
+builder.Services.AddScoped<ProductServiceJp>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//°O±o¥[-----------------
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-//°O±o¥[-----------------
 
 
 
@@ -45,9 +45,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 
-//°O±o¥[-----------------
 app.UseSession();
-//°O±o¥[-----------------
+
 
 
 
@@ -56,29 +55,60 @@ app.MapControllerRoute(
     name: "Query",
     pattern: "List/Query/{column}/{category?}",
     defaults: new { controller = "List", action = "Query" });
+app.MapControllerRoute(
+    name: "QueryEn",
+    pattern: "ListEn/QueryEn/{column}/{category?}",
+    defaults: new { controller = "ListEn", action = "QueryEn" });
+app.MapControllerRoute(
+    name: "QueryJp",
+    pattern: "ListJp/QueryJp/{column}/{category?}",
+    defaults: new { controller = "ListJp", action = "QueryJp" });
 
 
 app.MapControllerRoute(
     name: "GetModal",
     pattern: "List/ShowProductModal",
     defaults: new { controller = "List", action = "ShowProductModal" });
+app.MapControllerRoute(
+    name: "GetModalEn",
+    pattern: "ListEn/ShowProductModalEn",
+    defaults: new { controller = "ListEn", action = "ShowProductModalEn" });
+app.MapControllerRoute(
+    name: "GetModalJp",
+    pattern: "ListJp/ShowProductModalJp",
+    defaults: new { controller = "ListJp", action = "ShowProductModalJp" });
+
+
+
+app.MapControllerRoute(
+    name: "ProductJp",
+    pattern: "ListJp/{column?}/{category?}",
+    defaults: new { controller = "ListJp", action = "AllJp" });
 
 app.MapControllerRoute(
     name: "ProductEn",
-    pattern: "List/AllEn/{column?}/{category?}",
-    defaults: new { controller = "List", action = "AllEn" });
+    pattern: "ListEn/{column?}/{category?}",
+    defaults: new { controller = "ListEn", action = "AllEn" });
 
 app.MapControllerRoute(
     name: "Product",
     pattern: "List/{column?}/{category?}",
     defaults: new { controller = "List", action = "All" });
-
-
 //
 app.MapControllerRoute(
-	name: "Detail",
-	 pattern: "Detail/Detail/{id}",
-	 defaults: new { controller = "Detail", action = "Detail" });
+    name: "Detail",
+     pattern: "Detail/Detail/{id}",
+     defaults: new { controller = "Detail", action = "Detail" });
+
+app.MapControllerRoute(
+    name: "DetailEn",
+     pattern: "DetailEn/DetailEn/{id}",
+     defaults: new { controller = "DetailEn", action = "DetailEn" });
+
+app.MapControllerRoute(
+    name: "DetailJp",
+     pattern: "DetailJp/DetailJp/{id}",
+     defaults: new { controller = "DetailJp", action = "DetailJp" });
 
 app.MapControllerRoute(
     name: "default",

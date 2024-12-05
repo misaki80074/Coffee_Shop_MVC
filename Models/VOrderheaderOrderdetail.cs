@@ -5,7 +5,7 @@ namespace Coffee.Models;
 
 public partial class VOrderheaderOrderdetail
 {
-    public string OrderId { get; set; } = null!;
+    public string? OrderId { get; set; }
 
     public short OrderItem { get; set; }
 
@@ -48,4 +48,10 @@ public partial class VOrderheaderOrderdetail
     public string? PayMathod { get; set; }
 
     public string? ShipMethod { get; set; }
+
+    public string? ShippingMethod { get; set; }
+
+    public string? Address { get; set; }
+
+    public string? ProductName { get; set; }
 }

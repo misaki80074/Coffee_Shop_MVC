@@ -41,8 +41,9 @@ namespace Coffee.Controllers
                     {
                         // 登入成功，設定 Cookie 或 Session
                         HttpContext.Session.SetString("loginId", login.CustomerId);
+                        HttpContext.Session.SetString("userid", login.UserId);
                         TempData["id2"] = login.CustomerId;
-                        return RedirectToAction("Index", "Account"); //登入後預設為Account的Index畫面
+                        return RedirectToAction("IndexJp", "Home"); //登入後預設為Account的Index畫面
                     }
                 }
                 else { return View("Register"); }
@@ -53,6 +54,7 @@ namespace Coffee.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("loginId");
+            HttpContext.Session.Remove("userid");
             return RedirectToAction("Login", "Account");
         }
 

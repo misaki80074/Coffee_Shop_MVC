@@ -76,9 +76,9 @@
 
 				@* 加入購物車 *@
 				<div class="modalBtn">
-					<button class="btn btn-success add-cart-btn" data-id="@Model.ProductId"
-							data-img="/img/neko.png" data-name="@Model.ProductName"
-							data-price="@Model.Price" onclick="modalBtnAdd(this)">
+					<button class="btn btn-success add-cart-btn" data-product-id="@Model.ProductId"
+							data-image-src="@Model.Img" data-name="@Model.ProductName"
+							data-price="@Model.Price" onclick="AddToCart(this)">
 						加入購物車
 					</button>
 				</div>
@@ -331,7 +331,7 @@
 					<div class="accordion" id="accordionPanelsStayOpenExample">
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 									<strong>研磨粗細</strong>
 								</button>
 							</h2>
@@ -383,6 +383,13 @@
 			</li>
 		</ul>
 	</div>
+	<button class="topbtn">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="#b6d7a8" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5" />
+		</svg>
+	</button>
+
+	<div id="popup">已加入購物車！</div>
 
 	@await Html.PartialAsync("_PartialChatBot")
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>  @*引用APEXCHARTS.js*@
@@ -392,4 +399,6 @@
 	</script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/Detail.js" asp-append-version="true"></script>
+	<script src="~/js/chatbot.js" asp-append-version="true"></script>
+
 </body>

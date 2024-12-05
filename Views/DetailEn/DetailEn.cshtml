@@ -78,9 +78,9 @@
 
 				@* 加入購物車 *@
 				<div class="modalBtn">
-					<button class="btn btn-success add-cart-btn" data-id="@Model.ProductId"
-							data-img="/img/neko.png" data-name="@Model.ProductName"
-							data-price="@Model.Price" onclick="modalBtnAdd(this)">
+					<button class="btn btn-success add-cart-btn" data-product-id="@Model.ProductId"
+							data-image-src="@Model.Img" data-name="@Model.ProductName"
+							data-price="@Model.Price" onclick="AddToCart(this)">
 						Add to Cart
 					</button>
 				</div>
@@ -389,6 +389,13 @@
 			</li>
 		</ul>
 	</div>
+	<button class="topbtn">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="#b6d7a8" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5" />
+		</svg>
+	</button>
+
+	<div id="popup">Added to Cart</div>
 
 	@await Html.PartialAsync("_PartialChatBotEn")
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>  @*引用APEXCHARTS.js*@
@@ -398,5 +405,7 @@
 	</script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/DetailEn.js" asp-append-version="true"></script>
+	<script src="~/js/chatbotEn.js" asp-append-version="true"></script>
+
 </body>
 

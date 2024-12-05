@@ -129,7 +129,7 @@ label img {
     display: none;
     top: 46px;
     right: 0;
-    height: 85vh;
+    /*    height: 85vh;*/
     width: 28vw;
     border: 1px solid #2e724a;
     border-right: none;

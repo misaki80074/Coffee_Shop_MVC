@@ -1,5 +1,4 @@
 ﻿@using Coffee.Views.Account
-
 @model LoginViewModel
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -8,53 +7,102 @@
 }
 
 <style>
-	/* 內部白色背景的 div */
-	.squre2 {
-		width: 60%;
-		background-color: #ffffff;
-		border-radius: 10px; /* 圓角 */
-		padding: 30px; /* 內邊距，讓內容不會緊貼邊框 */
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
-	}
-
-	/* 外層 div 圓角和背景顏色 */
-	.squre3 {
-		background-color: #2E724A;
-		border-radius: 15px; /* 設置圓角 */
-		display: flex;
+	/* 設定整個頁面的背景色與文字對齊 */
+	body {
+		background-color: #f4f8f9;
+		font-family: Arial, sans-serif;
+		color: #333;
+		margin: 0;
+		padding: 0;
+		/* display: flex; */
 		justify-content: center;
 		align-items: center;
-		min-height: 60vh; /* 使容器至少佔滿整個視口 */
-		width: 70%; /* 設定寬度為 70% */
-		margin: 0 auto; /* 使容器居中 */
+		height: 100vh;
 	}
-
-	body {
-		background-color: #f9f9f9;
+	.container {
+		position: absolute;
+		top: 40%;
+		left: 40%;
+		width: 400px;
+		background-color: #ffffff;
+		border-radius: 15px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		padding: 40px;
+		text-align: center;
+	}
+	/* 表單標題 */
+	h2 {
+		font-size: 24px;
+		color: #2E724A;
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
+	/* 表單元素的樣式 */
+	.form-group {
+		margin-bottom: 20px;
+		text-align: left;
+	}
+	.form-control {
+		width: 100%;
+		padding: 10px 15px;
+		font-size: 14px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-sizing: border-box;
+	}
+	.form-control:focus {
+		border-color: #2E724A; /* 聚焦時顏色 */
+		outline: none;
+		box-shadow: 0 0 5px rgba(46, 114, 74, 0.2); /* 聚焦效果 */
+	}
+	/* 登入按鈕的樣式 */
+	button[type="submit"] {
+		width: 100%;
+		padding: 12px;
+		background-color: #2E724A; /* 綠色背景 */
+		color: #fff; /* 白色文字 */
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+		font-weight: bold;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+	button[type="submit"]:hover {
+		background-color: #265E3D; /* 深綠色 */
+	}
+	/* 其他連結樣式 */
+	a.small {
+		display: block;
+		margin-top: 10px;
+		font-size: 14px;
+		color: #2E724A;
+		text-decoration: none;
+	}
+	a.small:hover {
+		text-decoration: underline;
+		color: #265E3D;
+	}
+	/* 驗證訊息樣式 */
+	span.validation-message {
+		color: red;
+		font-size: 12px;
 	}
 </style>
 
-<h2 class="text-center">歡迎光臨!</h2>
-<div class="squre3">
-	<div class="squre2">
-		<div class="p-5">
-			<form asp-action="Login" method="post" class="user">
-				<div class="form-group">
-					<input asp-for="UserId" class="form-control form-control-user"
-						   placeholder="使用者帳號" />
-					<span asp-validation-for="UserId"></span>
-				</div>
-				<div class="form-group">
-					<input asp-for="Password" type="password"
-						   class="form-control form-control-user"
-						   placeholder="密碼包含大小寫、數字" />
-					<span asp-validation-for="Password"></span>
-				</div>
-
-				<button type="submit">登入</button>
-				<a class="small" asp-area="" asp-controller="Account" asp-action="Register">尚未註冊會員</a>
-				<a href=# class="small">忘記密碼</a>
-			</form>
+<div class="container">
+	<h2>歡迎光臨！</h2>
+	<form asp-action="Login" method="post">
+		<div class="form-group">
+			<input asp-for="UserId" class="form-control" placeholder="使用者帳號" />
+			<span asp-validation-for="UserId" class="validation-message"></span>
 		</div>
-	</div>
+		<div class="form-group">
+			<input asp-for="Password" type="password" class="form-control" placeholder="密碼包含大小寫、數字" />
+			<span asp-validation-for="Password" class="validation-message"></span>
+		</div>
+		<button type="submit">登入</button>
+		<a class="small" asp-area="" asp-controller="Account" asp-action="Register">尚未註冊會員？</a>
+		<a href="#" class="small">忘記密碼</a>
+	</form>
 </div>

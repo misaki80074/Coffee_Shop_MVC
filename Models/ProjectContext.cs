@@ -23,6 +23,8 @@ public partial class ProjectContext : DbContext
 
     public virtual DbSet<Customer> Customers { get; set; }
 
+    public virtual DbSet<OrderStatusHistory> OrderStatusHistories { get; set; }
+
     public virtual DbSet<Orderdetail> Orderdetails { get; set; }
 
     public virtual DbSet<Orderheader> Orderheaders { get; set; }
@@ -43,11 +45,16 @@ public partial class ProjectContext : DbContext
 
     public virtual DbSet<VCartProduct> VCartProducts { get; set; }
 
+    public virtual DbSet<VOrderHistory> VOrderHistories { get; set; }
+
     public virtual DbSet<VOrderheaderOrderdetail> VOrderheaderOrderdetails { get; set; }
 
     public virtual DbSet<VProductStock> VProductStocks { get; set; }
 
-  
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=.\\sqlexpress; Database=PROJECT; User ID=sa; Password=12345; TrustServerCertificate=true");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Admlookup>(entity =>
@@ -175,6 +182,30 @@ public partial class ProjectContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<OrderStatusHistory>(entity =>
+        {
+            entity.HasKey(e => new { e.HistoryId, e.OrderId }).HasName("PK__OrderSta__4D7B4ADDDE804D63");
+
+            entity.ToTable("OrderStatusHistory");
+
+            entity.Property(e => e.HistoryId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("HistoryID");
+            entity.Property(e => e.OrderId)
+                .HasMaxLength(12)
+                .IsUnicode(false);
+            entity.Property(e => e.Status)
+                .HasMaxLength(10)
+                .IsUnicode(false);
+            entity.Property(e => e.Updatedate)
+                .HasColumnType("datetime")
+                .HasColumnName("UPDATEDATE");
+            entity.Property(e => e.Updateuser)
+                .HasMaxLength(12)
+                .IsUnicode(false)
+                .HasColumnName("UPDATEUSER");
+        });
+
         modelBuilder.Entity<Orderdetail>(entity =>
         {
             entity.HasKey(e => new { e.OrderId, e.OrderItem }).HasName("PK__ORDERDET__C3905BCF9EC2CA22");
@@ -205,11 +236,19 @@ public partial class ProjectContext : DbContext
         {
             entity.HasKey(e => e.OrderId).HasName("PK__ORDERHEA__C3905BCF70681B5F");
 
-            entity.ToTable("ORDERHEADER");
+            entity.ToTable("ORDERHEADER", tb =>
+                {
+                    tb.HasTrigger("trg_Insert_OrderStatusHistory");
+                    tb.HasTrigger("trg_OrderStatusHistory");
+                });
 
             entity.Property(e => e.OrderId)
                 .HasMaxLength(12)
                 .IsUnicode(false);
+            entity.Property(e => e.Address)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("address");
             entity.Property(e => e.Comment).HasMaxLength(1000);
             entity.Property(e => e.CreateDate).HasColumnType("datetime");
             entity.Property(e => e.CreateUser)
@@ -240,7 +279,7 @@ public partial class ProjectContext : DbContext
                 .HasMaxLength(12)
                 .IsUnicode(false);
             entity.Property(e => e.Status)
-                .HasMaxLength(5)
+                .HasMaxLength(12)
                 .IsUnicode(false);
             entity.Property(e => e.UpdateDate).HasColumnType("datetime");
             entity.Property(e => e.UpdateUser)
@@ -318,7 +357,7 @@ public partial class ProjectContext : DbContext
                 .ValueGeneratedOnAdd()
                 .HasColumnName("ID");
             entity.Property(e => e.Img)
-                .HasMaxLength(46)
+                .HasMaxLength(200)
                 .IsUnicode(false);
             entity.Property(e => e.Method)
                 .HasMaxLength(100)
@@ -520,12 +559,45 @@ public partial class ProjectContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<VOrderHistory>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("v_OrderHistory");
+
+            entity.Property(e => e.Classno)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("CLASSNO");
+            entity.Property(e => e.Name)
+                .HasMaxLength(12)
+                .IsUnicode(false)
+                .HasColumnName("NAME");
+            entity.Property(e => e.OrderId)
+                .HasMaxLength(12)
+                .IsUnicode(false);
+            entity.Property(e => e.Status)
+                .HasMaxLength(10)
+                .IsUnicode(false);
+            entity.Property(e => e.Updatedate)
+                .HasColumnType("datetime")
+                .HasColumnName("UPDATEDATE");
+            entity.Property(e => e.Updateuser)
+                .HasMaxLength(12)
+                .IsUnicode(false)
+                .HasColumnName("UPDATEUSER");
+        });
+
         modelBuilder.Entity<VOrderheaderOrderdetail>(entity =>
         {
             entity
                 .HasNoKey()
                 .ToView("v_orderheader_orderdetail");
 
+            entity.Property(e => e.Address)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("address");
             entity.Property(e => e.Comment).HasMaxLength(1000);
             entity.Property(e => e.CustomerId)
                 .HasMaxLength(12)
@@ -557,6 +629,7 @@ public partial class ProjectContext : DbContext
             entity.Property(e => e.ProductId)
                 .HasMaxLength(12)
                 .IsUnicode(false);
+            entity.Property(e => e.ProductName).HasMaxLength(100);
             entity.Property(e => e.ShipMethod)
                 .HasMaxLength(12)
                 .IsUnicode(false);
@@ -566,8 +639,11 @@ public partial class ProjectContext : DbContext
             entity.Property(e => e.ShipStatus)
                 .HasMaxLength(5)
                 .IsUnicode(false);
+            entity.Property(e => e.ShippingMethod)
+                .HasMaxLength(12)
+                .IsUnicode(false);
             entity.Property(e => e.Status)
-                .HasMaxLength(5)
+                .HasMaxLength(12)
                 .IsUnicode(false);
             entity.Property(e => e.Uom).HasMaxLength(6);
         });

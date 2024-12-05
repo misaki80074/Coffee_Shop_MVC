@@ -2,7 +2,7 @@
 
 
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-
+<link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" />
 <link href="~/css/List.css" rel="stylesheet" />
 
 <div class="productList" style="margin:2.5%;">
@@ -26,7 +26,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="accordion" id="accordionSidebar">
+                <div class="accordion classAccordion" id="accordionSidebar">
                     <div class="accordion-item">
                         <a href="/List" class="accordion-header accordion-button">所有商品</a>
                     </div>
@@ -37,6 +37,7 @@
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionSidebar">
                             <div class="accordion-body">
                                 @foreach (string c in Model.Country!)
+
                                 {
                                     <a>@c</a>
                                 }
@@ -50,6 +51,7 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSidebar">
                             <div class="accordion-body">
                                 @foreach (string f in Model.Flavor!)
+
                                 {
                                     <a>@f</a>
                                 }
@@ -150,6 +152,7 @@
                                 </div>
                                 <div class="dropdown-item filter-baking-item">
                                     @foreach (string b in Model.Baking!)
+
                                     {
                                         <div>
                                             <label for="@b" class="CBcontainer"><input type="checkbox" id="@b" /><span class="checkmark"></span>@b</label>
@@ -176,6 +179,7 @@
                                 </div>
                                 <div class="dropdown-item filter-method-item">
                                     @foreach (string m in Model.Method!)
+
                                     {
                                         <div>
                                             <label for="@m" class="CBcontainer"><input type="checkbox" id="@m" /><span class="checkmark"></span>@m</label>
@@ -235,11 +239,11 @@
 </div>
 @* 到頂部 *@
 <button class="topbtn">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="#464646" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#b6d7a8" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5" />
     </svg>
 </button>
-
+@await Html.PartialAsync("_PartialChatBot")
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="~/js/chatbot.js" asp-append-version="true"></script>
 <script src="~/js/List.js"></script>

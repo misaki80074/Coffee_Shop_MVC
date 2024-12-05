@@ -60,52 +60,6 @@ namespace Coffee.Controllers
 
         }
 
-        // -------------------------------英文頁面
-        public async Task<IActionResult> AllEn()
-        {
-            //產品總數量
-            var totalcount = _context.Products.Count();
-            //所有產地
-            var country0 = await _context.Products
-                .Select(p => p.Country)
-                .Where(c => !string.IsNullOrEmpty(c))
-                .ToListAsync();
-            var country = country0
-                .SelectMany(c => c!.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                .Select(s => s.Trim())
-                .Distinct()
-                .ToArray();
-            //所有風味
-            var flavor0 = await _context.Products
-                .Select(p => p.Flavor)
-                .Where(c => !string.IsNullOrEmpty(c))
-                .ToListAsync();
-            var flavor = flavor0
-                .SelectMany(c => c!.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                .Select(s => s.Trim())
-                .Distinct()
-                .ToArray();
-            //所有烘焙程度
-            var baking = await _context.Products.Select(p => p.Baking)
-                .Distinct()
-                .ToArrayAsync();
-            //所有處理法
-            var method = await _context.Products.Select(p => p.Method)
-                .Distinct()
-                .ToArrayAsync();
-
-            return View("AllEn", new DocLoad()
-            {
-                TotalCount = totalcount,
-                Country = country,
-                Flavor = flavor,
-                Baking = baking!,
-                Method = method!
-            });
-
-
-        }
-
         public async Task<IActionResult> Query(string column, string? category)
         {
             // 分類
@@ -174,31 +128,31 @@ namespace Coffee.Controllers
             if (!string.IsNullOrEmpty(fragrance))
             {
                 int fragranceInt = Convert.ToInt32(fragrance);
-                predicateAnd = predicateAnd.And(p => p.Fragrance <= fragranceInt);
+                predicateAnd = predicateAnd.And(p => p.Fragrance == fragranceInt);
             }
             var sour = Request.Query["sour"].ToString();
             if (!string.IsNullOrEmpty(sour))
             {
                 var sourInt = Convert.ToInt32(sour);
-                predicateAnd = predicateAnd.And(p => p.Sour <= sourInt);
+                predicateAnd = predicateAnd.And(p => p.Sour == sourInt);
             }
             var bitter = Request.Query["bitter"].ToString();
             if (!string.IsNullOrEmpty(bitter))
             {
                 var bitterInt = Convert.ToInt32(bitter);
-                predicateAnd = predicateAnd.And(p => p.Bitter <= bitterInt);
+                predicateAnd = predicateAnd.And(p => p.Bitter == bitterInt);
             }
             var sweet = Request.Query["sweet"].ToString();
             if (!string.IsNullOrEmpty(sweet))
             {
                 var sweetInt = Convert.ToInt32(sweet);
-                predicateAnd = predicateAnd.And(p => p.Sweet <= sweetInt);
+                predicateAnd = predicateAnd.And(p => p.Sweet == sweetInt);
             }
             var strong = Request.Query["strong"].ToString();
             if (!string.IsNullOrEmpty(strong))
             {
                 var strongInt = Convert.ToInt32(strong);
-                predicateAnd = predicateAnd.And(p => p.Strong <= strongInt);
+                predicateAnd = predicateAnd.And(p => p.Strong == strongInt);
             }
             var query2 = query.Where(predicateAnd);
 

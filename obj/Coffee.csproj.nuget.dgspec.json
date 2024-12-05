@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\for_merge\\Coffee.csproj": {}
+    "C:\\Users\\User\\Desktop\\CoffeeProject-main\\Coffee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\for_merge\\Coffee.csproj": {
+    "C:\\Users\\User\\Desktop\\CoffeeProject-main\\Coffee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\for_merge\\Coffee.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\CoffeeProject-main\\Coffee.csproj",
         "projectName": "Coffee",
-        "projectPath": "C:\\Users\\User\\Desktop\\for_merge\\Coffee.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\CoffeeProject-main\\Coffee.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\for_merge\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\CoffeeProject-main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="euc-jp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hachi Cafe</title>
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
@@ -9,7 +9,6 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" />
 </head>
 <body>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -22,10 +21,10 @@
                 <span></span>
                 <span></span>
             </label>
-            <ul class="menu">
-                <li><a href="/List">カテゴリー</a></li>
-                <li><a href="/Account">アカウント</a></li>
-                <li><a href="?Cart">カート</a></li>
+            <ul class="menu" style="padding:0;">
+                <li><a href="/ListJp">カテゴリー</a></li>
+                <li><a href="/Account/Login">アカウント</a></li>
+                <li><a href="/CartJp/shopping_cart">カート</a></li>
             </ul>
             <div id="logo">
                 <a href="/Home/IndexJp"><img src="~/img/logo_white.png"></a>
@@ -35,28 +34,30 @@
             <!-- 導覽列右邊 -->
             <div id="nav-right">
                 <!-- 會員 -->
-                <a href="/Account"><img src="~/img/customer_white.png" id="customer_icon"></a>
+                <a href="/Account/Login"><img src="~/img/customer_white.png" id="customer_icon"></a>
 
                 <!-- 購物車 -->
                 <input type="checkbox" id="chart-toggle">
                 <label for="chart-toggle"><img src="~/img/shopping-cart_white.png" id="chart_icon"></label>
                 <div class="shoppingList">
+                    <form action="~/CartJp/Payment" method="post">
                     <div class="wanttobuy_div">
                         <div id="wantToBuy">
-                            <table>
-                                <tbody id="shop">
-                                </tbody>
-                            </table>
-                            <p id="defulttext"></p>
+                                <table>
+                                    <tbody id="shop">
+                                    </tbody>
+                                </table>
+                                <p id="defulttext"></p>
                         </div>
 
                         <hr style="margin:0;">
 
                         <div id="checkoutArea">
-                            <button class="checkoutBtn"><a href="#" class="chechoutLink"></a>レジ</button>
+                                <button class="checkoutBtn" type="submit">レジ</button>
                             @* <a href="#" class="chechoutLink"><button class="checkoutBtn">結帳</button></a> *@
                         </div>
                     </div>
+                    </form>
                 </div>
 
                 <!-- 切換語言 -->

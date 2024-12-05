@@ -17,7 +17,7 @@
                         <div class="col-6">
                             @* 產品圖 *@
                             <div class="productImg">
-                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false" style="height:350px">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <img src="@Model.Img" class="d-block w-100">
@@ -99,6 +99,7 @@
         </div>
     </div>
 </div>
+<div id="popup">已加入購物車！</div>
 <script>
     function AddToCart(button) {
         // 找到 <tr class="product">

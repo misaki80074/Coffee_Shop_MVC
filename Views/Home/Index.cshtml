@@ -676,3 +676,78 @@
 
 @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
 <script src="~/js/index.js" asp-append-version="true"></script>
+<script>
+        // ---------------------------------------------------------------
+        // // 使用者登入後，更新購物車 POST
+        // function PostCartData() {
+        //                 alert("sss");
+        //     const V_userId = "@Context.Session.GetString("userid")";
+        //     // 如果 loginExecuted 不等於
+        //     if (localStorage.getItem("loginExecuted") != "true") {
+        //         if (V_userId != "") {
+        //             localStorage.setItem("loginExecuted", "true");
+        //             let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        //             // 轉成控制器期望的格式
+        //             let DetailCart = cart.map(item => ({
+        //                 productID: item.productId,
+        //                 //productID: item.productID || "",
+        //                 qty: item.qty,
+        //                 unitPrice: item.price
+        //             }));
+        //             $.ajax({
+        //                 url: "/Cart/AddToCart",
+        //                 type: "POST",
+        //                 contentType: "application/json",
+        //                 data: JSON.stringify({
+        //                     Hmodel: {
+        //                         UserId: V_userId
+        //                     },
+        //                     Dmodels: DetailCart
+        //                 })
+        //             });
+        //         }
+        //     }
+        // }
+        // // 使用者登入後，取得 DB購物車資料 JSON ，並傳到 localStorage
+        // function GetCartData() {
+        //     const V_userId = "@Context.Session.GetString("userid")";
+        //     $.ajax({
+        //     url: `/Product/get?userId=CoffeeAC`,
+        //         type: "GET",
+        //         success: function (response) {
+        //             // console.log("回應資料:", response);
+        //             if (response.success) {
+        //                 localStorage.setItem("cart", JSON.stringify(response.items));
+        //                 // alert("成功獲取資料");
+        //                 console.log(response.items);
+        //                 //alert("成功獲取資料 ! ");
+        //             } else {
+        //                 alert("錯誤，請通知系統管理員 !!!!! ");
+        //             }
+        //         }
+        //     });
+        // }
+        // // 購物車POST & GET
+        // // 修改 mergesCart 函數，確保 PostCartData 先執行，然後再執行 GetCartData
+        // function mergesCart() {
+        //     PostCartData()  // 執行 PostCartData
+        //         .then(() => {
+        //             // 當 PostCartData 完成後，再執行 GetCartData
+        //             return GetCartData();
+        //         })
+        //         .then(() => {
+        //             // GetCartData 完成後的操作
+        //             console.log("所有操作完成！");
+        //         })
+        //         .catch((error) => {
+        //             console.error("發生錯誤:", error);
+        //         });
+        // }
+        // ---------------------------------------------------------------
+
+</script>
+<body>
+
+
+</body>
+

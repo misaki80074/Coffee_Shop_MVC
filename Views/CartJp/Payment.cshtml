@@ -1,0 +1,365 @@
+﻿@model Coffee.Models.USERANDADMLOOKUP
+@{
+    Layout = "_LayoutJp";
+
+    var PaymentValue = Model.adm.Where(o => o.Classno == "Payment").ToList();
+    var TransportValue = Model.adm.Where(o => o.Classno == "transport").ToList();
+    var user = Model.user.FirstOrDefault();
+    // var PaymentValue = Model.adm.Where(o => o.adm == "Payment").ToList();
+    // var TransportValue = Model.adm.Where(o => o.adm == "transport").ToList();
+}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="euc-jp">
+    <title>注文</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+        }
+        .checkout-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-header {
+            /* background-color: #2d8c91; */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .checkout-header h2 {
+            color: #333;
+            font-size: 30px;
+        }
+        /* 結帳商品 */
+        .checkout-section {
+            margin-bottom: 30px;
+        }
+        .checkout-section h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .checkout-table {
+            width: 100%;
+            border-collapse: collapse;
+            /* border-radius: 8px; */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .checkout-table th, .checkout-table td {
+            padding: 20px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .checkout-table th {
+            height: 20px;
+            background-color: #00AEAE;
+            color: white;
+        }
+        .checkout-table td {
+            background-color: #f9f9f9;
+        }
+        .checkout-table tr:last-child td {
+            border-bottom: none;
+        }
+        /* 付款方式 */
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .payment-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        .payment-option label {
+            font-size: 16px;
+            color: #333;
+        }
+        /* 總結 */
+        .checkout-summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .summary-row.total {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .checkout-btn:hover {
+            background-color: #218838;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-field:focus {
+            border-color: #007bff;
+        }
+        .input-area {
+            background-color: #f1f1f1;
+            width: 230%;
+            height: 100px;
+            resize: none;
+        }
+        .form-section, .order-section {
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+        .order-section {
+            padding-left: 20px;
+        }
+        .total-price {
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .payment-method-table {
+            width: 100%;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function PAY() {
+            let pay = document.getElementById("paymentmethod").value;
+            if (pay == "Pay0001") {
+                $("#PayMethod").css("display", "block");
+            }
+            else {
+                $("#PayMethod").css("display", "none");
+            }
+        }
+        function inputaddress() {
+            let address = document.getElementById("Shipping-method").value;
+            console.log(address.length);
+            if (address.length != 0) {
+                $("#add").css("display", "block");
+            }
+        }
+    </script>
+
+    <div class="container">
+        <form action="~/CartJp/OrderFormData" method="post">
+            <div class="checkout-container">
+                <!-- Header -->
+                @*                 <div class="checkout-header">
+                <h2>客戶資訊</h2>
+                </div> *@
+                <div class="checkout-section">
+                    <div class="order-section">
+                        <table style="width:500px">
+                            @* l *@
+                            <tr>
+                                <td>
+                                    <table class="checkout-table">
+                                        <h3>注文確認</h3>
+                                        <thead>
+                                            @* <tr><th><h3>訂單資訊</h3></th></tr> *@
+                                            <tr>
+                                                <th nowrap>商品名</th>
+                                                <th nowrap>数量</th>
+                                                <th nowrap>単価</th>
+                                                <th nowrap>小計</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @* 這一段沒接到 *@
+                                            <input type="hidden" name="CartID" value="@ViewBag.CartId[0]" />
+
+
+
+                                            @for (int i = 0; i < ViewBag.ID.Count; i++)
+                                            {
+                                                <tr>
+                                                    <input type="hidden" name="itemNO" value="@ViewBag.ID[i]" />
+                                                    <input type="hidden" name="itemQTY" value="@ViewBag.QTY[i]" />
+                                                    <input type="hidden" name="itemProuductID" value="@ViewBag.ProductID[i]" />
+                                                    <input type="hidden" name="itemPrice" value="@ViewBag.Price[i]" />
+                                                    <input type="hidden" name="itemTotle" value="@ViewBag.itemtotle[i]" />
+                                                    <td style="text-align: left;" nowrap><img src="@ViewBag.IMG[i]" alt="@ViewBag.Name[i]" style="width:50px;" /> @ViewBag.Name[i]</td>
+                                                    <td style="text-align:right">@ViewBag.QTY[i]</td>
+                                                    <td style="text-align:right">$@string.Format("{0:N0}", Convert.ToInt32(ViewBag.Price[i]))</td>
+                                                    <td style="text-align:right">$@string.Format("{0:N0}", Convert.ToInt32(ViewBag.itemtotle[i]))</td>
+                                                </tr>
+                                            }
+                                            <tr>
+                                                <td colspan="3" style="text-align:right">Total</td>
+                                                <td style="text-align:right">
+                                                    <input type="hidden" name="totle" value="@ViewBag.Alltotle" />
+                                                    $@string.Format("{0:N0}", Convert.ToInt32(ViewBag.Alltotle))
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                    </div>
+                    <tr>
+                        <td>
+                            <div class="form-section">
+                                @* <tr><td></td></tr> *@
+                                <h3>請求書詳細</h3>
+                                <table>
+                                    @* <tr><th><h3>帳單資訊</h3></th></tr> *@
+                                    <tr><td><label for="name">名前 *</label></td></tr>
+                                    <tr><td><input type="text" id="name" name="name" value="@user.Name" required class="input-field"></td></tr>
+                                    <tr><td><label for="email">メールアドレス *</label></td></tr>
+                                    <tr><td><input type="email" id="email" name="email" value="@user.Email" required class="input-field"></td></tr>
+                                    <tr><td><label for="phone">電話番号 *</label></td></tr>
+                                    <tr><td><input type="tel" id="phone" name="phone" value="@user.Phone" required class="input-field"></td></tr>
+                                    <tr><td><label for="comment" class="section-title">メモ欄 (オプション)</label></td></tr>
+                                    <tr><td><textarea id="comment" name="comment" class="input-area" placeholder="要であれば、ここに注釈を付すことができます。" maxlength="300">台湾チームを祝おう！コーヒー1杯買うともう1杯無料！</textarea></td></tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    </table> @* l *@
+                </div>
+                <hr />
+                <!-- 運送方式 -->
+                <div class="payment-option">
+                    <label for="Shipping-method"><nobr>配達サービス : &nbsp;</nobr></label>
+                    <select id="Shipping-method" name="transportmethod" class="input-field" required onchange="inputaddress()">
+                        <option value="">1つを選んでください</option>
+                        @foreach (var item in TransportValue)
+                        {
+                            string replaceText = "";
+                            if (@item.Lookupid == "tran0001")
+                                replaceText = "コンビニ受取";
+                            else if (@item.Lookupid == "tran0002")
+                                replaceText = "直接配送";
+                            else if (item.Lookupid == "tran0003")
+                                replaceText = "店舗受取";
+
+                            <option value="@item.Lookupid">@replaceText</option>
+                        }
+                    </select>
+                </div>
+                @* 地址 *@
+                <div id="add" style="display:none;">
+                    <table>
+                        <tr>
+                            <td><label for="Pickupaddress">お届け先：</label></td>
+                            <td><input type="text" name="address" id="Pickupaddress" value="" class="input-field" style="width:100%;"></td>
+                        </tr>
+                    </table>
+                </div>
+                @* ------------------ *@
+                <!-- 付款方式 -->
+                <div class="payment-option">
+                    <label for="paymentmethod"><nobr>決済方法 : &nbsp;</nobr></label>
+                    <select id="paymentmethod" name="paymentmethod" class="input-field" onchange="PAY()" required>
+                        <option value="">1つを選んでください</option>
+                        @foreach (var item in PaymentValue)
+                        {
+                            string replaceText = "";
+                            if (@item.Lookupid == "Pay0001")
+                                replaceText = "クレジット";
+                            else if (item.Lookupid == "Pay0002")
+                                replaceText = "代引き";
+
+
+                            <option value="@item.Lookupid">@replaceText</option>
+                        }
+                    </select>
+                </div>
+                <!-- 信用卡資料 -->
+                <div id="PayMethod" class="payment-method-table">
+                    <table>
+                        <tr>
+                            <th nowrap><h3>支払情報</h3></th>
+                        </tr>
+                        <tr>
+                            <td><label for="VisaID">カード番号：</label></td>
+                            <td>
+                                <input type="text" id="VisaID1" name="VisaID" maxlength="4" class="input-field" value="">
+                            </td>
+                            @*                             <td><input type="text" id="VisaID1" name="VisaID" maxlength="4" class="input-field" value=""></td>
+                            <td><input type="text" id="VisaID2" name="VisaID" maxlength="4" class="input-field" value=""></td>
+                            <td><input type="text" id="VisaID3" name="VisaID" maxlength="4" class="input-field" value=""></td>
+                            <td><input type="text" id="VisaID4" name="VisaID" maxlength="4" class="input-field" value=""></td> *@
+                        </tr>
+                        <tr>
+                            <td><label for="deadlineMonth">有効期限：</label></td>
+                            <td>
+                                <select name="deadlineMonth" id="deadlineMonth" class="input-field">
+                                    @for (int i = 1; i < 13; i++)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+                                </select>
+                            </td>
+                            <td>
+                                @{
+                                    string Years = DateTime.Today.ToString("yyyy").Substring(2, 2);
+                                    int Years15 = Convert.ToInt32(Years) + 15;
+                                }
+                                <select name="deadlineYear" id="deadlineYear" class="input-field">
+                                    @for (int i = Convert.ToInt32(Years); i < Years15; i++)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Safety">セキュリティコード：</label></td>
+                            <td><input name="Safety" id="Safety" value="" /></td>
+                        </tr>
+
+
+                    </table>
+                </div>
+                <!-- 總結 -->
+                <div class="checkout-summary">
+                    <div class="summary-row">
+                        <span>合計:</span>
+                        <span class="total-price">$@string.Format("{0:N0}", Convert.ToInt32(ViewBag.Alltotle))</span>
+                    </div>
+                    <button type="submit" class="checkout-btn">続ける</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
