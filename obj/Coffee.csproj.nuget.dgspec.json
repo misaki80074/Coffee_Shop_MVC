@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\true_main\\Coffee.csproj": {}
+    "C:\\Users\\chuu0\\Desktop\\main_html\\Coffee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\true_main\\Coffee.csproj": {
+    "C:\\Users\\chuu0\\Desktop\\main_html\\Coffee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\true_main\\Coffee.csproj",
+        "projectUniqueName": "C:\\Users\\chuu0\\Desktop\\main_html\\Coffee.csproj",
         "projectName": "Coffee",
-        "projectPath": "C:\\Users\\User\\Desktop\\true_main\\Coffee.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\true_main\\obj\\",
+        "projectPath": "C:\\Users\\chuu0\\Desktop\\main_html\\Coffee.csproj",
+        "packagesPath": "C:\\Users\\chuu0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chuu0\\Desktop\\main_html\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\chuu0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

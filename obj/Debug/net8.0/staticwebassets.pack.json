@@ -1,587 +1,587 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Coffee.bundle.scp.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Coffee.bundle.scp.css",
       "PackagePath": "staticwebassets\\Coffee.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\css\\Detail.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\css\\Detail.css",
       "PackagePath": "staticwebassets\\css\\Detail.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\css\\List.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\css\\List.css",
       "PackagePath": "staticwebassets\\css\\List.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\data\\chatbot.json",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\data\\chatbot.json",
       "PackagePath": "staticwebassets\\data\\chatbot.json"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\data\\chatbotEn.json",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\data\\chatbotEn.json",
       "PackagePath": "staticwebassets\\data\\chatbotEn.json"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\data\\chatbotJp.json",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\data\\chatbotJp.json",
       "PackagePath": "staticwebassets\\data\\chatbotJp.json"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\images\\kitty.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\images\\kitty.jpg",
       "PackagePath": "staticwebassets\\images\\kitty.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB001.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB001.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB001.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB002.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB002.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB002.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB003.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB003.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB003.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB004.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB004.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB004.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB005.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB005.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB005.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB006.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB006.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB006.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB007.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB007.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB007.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB008.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB008.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB008.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB009.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB009.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB009.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB010.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB010.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB010.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB011.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB011.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB011.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB012.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB012.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB012.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB013.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB013.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB013.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB014.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB014.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB014.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB015.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB015.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB015.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB016.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB016.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB016.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB017.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB017.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB017.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB018.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB018.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB018.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB019.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB019.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB019.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CB020.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CB020.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CB020.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD001.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD001.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD001.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD002.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD002.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD002.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD003.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD003.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD003.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD004.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD004.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD004.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD005.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD005.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD005.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD006.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD006.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD006.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD007.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD007.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD007.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD008.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD008.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD008.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD009.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD009.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD009.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD010.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD010.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD010.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD011.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD011.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD011.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD012.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD012.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD012.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD013.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD013.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD013.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD014.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD014.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD014.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD015.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD015.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD015.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD016.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD016.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD016.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD017.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD017.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD017.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD018.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD018.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD018.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD019.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD019.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD019.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\CD020.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\CD020.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\CD020.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\product_img_1.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\product_img_1.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\product_img_1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\Product\\product_img_2.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\Product\\product_img_2.jpg",
       "PackagePath": "staticwebassets\\img\\Product\\product_img_2.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_1.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_1.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_2.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_2.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_2.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_3.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_3.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_3.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_4.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_4.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_4.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_5.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_5.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_5.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_6.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_6.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_6.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_7.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_7.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_7.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\coffee_8.jpg",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\coffee_8.jpg",
       "PackagePath": "staticwebassets\\img\\coffee_8.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\customer.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\customer.png",
       "PackagePath": "staticwebassets\\img\\customer.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\customer_white.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\customer_white.png",
       "PackagePath": "staticwebassets\\img\\customer_white.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\logo.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\logo_white.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\logo_white.png",
       "PackagePath": "staticwebassets\\img\\logo_white.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\menu.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\menu.png",
       "PackagePath": "staticwebassets\\img\\menu.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\shopping-cart.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\shopping-cart.png",
       "PackagePath": "staticwebassets\\img\\shopping-cart.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\shopping-cart_white.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\shopping-cart_white.png",
       "PackagePath": "staticwebassets\\img\\shopping-cart_white.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\translate.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\translate.png",
       "PackagePath": "staticwebassets\\img\\translate.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\translate_white.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\translate_white.png",
       "PackagePath": "staticwebassets\\img\\translate_white.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\咖啡粉.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\咖啡粉.png",
       "PackagePath": "staticwebassets\\img\\咖啡粉.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\悶蒸時間.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\悶蒸時間.png",
       "PackagePath": "staticwebassets\\img\\悶蒸時間.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\悶蒸水量.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\悶蒸水量.png",
       "PackagePath": "staticwebassets\\img\\悶蒸水量.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\水溫.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\水溫.png",
       "PackagePath": "staticwebassets\\img\\水溫.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\水量.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\水量.png",
       "PackagePath": "staticwebassets\\img\\水量.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\沖煮時間.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\沖煮時間.png",
       "PackagePath": "staticwebassets\\img\\沖煮時間.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\研磨粗細.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\研磨粗細.png",
       "PackagePath": "staticwebassets\\img\\研磨粗細.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\img\\萃取係數.png",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\img\\萃取係數.png",
       "PackagePath": "staticwebassets\\img\\萃取係數.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\Detail.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\Detail.js",
       "PackagePath": "staticwebassets\\js\\Detail.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\DetailEn.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\DetailEn.js",
       "PackagePath": "staticwebassets\\js\\DetailEn.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\DetailJp.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\DetailJp.js",
       "PackagePath": "staticwebassets\\js\\DetailJp.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\List.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\List.js",
       "PackagePath": "staticwebassets\\js\\List.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\ListEn.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\ListEn.js",
       "PackagePath": "staticwebassets\\js\\ListEn.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\ListJp.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\ListJp.js",
       "PackagePath": "staticwebassets\\js\\ListJp.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\chatbot.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\chatbot.js",
       "PackagePath": "staticwebassets\\js\\chatbot.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\chatbotEn.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\chatbotEn.js",
       "PackagePath": "staticwebassets\\js\\chatbotEn.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\chatbotJp.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\chatbotJp.js",
       "PackagePath": "staticwebassets\\js\\chatbotJp.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\index.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\index.js",
       "PackagePath": "staticwebassets\\js\\index.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\indexEn.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\indexEn.js",
       "PackagePath": "staticwebassets\\js\\indexEn.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\indexJp.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\indexJp.js",
       "PackagePath": "staticwebassets\\js\\indexJp.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\chuu0\\Desktop\\main_html\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
