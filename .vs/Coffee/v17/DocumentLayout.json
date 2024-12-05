@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\chuu0\\desktop\\main_html\\views\\account\\member.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\account\\member.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\chuu0\\desktop\\main_html\\views\\account\\login.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\account\\login.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +21,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 320,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 348,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
@@ -28,9 +32,28 @@
               "RelativeDocumentMoniker": "Views\\Account\\Member.cshtml",
               "ToolTip": "C:\\Users\\chuu0\\Desktop\\main_html\\Views\\Account\\Member.cshtml",
               "RelativeToolTip": "Views\\Account\\Member.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-05T13:36:49.377Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 292,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\chuu0\\Desktop\\main_html\\Views\\Account\\Login.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml.css",
+              "ToolTip": "C:\\Users\\chuu0\\Desktop\\main_html\\Views\\Account\\Login.cshtml.css",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-05T16:32:44.065Z",
               "EditorCaption": ""
             },
             {
@@ -41,7 +64,7 @@
               "RelativeDocumentMoniker": "Views\\Account\\Member.cshtml.css",
               "ToolTip": "C:\\Users\\chuu0\\Desktop\\main_html\\Views\\Account\\Member.cshtml.css",
               "RelativeToolTip": "Views\\Account\\Member.cshtml.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAewCEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-05T14:09:28.84Z",
               "EditorCaption": ""

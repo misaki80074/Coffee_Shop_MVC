@@ -1,4 +1,5 @@
-﻿.SignOutBtn {
+﻿/*主畫面*/
+.SignOutBtn {
     background-color: transparent;
     border: none;
     text-decoration: underline;
@@ -8,17 +9,34 @@
 
 .nav-tabs {
     margin: 0 10px 0 10px;
+    color: #2e724a;
+    font-weight: bold;
 }
 
-.tab-content {
-/*    display: flex;*/
-    align-items: center;
-/*    width: 80%;*/
+.nav-link {
+    color: black;
 }
 
-.form-control {
-/*    width: 33%;*/
+    .nav-link:focus, .nav-link:hover {
+        color: #2e724a;
+    }
+
+    .nav-link.active {
+        color: #2e724a;
+        font-weight: bold;
+    }
+
+.infoDiv {
+    display: grid;
+    margin-inline: auto;
+    width: 35%;
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
+
+    .infoDiv label{
+        font-size: 18px;
+    }
 
     .form-control:focus {
         border-color: #2e724a;
@@ -38,5 +56,119 @@
 
 .changeBtnDiv {
     position: relative;
-    left: 40%;
+    left: 80%;
+}
+
+.CancelChangeBtn,
+.CloseBtn {
+    margin-right: 10px;
+    background-color: #F0FFF0;
+    border: 1px solid #2e724a;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
+    .CancelChangeBtn:hover,
+    .CloseBtn:hover{
+        border-color: black;
+    }
+
+.SaveChangeBtn,
+.OrderCheckBtn,
+.UpdateBtn {
+    background-color: #2e724a;
+    border: 1px solid #2e724a;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+    .SaveChangeBtn:hover,
+    .OrderCheckBtn:hover,
+    .UpdateBtn:hover {
+        background-color: white;
+        color: #2e724a;
+    }
+
+.oderDiv {
+    display: grid;
+    margin-inline: auto;
+    width: 90%;
+    margin-bottom: 500px;
+}
+
+td,tr {
+    vertical-align:middle;
+    text-align:center;
+    font-size: 18px;
+}
+
+/* Modal */
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* 修改密碼 Modal */
+#CurrentPwd,
+#NewPwd,
+#CheckNewPwd {
+    display: inline;
+    width: 60%;
+}
+
+.ChangePwdModal_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.ChangePwdModal_body input {
+    margin: 10px 0;
+    width: 50%;
+}
+
+    .ChangePwdModal_body svg {
+        fill: #2e724a;
+        margin-left: 130px;
+    }
+
+/* 查閱訂單 Modal */
+.modal-body h2 {
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: #2e724a;
+}
+
+#OrderCheckModal .modal-body {
+    background-color: #F0FFF0;
+}
+
+td img {
+    width: 10%;
+    display: inline;
+    margin-left: 80px;
+}
+
+td span {
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.productTd {
+    max-width: 300px;
+    text-align:left;
+}
+
+    .totalDiv table {
+        margin-left: auto;
+        margin-right: 80px;
+    }
+.totalDiv tr {
+    display:block;
+    padding: 5px 0;
 }
