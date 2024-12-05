@@ -1940,3 +1940,4 @@ C:\Users\chuu0\Desktop\main_html\obj\Debug\net8.0\Coffee.pdb
 C:\Users\chuu0\Desktop\main_html\obj\Debug\net8.0\Coffee.genruntimeconfig.cache
 C:\Users\chuu0\Desktop\main_html\obj\Debug\net8.0\ref\Coffee.dll
 C:\Users\chuu0\Desktop\main_html\obj\Debug\net8.0\scopedcss\Views\Account\Login.cshtml.rz.scp.css
+C:\Users\chuu0\Desktop\main_html\obj\Debug\net8.0\scopedcss\Views\Account\Register.cshtml.rz.scp.css

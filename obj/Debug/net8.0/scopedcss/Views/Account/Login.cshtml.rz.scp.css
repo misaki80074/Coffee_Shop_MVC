@@ -10,6 +10,11 @@ label[b-g4ihlm84sv] {
     font-size: 18px;
 }
 
+.form-control:focus[b-g4ihlm84sv] {
+    border-color: #2e724a;
+    box-shadow: none;
+}
+
 .FormDiv[b-g4ihlm84sv] {
     display: flex;
     flex-direction: column;

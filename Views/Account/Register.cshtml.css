@@ -1,4 +1,4 @@
-h1[b-or7bm71rte] {
+﻿h1 {
     display: grid;
     place-content: center;
     margin: 60px 0;
@@ -6,18 +6,18 @@ h1[b-or7bm71rte] {
     font-weight: bolder;
 }
 
-label[b-or7bm71rte] {
+label {
     font-size: 18px;
 }
 
-.FormDiv[b-or7bm71rte] {
+.FormDiv {
     display: flex;
     flex-direction: column;
     width: 35%;
     margin: auto;
 }
 
-button[b-or7bm71rte] {
+button {
     font-size: 20px;
     background-color: #2e724a;
     border: 1px solid #2e724a;
@@ -28,14 +28,14 @@ button[b-or7bm71rte] {
     margin: 20px 0;
 }
 
-    button:hover[b-or7bm71rte] {
+    button:hover {
         background-color: white;
         color: #2e724a;
         border: 1px solid #2e724a;
         font-weight: bold;
     }
 
-.form-control:focus[b-or7bm71rte] {
+.form-control:focus {
     border-color: #2e724a;
     box-shadow: none;
 }

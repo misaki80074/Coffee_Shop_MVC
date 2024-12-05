@@ -30,10 +30,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNZW1iZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chuu0/Desktop/main_html/Views/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/chuu0/Desktop/main_html/Views/CartEn/commodity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydEVuXGNvbW1vZGl0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -177,6 +173,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/chuu0/Desktop/main_html/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-g4ihlm84sv
+
+[C:/Users/chuu0/Desktop/main_html/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-or7bm71rte
 
 [C:/Users/chuu0/Desktop/main_html/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=

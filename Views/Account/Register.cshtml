@@ -1,7 +1,36 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
 }
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-<h1>註冊</h1>
+<h1>註冊會員</h1>
+<form>
+    <div class="FormDiv">
+        <div class="mb-3">
+            <label for="InputUserId" class="form-label">帳&nbsp;號</label>
+            <input type="text" class="form-control" id="InputUserId">
+        </div>
+        <div class="mb-3">
+            <label for="InputPassword" class="form-label">密&nbsp;碼</label>
+            <input type="password" class="form-control" id="InputPassword">
+        </div>
+        <div class="mb-3">
+            <label for="CheckPassword" class="form-label">再次輸入密碼</label>
+            <input type="password" class="form-control" id="CheckPassword">
+        </div>
+        <div class="mb-3">
+            <label for="InputName" class="form-label">姓&nbsp;名</label>
+            <input type="text" class="form-control" id="InputName">
+        </div>
+        <div class="mb-3">
+            <label for="InputPhone" class="form-label">手機號碼</label>
+            <input type="tel" class="form-control" id="InputPhone">
+        </div>
+        <div class="mb-3">
+            <label for="InputEmail" class="form-label">電子信箱</label>
+            <input type="email" class="form-control" id="InputEmail">
+        </div>
+        <button type="submit">送&nbsp;出</button>
+    </div>
+</form>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
