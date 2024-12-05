@@ -1,0 +1,42 @@
+﻿.SignOutBtn {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #FF9224;
+    margin: 10px 0 10px 10px;
+}
+
+.nav-tabs {
+    margin: 0 10px 0 10px;
+}
+
+.tab-content {
+/*    display: flex;*/
+    align-items: center;
+/*    width: 80%;*/
+}
+
+.form-control {
+/*    width: 33%;*/
+}
+
+    .form-control:focus {
+        border-color: #2e724a;
+        box-shadow: none;
+    }
+
+.ResetPwd {
+    margin-right: 60px;
+}
+
+#ResetPwdBtn {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #FF9224;
+}
+
+.changeBtnDiv {
+    position: relative;
+    left: 40%;
+}

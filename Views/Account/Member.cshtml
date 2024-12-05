@@ -1,6 +1,70 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
 }
-<h1>會員中心</h1>
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<button class="SignOutBtn">登出</button>
+
+@* <nav> *@
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info" type="button" role="tab" aria-controls="nav-info" aria-selected="true">個人資訊</button>
+    <button class="nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false">訂單資訊</button>
+    </div>
+@* </nav> *@
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+        <form>
+            <div class="mb-3">
+                <label for="InputName" class="form-label">姓&nbsp;名</label>
+                <input type="text" class="form-control" id="InputName">
+            </div>
+            <div class="mb-3">
+                <label for="InputPhone" class="form-label">手機號碼</label>
+                <input type="tel" class="form-control" id="InputPhone">
+            </div>
+            <div class="mb-3">
+                <label for="InputEmail" class="form-label">電子信箱</label>
+                <input type="email" class="form-control" id="InputEmail">
+            </div>
+            <div class="mb-3">
+                <label for="InputAddress" class="form-label">寄送地址</label>
+                <input type="text" class="form-control" id="InputAddress">
+            </div>
+            <label for="ResetPwd" class="form-label ResetPwd">密碼</label>
+            <button type="button" id="ResetPwdBtn">設定新密碼</button>
+            <br/>
+            <div class="mb-3 changeBtnDiv">
+                <button type="reset" class="CancelChangeBtn">取消</button>
+                <button type="submit" class="SaveChangeBtn">儲存變更</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">訂單編號</th>
+                    <th scope="col">訂單日期</th>
+                    <th scope="col">合計</th>
+                    <th scope="col">訂單狀況</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">O2411201159</td>            @* 訂單編號 *@
+                    <td>2024-11-20</td>                         @* 訂單日期 *@
+                    <td>6420</td>                               @* 合計 *@
+                    <td>新單</td>                               @* 訂單狀況 *@
+                    <td><button>查閱</button></td>              @* 查閱button *@
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

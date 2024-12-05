@@ -1,0 +1,42 @@
+.SignOutBtn[b-k14d557v0y] {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #FF9224;
+    margin: 10px 0 10px 10px;
+}
+
+.nav-tabs[b-k14d557v0y] {
+    margin: 0 10px 0 10px;
+}
+
+.tab-content[b-k14d557v0y] {
+/*    display: flex;*/
+    align-items: center;
+/*    width: 80%;*/
+}
+
+.form-control[b-k14d557v0y] {
+/*    width: 33%;*/
+}
+
+    .form-control:focus[b-k14d557v0y] {
+        border-color: #2e724a;
+        box-shadow: none;
+    }
+
+.ResetPwd[b-k14d557v0y] {
+    margin-right: 60px;
+}
+
+#ResetPwdBtn[b-k14d557v0y] {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #FF9224;
+}
+
+.changeBtnDiv[b-k14d557v0y] {
+    position: relative;
+    left: 40%;
+}

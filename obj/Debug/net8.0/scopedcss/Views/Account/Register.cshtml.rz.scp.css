@@ -1,0 +1,41 @@
+h1[b-or7bm71rte] {
+    display: grid;
+    place-content: center;
+    margin: 60px 0;
+    color: #2e724a;
+    font-weight: bolder;
+}
+
+label[b-or7bm71rte] {
+    font-size: 18px;
+}
+
+.FormDiv[b-or7bm71rte] {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: auto;
+}
+
+button[b-or7bm71rte] {
+    font-size: 20px;
+    background-color: #2e724a;
+    border: 1px solid #2e724a;
+    color: white;
+    border-radius: 3px;
+    padding: 1.5px 0;
+    height: 40px;
+    margin: 20px 0;
+}
+
+    button:hover[b-or7bm71rte] {
+        background-color: white;
+        color: #2e724a;
+        border: 1px solid #2e724a;
+        font-weight: bold;
+    }
+
+.form-control:focus[b-or7bm71rte] {
+    border-color: #2e724a;
+    box-shadow: none;
+}
