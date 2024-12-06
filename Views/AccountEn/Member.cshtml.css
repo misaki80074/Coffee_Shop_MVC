@@ -135,7 +135,7 @@ td, tr {
 #NewPwd,
 #CheckNewPwd {
     display: inline;
-    width: 60%;
+    width: 70%;
 }
 
 .ChangePwdModal_body {
@@ -150,7 +150,7 @@ td, tr {
 
     .ChangePwdModal_body svg {
         fill: #2e724a;
-        margin-left: 130px;
+        margin-left: 100px;
     }
 
 .UpdateBtn {
@@ -239,14 +239,26 @@ td span {
         width:80%;
     }
 
-/*    查閱訂單 Modal*/
-    td img {
-        width:25%;
-        margin-left:50px;
-    }
+        #NewPwd::placeholder{
+            font-size: 11px;
+        }
 
+
+
+/*    查閱訂單 Modal*/
     .productTd {
         max-width: 150px;
+        text-align: center;
+        vertical-align:middle;
     }
 
+    td img {
+        width: 25%;
+        margin-left: 0px;
+    }
+
+    td span{
+        vertical-align: middle;
+        margin-left: 5px;
+    }
 }
