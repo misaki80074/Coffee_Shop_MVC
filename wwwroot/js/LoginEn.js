@@ -16,14 +16,14 @@ $('.LoginBtn').on('click', function () {
         },
         success: function (data) {
             console.log(data)
-            if (data.status === "0") {
+            if (data === "0") {
                 alert(`Welcome! Let's go shopping!`);
-                window.location.href = '/';  
+                window.location.href = '/Home/IndexEn';  
             } else if (data === "1") {
-                alert('You need to create an account to continue.');
+                alert('Invalid password. Please try again.');
                 window.location.href = '/AccountEn/Register';  
             } else if (data === "2") {
-                alert('Invalid password. Please try again.');
+                alert('You need to create an account to continue.');
             }
         },
         error: function () {

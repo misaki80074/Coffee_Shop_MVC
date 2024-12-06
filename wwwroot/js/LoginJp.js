@@ -16,14 +16,14 @@ $('.LoginBtn').on('click', function () {
         },
         success: function (data) {
             console.log(data)
-            if (data.status === "0") {
+            if (data === "0") {
                 alert('ログイン完了！お買い物をお楽しみください！');
                 window.location.href = '/Home/IndexJp';  
             } else if (data === "1") {
-                alert('まだ会員登録がお済みではありません。こちらから登録手続きをお願いします。');
+                alert('パスワードが一致しません。もう一度お試しください。');
                 window.location.href = '/AccountJp/Register';  
             } else if (data === "2") {
-                alert('パスワードが一致しません。もう一度お試しください。');
+                alert('まだ会員登録がお済みではありません。こちらから登録手続きをお願いします。');
             }
         },
         error: function () {

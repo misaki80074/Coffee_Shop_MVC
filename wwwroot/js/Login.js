@@ -18,12 +18,12 @@ $('.LoginBtn').on('click', function () {
             console.log(data)
             if (data === "0") {
                 alert('登入成功，開始購物吧!');
-                window.location.href = '/';  
+                window.location.href = '/Home/Index';  
             } else if (data === "1") {
-                alert('該帳號未註冊，請註冊!');
+                alert('登入失敗，密碼錯誤!');
                 window.location.href = '/Account/Register';  
             } else if (data === "2") {
-                alert('登入失敗，密碼錯誤!');
+                alert('該帳號未註冊，請註冊!');
             }
         },
         error: function () {
