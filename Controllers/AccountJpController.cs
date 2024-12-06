@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Member.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Coffee.Controllers
 {
@@ -14,6 +15,7 @@ namespace Coffee.Controllers
 			return View();
 		}
 
+		[AuthFilter]
 		public IActionResult Member()
 		{
 			return View();
