@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\true_main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\wwwroot\\data\\chatboten.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:wwwroot\\data\\chatboten.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\account\\member.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\account\\member.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\account\\member.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,40 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "chatbotEn.json",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\data\\chatbotEn.json",
-              "RelativeDocumentMoniker": "wwwroot\\data\\chatbotEn.json",
-              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\wwwroot\\data\\chatbotEn.json",
-              "RelativeToolTip": "wwwroot\\data\\chatbotEn.json",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-06T01:12:13.84Z",
+              "Title": "Member.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Member.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Account\\Member.cshtml.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Member.cshtml.css",
+              "RelativeToolTip": "Views\\Account\\Member.cshtml.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-06T01:52:46.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T01:08:52.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Member.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Member.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Member.cshtml",
               "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Member.cshtml",
               "RelativeToolTip": "Views\\Account\\Member.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwK0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T13:36:49.377Z",
+              "WhenOpened": "2024-12-06T01:48:15.224Z",
               "EditorCaption": ""
             }
           ]
