@@ -5,7 +5,6 @@ using System.Data;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 using Coffee;
-using Member.Controllers;
 
 
 namespace Coffee.Controllers

@@ -8,7 +8,7 @@ $('.LoginBtn').on('click', function () {
 
     // 傳送資料到後端
     $.ajax({
-        url: '/Member/Login',
+        url: '/AccountJp/Login',
         type: 'POST',
         data: {
             userId: UserId,
