@@ -1,0 +1,264 @@
+/*主畫面*/
+.SignOutBtn {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #FF9224;
+    margin: 10px 0 10px 10px;
+}
+
+.nav-tabs {
+    margin: 0 10px 0 10px;
+    color: #2e724a;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: black;
+}
+
+    .nav-link:focus, .nav-link:hover {
+        color: #2e724a;
+    }
+
+    .nav-link.active {
+        color: #2e724a;
+        font-weight: bold;
+    }
+
+.infoDiv {
+    display: grid;
+    margin-inline: auto;
+    width: 35%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+    .infoDiv label {
+        font-size: 18px;
+    }
+
+.form-control:focus {
+    border-color: #2e724a;
+    box-shadow: none;
+}
+
+.ResetPwd {
+    margin-right: 60px;
+}
+
+#ResetPwdBtn {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #FF9224;
+}
+
+    #ResetPwdBtn:hover {
+        color: #2e724a;
+    }
+
+    .changeBtnDiv {
+        position: relative;
+        left: 80%;
+    }
+
+.CancelChangeBtn,
+.CloseBtn {
+    margin-right: 10px;
+    background-color: #F0FFF0;
+    border: 1px solid #2e724a;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+    .CancelChangeBtn:hover,
+    .CloseBtn:hover {
+        border-color: black;
+    }
+
+.SaveChangeBtn,
+.OrderCheckBtn,
+.UpdateBtn {
+    background-color: #2e724a;
+    border: 1px solid #2e724a;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size:18px;
+}
+
+    .SaveChangeBtn:hover,
+    .OrderCheckBtn:hover,
+    .UpdateBtn:hover {
+        background-color: white;
+        color: #2e724a;
+    }
+
+.oderDiv {
+    display: grid;
+    margin-inline: auto;
+    width: 90%;
+    margin-bottom: 500px;
+}
+
+td, tr {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Modal */
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.nav-tabs .nav-link {
+    font-size: 18px;
+}
+
+/* 修改密碼 Modal */
+.ChangePwdModal_body h2 {
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: #2e724a;
+}
+
+#CurrentPwd,
+#NewPwd,
+#CheckNewPwd {
+    display: inline;
+    width: 70%;
+}
+
+.ChangePwdModal_body {
+    display: flex;
+    flex-direction: column;
+}
+
+    .ChangePwdModal_body input {
+        margin: 10px 0;
+        width: 50%;
+    }
+
+    .ChangePwdModal_body svg {
+        fill: #2e724a;
+        margin-left: 100px;
+    }
+
+.UpdateBtn {
+    margin-right: 50px;
+}
+
+#ChangePwdModal .modal-footer {
+    margin-bottom: 30px;
+}
+/* 查閱訂單 Modal */
+.modal-body h2 {
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: #2e724a;
+}
+
+.modal-xl .modal-header {
+    background-color: #F0FFF0;
+}
+
+#OrderCheckModal .modal-body {
+    background-color: #F0FFF0;
+}
+
+td img {
+    width: 10%;
+    display: inline;
+    margin-left: 80px;
+}
+
+td span {
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.productTd {
+    max-width: 300px;
+    text-align: left;
+}
+
+.totalDiv table {
+    margin-left: auto;
+    margin-right: 80px;
+}
+
+.totalDiv tr {
+    display: block;
+    padding: 5px 0;
+    text-align: right;
+}
+
+.totalDiv th {
+    min-width: 131.99px;
+    
+}
+
+
+/*RWD*/
+@media screen and (max-width: 768px) {
+    /*    主畫面*/
+    .infoDiv {
+        width: 60%;
+    }
+
+    .changeBtnDiv {
+        margin-top: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .SignOutBtn {
+        padding:5px;
+        font-size:18px;
+        margin-left:20px;
+    }
+
+    /*    編輯密碼 Modal*/
+    .ChangePwdModal_body svg {
+        margin-left: 25px;
+    }
+
+    #CurrentPwd, #NewPwd, #CheckNewPwd {
+        width:80%;
+    }
+
+        #NewPwd::placeholder{
+            font-size: 11px;
+        }
+
+
+
+/*    查閱訂單 Modal*/
+    .productTd {
+        max-width: 150px;
+        text-align: center;
+        vertical-align:middle;
+    }
+
+    td img {
+        width: 25%;
+        margin-left: 0px;
+    }
+
+    td span{
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+}

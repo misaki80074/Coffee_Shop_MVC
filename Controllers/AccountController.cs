@@ -29,6 +29,5 @@ namespace Coffee.Controllers
         public IActionResult Member()
         {
             return View();
-        }
-    }
-}
+      }
+ }

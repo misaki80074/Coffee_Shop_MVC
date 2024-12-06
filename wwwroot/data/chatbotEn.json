@@ -4,22 +4,22 @@
       {
         "year": "2024.10.15",
         "title": "Assembling a founding team",
-        "description": "We’re excited to be building this new brand together with a team of like-minded individuals."
+        "description": ""
       },
       {
         "year": "2024.10.30",
         "title": "Branding",
-        "description": "Our brand is officially launched! We are fully committed to providing our customers with premium specialty coffee."
+        "description": ""
       },
       {
         "year": "2024.11.04",
         "title": "Website Setup",
-        "description": "We're starting to design and develop our brand's website, focusing on an intuitive and attractive online shopping experience for specialty coffee."
+        "description": ""
       },
       {
         "year": "2024.11.30",
         "title": "Officially Launched",
-        "description": "Our website is now live, featuring our full product line. The response has been fantastic!"
+        "description": ""
       }
     ],
     "About our team": [
@@ -27,53 +27,53 @@
         "name": "Syu",
         "position": "Order system coordinator",
         "image": "/img/Product/product_img_2.jpg",
-        "description": "Responsible for designing and developing the order processing system and workflow, including the shopping cart function."
+        "description": ""
       },
       {
         "name": "Wei",
         "position": "Product pages & charbot coordinator",
         "image": "/img/Product/product_img_2.jpg",
-        "description": "Responsible for designing product detail pages and developing a flow-based chatbot for user interaction."
+        "description": ""
       },
       {
         "name": "Liang",
         "position": "Back-font system coordinator",
         "image": "/img/Product/product_img_2.jpg",
-        "description": "Responsible for developing the back-end system and integrating all website functions."
+        "description": ""
       },
       {
         "name": "Chen",
         "position": "Product catalog coordinator",
         "image": "/img/Product/product_img_2.jpg",
-        "description": "Responsible for designing the product catalog and implementing quick filtering and sorting functions."
+        "description": ""
       },
       {
         "name": "Lin",
         "position": "Account system coordinator",
         "image": "/img/Product/product_img_2.jpg",
-        "description": "Responsible for member registration, login, management, and the design of the membership permission system."
+        "description": ""
       },
       {
         "name": "Chiang",
         "position": "Homepage coordinator",
         "image": "/img/Product/product_img_2.jpg",
-        "description": "Responsible for the overall design and planning of the homepage, including the collection of coffee materials."
+        "description": ""
       }
     ]
   },
   "Flavor Guide to Coffee Bean Selection": {
     "Taste Preference": {
-      "Sourer": "~/List/AllEn/?sour=5",
-      "Sweeter": "~/List/AllEn/?sweet=5",
-      "More bitter": "~/List/AllEn/?bitter=4"
+      "Sourer": "~/ListEn?sour=5",
+      "Sweeter": "~/ListEn/?sweet=5",
+      "More bitter": "~/ListEn/?bitter=4"
     },
     "Flavor Preference": {
-      "flower": "~/List/%E9%A2%A8%E5%91%B3/%E8%8A%B1%E9%A6%99",
-      "fruit": "~/List/%E9%A2%A8%E5%91%B3/%E6%9E%9C%E9%A6%99",
-      "tea": "~/List/%E9%A2%A8%E5%91%B3/%E8%8C%B6%E9%A6%99",
-      "wine": "~/List/%E9%A2%A8%E5%91%B3/%E9%85%92%E9%A6%99",
-      "nut": "~/List/%E9%A2%A8%E5%91%B3/%E5%A0%85%E6%9E%9C%E9%A6%99",
-      "chocolate": "~/List/%E9%A2%A8%E5%91%B3/%E5%B7%A7%E5%85%8B%E5%8A%9B"
+      "flower": "~/ListEn/Flavor/flower",
+      "fruit": "~/ListEn/Flavor/fruit",
+      "tea": "~/ListEn/Flavor/tea",
+      "wine": "~/ListEn/Flavor/wine",
+      "nut": "~/ListEn/Flavor/nut",
+      "chocolate": "~/ListEn/Flavor/chocolate"
     }
   },
   "Trivia of Coffee": {
