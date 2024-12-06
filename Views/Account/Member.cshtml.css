@@ -54,10 +54,14 @@
     color: #FF9224;
 }
 
-.changeBtnDiv {
-    position: relative;
-    left: 80%;
-}
+    #ResetPwdBtn:hover {
+        color: #2e724a;
+    }
+
+    .changeBtnDiv {
+        position: relative;
+        left: 80%;
+    }
 
 .CancelChangeBtn,
 .CloseBtn {
@@ -66,6 +70,7 @@
     border: 1px solid #2e724a;
     padding: 7px 10px;
     border-radius: 5px;
+    font-size: 18px;
 }
 
     .CancelChangeBtn:hover,
@@ -81,6 +86,7 @@
     padding: 7px 10px;
     border-radius: 5px;
     color: white;
+    font-size:18px;
 }
 
     .SaveChangeBtn:hover,
@@ -112,7 +118,19 @@ td, tr {
     border-top: none;
 }
 
+.nav-tabs .nav-link {
+    font-size: 18px;
+}
+
 /* 修改密碼 Modal */
+.ChangePwdModal_body h2 {
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: #2e724a;
+}
+
 #CurrentPwd,
 #NewPwd,
 #CheckNewPwd {
@@ -135,6 +153,13 @@ td, tr {
         margin-left: 130px;
     }
 
+.UpdateBtn {
+    margin-right: 50px;
+}
+
+#ChangePwdModal .modal-footer {
+    margin-bottom: 30px;
+}
 /* 查閱訂單 Modal */
 .modal-body h2 {
     display: grid;
@@ -142,6 +167,10 @@ td, tr {
     font-weight: bold;
     margin: 10px 0 20px;
     color: #2e724a;
+}
+
+.modal-xl .modal-header {
+    background-color: #F0FFF0;
 }
 
 #OrderCheckModal .modal-body {
@@ -172,4 +201,45 @@ td span {
 .totalDiv tr {
     display: block;
     padding: 5px 0;
+}
+
+/*RWD*/
+@media screen and (max-width: 768px) {
+/*    主畫面*/
+    .infoDiv {
+        width: 60%;
+    }
+
+    .changeBtnDiv {
+        margin-top: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .SignOutBtn {
+        padding:5px;
+        font-size:18px;
+        margin-left:20px;
+    }
+
+    /*    編輯密碼 Modal*/
+    .ChangePwdModal_body svg {
+        margin-left: 25px;
+    }
+
+    #CurrentPwd, #NewPwd, #CheckNewPwd {
+        width:80%;
+    }
+
+/*    查閱訂單 Modal*/
+    td img {
+        width:25%;
+        margin-left:50px;
+    }
+
+    .productTd {
+        max-width: 150px;
+    }
+
 }
