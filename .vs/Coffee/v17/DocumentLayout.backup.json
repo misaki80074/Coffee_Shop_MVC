@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\true_main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\account\\member.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\account\\member.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\accounten\\member.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\accounten\\member.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\account\\register.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\account\\register.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\accounten\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\accounten\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|c:\\users\\user\\desktop\\true_main\\views\\accounten\\member.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{12FF9CEB-2213-4FAB-8FB8-74BB86B6E1B5}|Coffee.csproj|solutionrelative:views\\accounten\\member.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 248,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Member.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Member.cshtml.css",
-              "RelativeDocumentMoniker": "Views\\Account\\Member.cshtml.css",
-              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Member.cshtml.css",
-              "RelativeToolTip": "Views\\Account\\Member.cshtml.css",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAAAM0AAAAeAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\AccountEn\\Member.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\AccountEn\\Member.cshtml.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\AccountEn\\Member.cshtml.css",
+              "RelativeToolTip": "Views\\AccountEn\\Member.cshtml.css",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAMsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-06T02:35:41.818Z",
+              "WhenOpened": "2024-12-06T07:24:29.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Register.cshtml.css",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml.css",
-              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\Account\\Register.cshtml.css",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml.css",
-              "ViewState": "AgIAACcAAAAAAAAAAAAgwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-06T02:33:31.969Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\AccountEn\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\AccountEn\\Login.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\AccountEn\\Login.cshtml",
+              "RelativeToolTip": "Views\\AccountEn\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T07:00:21.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Member.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\true_main\\Views\\AccountEn\\Member.cshtml",
+              "RelativeDocumentMoniker": "Views\\AccountEn\\Member.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\true_main\\Views\\AccountEn\\Member.cshtml",
+              "RelativeToolTip": "Views\\AccountEn\\Member.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAMwD8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T07:00:16.895Z",
               "EditorCaption": ""
             }
           ]
