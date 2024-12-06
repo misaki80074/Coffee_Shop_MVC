@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿/*主畫面*/
 .SignOutBtn {
+=======
+﻿.SignOutBtn {
+>>>>>>> 41c205bebbc7c906e8e437d3ff49961d1d78133b
     background-color: transparent;
     border: none;
     text-decoration: underline;
@@ -9,6 +13,7 @@
 
 .nav-tabs {
     margin: 0 10px 0 10px;
+<<<<<<< HEAD
     color: #2e724a;
     font-weight: bold;
 }
@@ -38,6 +43,20 @@
         font-size: 18px;
     }
 
+=======
+}
+
+.tab-content {
+/*    display: flex;*/
+    align-items: center;
+/*    width: 80%;*/
+}
+
+.form-control {
+/*    width: 33%;*/
+}
+
+>>>>>>> 41c205bebbc7c906e8e437d3ff49961d1d78133b
     .form-control:focus {
         border-color: #2e724a;
         box-shadow: none;
@@ -56,6 +75,7 @@
 
 .changeBtnDiv {
     position: relative;
+<<<<<<< HEAD
     left: 80%;
 }
 
@@ -171,4 +191,7 @@ td span {
 .totalDiv tr {
     display:block;
     padding: 5px 0;
+=======
+    left: 40%;
+>>>>>>> 41c205bebbc7c906e8e437d3ff49961d1d78133b
 }
