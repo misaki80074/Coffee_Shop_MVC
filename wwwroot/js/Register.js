@@ -27,7 +27,7 @@ $('#InputUserId').on('blur', function () {
     FrontInputUserId = UserId; 
     
     $.ajax({
-        url: '/Member/CheckUserid',
+        url: '/Account/CheckUserid',
         type: 'POST',
         contentType: 'application/json',
         // 帳號轉成 JSON 格式
@@ -121,7 +121,7 @@ $('#SubmitButton').on('click', function (e) {
     const FormData = $('#registerForm').serialize();  
     //console.log(FormData)
     $.ajax({
-        url: '/Member/Register',
+        url: '/Account/Register',
         type: 'POST',
         data: FormData,  // 是空的  // 發送序列化後的表單資料
         success: function (data) {
