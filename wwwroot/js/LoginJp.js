@@ -17,17 +17,17 @@ $('.LoginBtn').on('click', function () {
         success: function (data) {
             console.log(data.status)
             if (data.status === "0") {
-                alert('登入成功，開始購物吧!');
-                window.location.href = '/';  
+                alert('ログイン完了！お買い物をお楽しみください！');
+                window.location.href = '/Home/IndexJp';  
             } else if (data.status === "1") {
-                alert('該帳號未註冊，請註冊!');
-                window.location.href = '/Account/Register';  
+                alert('まだ会員登録がお済みではありません。こちらから登録手続きをお願いします。');
+                window.location.href = '/AccountJp/Register';  
             } else if (data.status === "2") {
-                alert('登入失敗，密碼錯誤!');
+                alert('パスワードが一致しません。もう一度お試しください。');
             }
         },
         error: function () {
-            alert('伺服器錯誤');
+            alert('エラー');
         }
     });
 });
@@ -35,5 +35,5 @@ $('.LoginBtn').on('click', function () {
 
 // ------------------------------------------------------- 註冊按鈕 ------------------------------------------------------- //
 $('.RegisterBtn').on('click',function () {
-    window.location.href = "/Account/Register";
+    window.location.href = "/AccountJp/Register";
 })
