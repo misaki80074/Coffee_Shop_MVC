@@ -34,9 +34,9 @@ $('#InputUserId').on('input', function () {
         data: JSON.stringify(UserId), 
         success: function (data) {
             // 0 帳號存在 | 1帳號尚未註冊
-            if (data.status === "0") {
+            if (data === "0") {
                 $('#InputUserIdResult').text('このアカウントはすでに登録されています。').css('color', 'red');
-            } else if (data.status === "1") {
+            } else if (data === "1") {
                 $('#InputUserIdResult').text('登録できます。').css('color', 'green');
             }
         },
@@ -126,8 +126,8 @@ $('#SubmitButton').on('click', function (e) {
         data: FormData,  // 發送序列化後的表單資料
         success: function (data) {
             // 如果註冊成功，顯示成功訊息並導向首頁
-            console.log(data.status)
-            if (data.status === "1") {
+            console.log(data)
+            if (data === "註冊成功") {
                 alert('ご登録ありがとうございます。');
                 window.location.href = '/Home/IndexJp';  
             } else {

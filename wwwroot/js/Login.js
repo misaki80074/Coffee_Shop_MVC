@@ -15,14 +15,14 @@ $('.LoginBtn').on('click', function () {
             password: Password
         },
         success: function (data) {
-            console.log(data.status)
-            if (data.status === "0") {
+            console.log(data)
+            if (data === "0") {
                 alert('登入成功，開始購物吧!');
                 window.location.href = '/';  
-            } else if (data.status === "1") {
+            } else if (data === "1") {
                 alert('該帳號未註冊，請註冊!');
                 window.location.href = '/Account/Register';  
-            } else if (data.status === "2") {
+            } else if (data === "2") {
                 alert('登入失敗，密碼錯誤!');
             }
         },

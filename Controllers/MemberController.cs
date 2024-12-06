@@ -111,7 +111,7 @@ namespace Member.Controllers
         /// <param name="email"></param> 信箱
         /// <returns>註冊成功</returns>
         [HttpPost]
-        public IActionResult Register(string userid, string password, string name, string phone, string email)
+        public IActionResult Register([FromForm]string userid, [FromForm] string password, [FromForm] string name, [FromForm] string phone, [FromForm] string email)
         {
             //產生新的CustomerId
             string customerId = _context.Customers.OrderByDescending(c => c.Id).Select(c => c.CustomerId).FirstOrDefault()!;

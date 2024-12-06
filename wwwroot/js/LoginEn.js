@@ -15,14 +15,14 @@ $('.LoginBtn').on('click', function () {
             password: Password
         },
         success: function (data) {
-            console.log(data.status)
+            console.log(data)
             if (data.status === "0") {
                 alert(`Welcome! Let's go shopping!`);
                 window.location.href = '/';  
-            } else if (data.status === "1") {
+            } else if (data === "1") {
                 alert('You need to create an account to continue.');
                 window.location.href = '/AccountEn/Register';  
-            } else if (data.status === "2") {
+            } else if (data === "2") {
                 alert('Invalid password. Please try again.');
             }
         },

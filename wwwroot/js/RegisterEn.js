@@ -9,7 +9,7 @@ $('input').on('keypress', function (e) {
 // ------------------------------------------------------- 帳號判斷 有無註冊過 ------------------------------------------------------- //
 // 先記錄上次輸入的帳號值
 let FrontInputUserId = ''; 
-$('#InputUserId').on('input', function () {
+$('#InputUserId').on('blur', function () {
     const UserId = $(this).val();
 
     // 輸入有空格 跳出不發送AJAX
@@ -34,9 +34,9 @@ $('#InputUserId').on('input', function () {
         data: JSON.stringify(UserId), 
         success: function (data) {
             // 0 帳號存在 | 1帳號尚未註冊
-            if (data.status === "0") {
+            if (data === "1") {
                 $('#InputUserIdResult').text('This account is already in use.').css('color', 'red');
-            } else if (data.status === "1") {
+            } else if (data === "0") {
                 $('#InputUserIdResult').text('This account can be used.').css('color', 'green');
             }
         },
@@ -127,7 +127,7 @@ $('#SubmitButton').on('click', function (e) {
         success: function (data) {
             // 如果註冊成功，顯示成功訊息並導向首頁
             console.log(data.status)
-            if (data.status === "1") {
+            if (data.status === "註冊成功") {
                 alert('Registration complete.');
                 window.location.href = '/Home/IndexEn';  
             } else {

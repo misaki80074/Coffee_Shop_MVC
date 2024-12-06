@@ -15,14 +15,14 @@ $('.LoginBtn').on('click', function () {
             password: Password
         },
         success: function (data) {
-            console.log(data.status)
+            console.log(data)
             if (data.status === "0") {
                 alert('ログイン完了！お買い物をお楽しみください！');
                 window.location.href = '/Home/IndexJp';  
-            } else if (data.status === "1") {
+            } else if (data === "1") {
                 alert('まだ会員登録がお済みではありません。こちらから登録手続きをお願いします。');
                 window.location.href = '/AccountJp/Register';  
-            } else if (data.status === "2") {
+            } else if (data === "2") {
                 alert('パスワードが一致しません。もう一度お試しください。');
             }
         },

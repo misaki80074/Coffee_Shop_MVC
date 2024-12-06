@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 using Coffee;
+using Member.Controllers;
 
 
 namespace Coffee.Controllers
@@ -70,6 +71,7 @@ namespace Coffee.Controllers
         }
 
         [HttpGet]
+        [AuthFilter]
         public IActionResult Payment()
         {
             return View();
@@ -77,6 +79,7 @@ namespace Coffee.Controllers
 
         [HttpPost]
         [Route("Cart/Payment")]
+        [AuthFilter]
         public IActionResult Payment(IFormCollection form)
         {
             ViewBag.CartId = form["CartID"].ToList();

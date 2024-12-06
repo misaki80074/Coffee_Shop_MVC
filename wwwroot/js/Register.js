@@ -9,7 +9,7 @@ $('input').on('keypress', function (e) {
 // ------------------------------------------------------- 帳號判斷 有無註冊過 ------------------------------------------------------- //
 // 先記錄上次輸入的帳號值
 let FrontInputUserId = ''; 
-$('#InputUserId').on('input', function () {
+$('#InputUserId').on('blur', function () {
     const UserId = $(this).val();
 
     // 輸入有空格 跳出不發送AJAX
@@ -31,12 +31,12 @@ $('#InputUserId').on('input', function () {
         type: 'POST',
         contentType: 'application/json',
         // 帳號轉成 JSON 格式
-        data: JSON.stringify(UserId), 
+        data: { userId: UserId }, 
         success: function (data) {
             // 0 帳號存在 | 1帳號尚未註冊
-            if (data.status === "0") {
+            if (data === "1") {
                 $('#InputUserIdResult').text('帳號已存在').css('color', 'red');
-            } else if (data.status === "1") {
+            } else if (data === "0") {
                 $('#InputUserIdResult').text('帳號尚未註冊').css('color', 'green');
             }
         },
@@ -119,15 +119,15 @@ $('#SubmitButton').on('click', function (e) {
 
     // 序列化表單資料  ( 後端要用FROMFROM
     const FormData = $('#registerForm').serialize();  
-
+    //console.log(FormData)
     $.ajax({
         url: '/Member/Register',
         type: 'POST',
-        data: FormData,  // 發送序列化後的表單資料
+        data: FormData,  // 是空的  // 發送序列化後的表單資料
         success: function (data) {
             // 如果註冊成功，顯示成功訊息並導向首頁
-            console.log(data.status)
-            if (data.status === "1") {
+            console.log(data)
+            if (data === "註冊成功") {
                 alert('註冊成功');
                 window.location.href = '/Home/Index';  
             } else {
