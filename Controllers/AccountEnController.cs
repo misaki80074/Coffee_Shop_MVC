@@ -303,15 +303,17 @@ namespace Coffee.Controllers
         public IActionResult GetOrderDetail(string orderid)
         {
             //訂單明細集合
-            var orderdetails = (from o in _context.VOrderheaderOrderdetails
-                                where o.OrderId == orderid
+            var orderdetails = (from p in _context.ProductEns
+                                join od in _context.Orderdetails on p.ProductId equals od.ProductId
+                                join oh in _context.Orderheaders on od.OrderId equals oh.OrderId
+                                where oh.OrderId == orderid
                                 select new
                                 {
-                                    o.ImgSrc,
-                                    o.ProductName,
-                                    o.UnitPrice,
-                                    o.Qty,
-                                    o.Totle
+                                    p.Img,
+                                    p.ProductName,
+                                    p.Price,
+                                    od.Qty,
+                                    od.Totle
                                 }).ToList();
 
             //總計
