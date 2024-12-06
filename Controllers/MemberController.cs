@@ -288,17 +288,21 @@ namespace Member.Controllers
         [AuthFilter]
         public IActionResult GetOrderDetail(string orderid)
         {
+            //訂單明細集合
             var orderdetails = (from o in _context.VOrderheaderOrderdetails
                                 where o.OrderId == orderid
                                 select new
                                 {
-                                    //o.ImgSrc,
+                                    o.ImgSrc,
                                     o.ProductName,
                                     o.UnitPrice,
                                     o.Qty,
                                     o.Totle
                                 }).ToList();
-            return Json(new { orderdetails });
+
+            //總計
+            var total = _context.Orderheaders.Where(o => o.OrderId == orderid).Select(t => t.Total);
+            return Json(new { orderdetails, Total = total });
         }
     }
 

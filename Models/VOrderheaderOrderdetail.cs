@@ -54,4 +54,6 @@ public partial class VOrderheaderOrderdetail
     public string? Address { get; set; }
 
     public string? ProductName { get; set; }
+
+    public string? ImgSrc { get; set; }
 }
