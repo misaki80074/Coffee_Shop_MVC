@@ -1,0 +1,91 @@
+﻿h1 {
+    display: grid;
+    place-content: center;
+    margin: 60px 0;
+    color: #2e724a;
+    font-weight: bolder;
+}
+
+label {
+    font-size: 18px;
+}
+
+.form-control:focus {
+    border-color: #2e724a;
+    box-shadow: none;
+}
+
+.FormDiv {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: auto;
+}
+
+.forgetPw {
+    text-decoration: none;
+    color: #2e724a;
+    font-size: 12px;
+    text-align: left;
+}
+
+    .forgetPw:hover {
+        text-decoration: underline;
+    }
+
+    .LoginBtn {
+        font-size: 20px;
+        background-color: #2e724a;
+        border: 1px solid #2e724a;
+        color: white;
+        border-radius: 3px;
+        padding: 1.5px 0;
+        height: 40px;
+    }
+
+.RegisterBtn {
+    height: 40px;
+    width: 35%;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid #2e724a;
+    border-radius: 3px;
+    padding: 1.5px 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .LoginBtn:hover,
+    .RegisterBtn:hover {
+        cursor: pointer;
+    }
+
+.LoginBtn:hover {
+    background-color: transparent;
+    color: #2e724a;
+}
+
+.RegisterBtn:hover {
+    background-color: #b6d7a8;
+}
+
+.marginDiv {
+    margin-bottom: 180px;
+}
+
+hr {
+    background-color: transparent;
+    opacity: 1;
+    border: 0;
+    margin: 40px 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+/* RWD */
+@media screen and (max-width: 768px) {
+    .FormDiv,
+    .RegisterBtn {
+        width: 60%;
+    }
+}

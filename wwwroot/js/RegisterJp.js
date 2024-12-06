@@ -2,7 +2,7 @@
 $('input').on('keypress', function (e) {
     if (e.which === 32) {        //  ASCII 編碼
         e.preventDefault();      // 阻止輸入空格
-        alert('禁止輸入空格符號');
+        alert('スペースは入力しないでください。');
     }
 });
 
@@ -14,7 +14,7 @@ $('#InputUserId').on('input', function () {
 
     // 輸入有空格 跳出不發送AJAX
     if (!UserId.trim()) {
-        $('#InputUserIdResult').text('請輸入帳號').css('color', 'orange');
+        $('#InputUserIdResult').text('アカウントを入力してください。').css('color', 'orange');
         return;
     }
 
@@ -35,13 +35,13 @@ $('#InputUserId').on('input', function () {
         success: function (data) {
             // 0 帳號存在 | 1帳號尚未註冊
             if (data.status === "0") {
-                $('#InputUserIdResult').text('帳號已存在').css('color', 'red');
+                $('#InputUserIdResult').text('このアカウントはすでに登録されています。').css('color', 'red');
             } else if (data.status === "1") {
-                $('#InputUserIdResult').text('帳號尚未註冊').css('color', 'green');
+                $('#InputUserIdResult').text('登録できます。').css('color', 'green');
             }
         },
         error: function () {
-            $('#InputUserIdResult').text('伺服器錯誤，請稍後再試').css('color', 'red');
+            $('#InputUserIdResult').text('エラー').css('color', 'red');
         }
     });
 });
@@ -64,11 +64,11 @@ $('#InputPassword').on('input', function () {
 
     // 顯示密碼強度
     if (PassWord.length < PassWordLength) {
-        $('#InputPasswordResult').text('密碼至少需要 8 個字元').css('color', 'red');
+        $('#InputPasswordResult').text('最低8文字を入力してください。').css('color', 'red');
     } else if (!HasUpperABC || !HasLowerABC || !HasNumber) {
-        $('#InputPasswordResult').text('密碼必須包含大寫字母、小寫字母和數字').css('color', 'red');
+        $('#InputPasswordResult').text('大文字、小文字、数字をそれぞれ1文字以上含めてください。').css('color', 'red');
     } else {
-        $('#InputPasswordResult').text('密碼符合要求').css('color', 'green');
+        $('#InputPasswordResult').text('パスワードは有効です').css('color', 'green');
 
     }
 });
@@ -80,9 +80,9 @@ $('#CheckPassword').on('input', function () {
 
     // 檢查兩個密碼欄位是否一致
     if (CheckPassword !== PassWord) {
-        $('#CheckPasswordResult').text('密碼不一致').css('color', 'red');
+        $('#CheckPasswordResult').text('パスワードが一致しませんでした。').css('color', 'red');
     } else {
-        $('#CheckPasswordResult').text('密碼一致').css('color', 'green');
+        $('#CheckPasswordResult').text('パスワードが一致しました。').css('color', 'green');
     }
 });
 
@@ -93,9 +93,9 @@ $('#InputPhone').on('input', function () {
 
     // 檢查手機號碼是否符合格式
     if (!PhonePattern.test(InputPhone)) {
-        $('#InputPhoneResult').text('格式錯誤').css('color', 'red');
+        $('#InputPhoneResult').text('フォーマットが不正です。').css('color', 'red');
     } else {
-        $('#InputPhoneResult').text('格式正確').css('color', 'green');
+        $('#InputPhoneResult').text('フォーマットが有効です。').css('color', 'green');
     }
 });
 
@@ -106,9 +106,9 @@ $('#InputEmail').on('input', function () {
 
     // 檢查手機號碼是否符合格式
     if (!EmailPattern.test(InputEmail)) {
-        $('#InputEmailResult').text('格式錯誤').css('color', 'red');
+        $('#InputEmailResult').text('フォーマットが不正です。').css('color', 'red');
     } else {
-        $('#InputEmailResult').text('格式正確').css('color', 'green');
+        $('#InputEmailResult').text('フォーマットが有効です。').css('color', 'green');
     }
 });
 
@@ -128,14 +128,14 @@ $('#SubmitButton').on('click', function (e) {
             // 如果註冊成功，顯示成功訊息並導向首頁
             console.log(data.status)
             if (data.status === "1") {
-                alert('註冊成功');
-                window.location.href = '/Home/Index';  
+                alert('ご登録ありがとうございます。');
+                window.location.href = '/Home/IndexJp';  
             } else {
-                alert('註冊失敗，請稍後再試');
+                alert('登録処理中にエラーが発生しました。大変申し訳ございませんが、しばらくたってから再度お試しください。');
             }
         },
         error: function () {
-            alert('伺服器錯誤');
+            alert('エラー');
         }
     });
 });
