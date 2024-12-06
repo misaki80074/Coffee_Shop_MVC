@@ -247,7 +247,6 @@ public partial class ProjectContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.Address)
                 .HasMaxLength(100)
-                .IsUnicode(false)
                 .HasColumnName("address");
             entity.Property(e => e.Comment).HasMaxLength(1000);
             entity.Property(e => e.CreateDate).HasColumnType("datetime");
@@ -596,7 +595,6 @@ public partial class ProjectContext : DbContext
 
             entity.Property(e => e.Address)
                 .HasMaxLength(100)
-                .IsUnicode(false)
                 .HasColumnName("address");
             entity.Property(e => e.Comment).HasMaxLength(1000);
             entity.Property(e => e.CustomerId)
@@ -605,6 +603,9 @@ public partial class ProjectContext : DbContext
                 .HasColumnName("CustomerID");
             entity.Property(e => e.CustomerName)
                 .HasMaxLength(12)
+                .IsUnicode(false);
+            entity.Property(e => e.ImgSrc)
+                .HasMaxLength(200)
                 .IsUnicode(false);
             entity.Property(e => e.Mail)
                 .HasMaxLength(50)
