@@ -77,6 +77,7 @@ namespace Coffee.Controllers
 
         [HttpPost]
         [Route("CartEn/Payment")]
+        [AuthFilterEn]
         public IActionResult Payment(IFormCollection form)
         {
             ViewBag.CartId = form["CartID"].ToList();

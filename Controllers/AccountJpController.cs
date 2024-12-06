@@ -332,7 +332,7 @@ namespace Coffee.Controllers
             if (filterContext.HttpContext.Session.GetString("userid") == null)
             {
                 //合併後改成跳轉至登入頁面
-                filterContext.Result = new RedirectResult("Login");
+                filterContext.Result = new RedirectResult("~/AccountJp/Login");
             }
         }
     }
