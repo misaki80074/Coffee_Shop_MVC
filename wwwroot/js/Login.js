@@ -20,10 +20,18 @@ $('.LoginBtn').on('click', function () {
                 alert('登入成功，開始購物吧!');
                 window.location.href = '/Home/Index';  
             } else if (data === "1") {
+<<<<<<< HEAD
                 alert('登入失敗，密碼錯誤!'); 
             } else if (data === "2") {
                 alert('該帳號未註冊，請註冊!');
                 window.location.href = '/Account/Register';
+=======
+                alert('登入失敗，密碼錯誤!');   
+            } else if (data === "2") {
+                alert('該帳號未註冊，請註冊!');
+                window.location.href = '/Account/Register';
+
+>>>>>>> a2976f9f57be87a58d94b8959e49d7b63412a88e
             }
         },
         error: function () {
