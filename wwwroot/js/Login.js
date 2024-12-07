@@ -21,9 +21,9 @@ $('.LoginBtn').on('click', function () {
                 window.location.href = '/Home/Index';  
             } else if (data === "1") {
                 alert('登入失敗，密碼錯誤!');
-                window.location.href = '/Account/Register';  
             } else if (data === "2") {
                 alert('該帳號未註冊，請註冊!');
+                window.location.href = '/Account/Register';  
             }
         },
         error: function () {
