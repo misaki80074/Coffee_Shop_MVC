@@ -31,6 +31,25 @@ namespace Coffee.Controllers
 			return View();
 		}
         //-------------------------------------------------------------
+        
+        /// <summary>
+        /// 取得帳號名稱
+        /// </summary>
+        /// <returns>0:沒有帳號，Json(Name):使用者姓名</returns>
+        [HttpGet]
+        public IActionResult GetUserid()
+        {
+            string userid = HttpContext.Session.GetString("userid")!;
+            if (userid == null)
+            {
+                return new ContentResult() { Content = "0" };
+            }
+            else
+            {
+                var name = _context.Customers.Where(c => c.UserId == userid).Select(c => c.Name);
+                return Json(new { Name = name });
+            }
+        }
 
         /// <summary>
         /// 將密碼雜湊轉換
