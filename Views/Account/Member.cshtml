@@ -117,7 +117,7 @@
             </div>
             <div class="modal-body">
                 <h2>訂單資訊</h2>
-                <table class="table">
+                <table class="table orderDetailsTable">
                     <thead>
                         <tr>
                             <th scope="col">商品資料</th>
@@ -143,7 +143,7 @@
                     <table>
                         <tr>
                             <th>小計&nbsp;：&nbsp; </th>
-                            <td>680</td>
+                            <td class="small-total">680</td>
                         </tr>
                         <tr>
                             <th>運費&nbsp;：&nbsp; </th>
@@ -151,7 +151,7 @@
                         </tr>
                         <tr>
                             <th>合計&nbsp;：&nbsp;</th>
-                            <td>680</td>
+                            <td class="big-total">680</td>
                         </tr>
                     </table>
                 </div>
@@ -164,11 +164,15 @@
 
 
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    var myModal = document.getElementById('myModal')
-    var myInput = document.getElementById('myInput')
+@* <script>
+     var myModal = document.getElementById('myModal')
+     var myInput = document.getElementById('myInput')
 
-    myModal.addEventListener('shown.bs.modal', function () {
-        myInput.focus()
-    })
-</script>
+     myModal.addEventListener('shown.bs.modal', function () {
+         myInput.focus()
+     })
+</script>*@
+
+@* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+<script src="~/js/Member.js"></script>
+@* ------------------------------------------------------------------------------------------------ *@
