@@ -1,6 +1,6 @@
 ﻿// ------------------------------------------------------------取得會員資料  **缺訂單資訊
 $.ajax({
-    url: '/Account/GetMemberInfo',
+    url: '/AccountEn/GetMemberInfo',
     type: 'GET',
     dataType: 'json',
     success: function (data) {
@@ -24,13 +24,44 @@ $.ajax({
             const orderDateParts = order.orderDate.split(' ');
             const formattedDate = new Date(`${orderDateParts[2]}-${orderDateParts[0]}-${orderDateParts[1]}`).toLocaleDateString();
 
+            let replaceStatus = "";
+            switch (order.statusName) {
+                case "新單":
+                    replaceStatus = "New Order";
+                    break;
+                case "賣家已確認":
+                    replaceStatus = "Comfirmed";
+                    break;
+                case "已取消":
+                    replaceStatus = "Canceled";
+                    break;
+                case "已送達":
+                    replaceStatus = "Arrived";
+                    break;
+                case "已取貨":
+                    replaceStatus = "Picked up";
+                    break;
+                case "付款完成":
+                    replaceStatus = "Payment completed";
+                    break;
+                case "已出貨":
+                    replaceStatus = "Shipped";
+                    break;
+                case "已完成":
+                    replaceStatus = "Finished";
+                    break;
+                default:
+                    replaceStatus = "NA";
+                    break;
+            }
+
             const orderRow = `
                 <tr>
                     <td scope="row" class="text-center">${order.orderId}</td>
                     <td class="text-center">${formattedDate}</td>
                     <td class="text-center">${order.total}</td>
-                    <td class="text-center">${order.statusName}</td>
-                    <td><button class="OrderCheckBtn" data-bs-toggle="modal" data-bs-target="#OrderCheckModal"  data-orderid="${order.orderId}">查閱</button></td>
+                    <td class="text-center">${replaceStatus}</td>
+                    <td><button class="OrderCheckBtn" data-bs-toggle="modal" data-bs-target="#OrderCheckModal"  data-orderid="${order.orderId}">Browse</button></td>
                 </tr>
             `;
 
@@ -73,7 +104,7 @@ $.ajax({
             var orderId = $(this).data('orderid');
             console.log(orderId)
             $.ajax({
-                url: '/Account/GetOrderDetail',  
+                url: '/AccountEn/GetOrderDetail',  
                 type: 'POST',
                 data: { orderid: orderId },  
                 success: function (response) {
@@ -105,10 +136,15 @@ $.ajax({
                         "font-size": "18px"
                     })
 
-                    $('td img').css({
+                    $('td>img').css({
                         "width": "10%",
                         "display": "inline",
                         "margin-left": "80px"
+                    })
+
+                    $('td>span').css({
+                        "vertical-align": "top",
+                        "margin-left": "10px"
                     })
 
                     $('.productTd').css({
@@ -122,14 +158,14 @@ $.ajax({
 
                 },
                 error: function () {
-                    alert('無法獲取訂單明細，請稍後再試');
+                    alert('There was an error retrieving your order information. Please try again.');
                 }
             });
         });
     },
     error: function (xhr, status, error) {
         console.error('錯誤訊息:', error);
-        alert('錯誤訊息，看主控台');
+        alert('Error');
     }
 });
 
@@ -137,15 +173,15 @@ $.ajax({
 // ----------------------------------------------------------------------------- 登出按鈕 **完成
 $('.SignOutBtn').on('click', function () {
     $.ajax({
-        url: '/Account/Logout',
+        url: '/AccountEn/Logout',
         type: 'GET',
         success: function (response) {
             console.log(response)
-            alert(response);                     // 顯示登出成功訊息
-            window.location.href = '/Home/Index';
+            alert("Logout successful.");                     // 顯示登出成功訊息
+            window.location.href = '/Home/IndexEn';
         },
         error: function () {
-            alert('登出失敗，請稍後再試');
+            alert('Log out failed. Please try again later.');
         }
     });
 });
@@ -170,14 +206,14 @@ $('.SaveChangeBtn').on('click', function (e) {
     // 手機格式檢查
     var phonePattern = /^09\d{8}$/;
     if (!phonePattern.test(phone)) {
-        alert("請輸入正確的手機號碼格式！");
+        alert("Please ensure you enter your mobile number in the correct format.");
         return;
     }
 
     // mail格式檢查
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailPattern.test(email)) {
-        alert("請輸入正確的電子郵件格式！");
+        alert("Please ensure you enter your Email address in the correct format.");
         return;
     }
 
@@ -196,7 +232,7 @@ $('.SaveChangeBtn').on('click', function (e) {
     // 先取userid
     $.ajax({
         type: "GET",
-        url: "/Account/GetUserid",
+        url: "/AccountEn/GetUserid",
         success: function (response) {
             if (response.userid) {
                 var userid = response.userid;
@@ -205,7 +241,7 @@ $('.SaveChangeBtn').on('click', function (e) {
                 // 再送更新資料的請求
                 $.ajax({
                     type: "POST",
-                    url: "/Account/UpdateMemberInfo",
+                    url: "/AccountEn/UpdateMemberInfo",
                     data: {
                         userid: userid,
                         name: name,
@@ -219,11 +255,11 @@ $('.SaveChangeBtn').on('click', function (e) {
 
                     },
                     error: function (xhr, status, error) {
-                        alert("更新失敗，請稍後再試！");
+                        alert("Update failed. Please try again later.");
                     }
                 });
             } else {
-                alert("無法取得 UserId，請重新登入！");
+                alert("Unable to retrieve User ID. Please log in again.");
             }
         },
         error: function (xhr, status, error) {
@@ -244,28 +280,28 @@ $('.UpdateBtn').on('click', function (e) {
 
     // 檢查新密碼與確認新密碼是否一致
     if (newPwd !== checkNewPwd) {
-        alert("新密碼與確認新密碼不一致！");
+        alert("The new password and the password confirmation must be the same.");
         return;
     }
 
     // 檢查新密碼格式（至少8個字元，包含大小寫字母與數字）
     var pwdPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!pwdPattern.test(newPwd)) {
-        alert("新密碼必須包含大小寫字母與數字，且至少8個字元！");
+        alert("Password must be at least 8 characters long and contain a mix of uppercase and lowercase letters, and numbers.");
         return;
     }
 
     // 先取得 UserId
     $.ajax({
         type: "GET",
-        url: "/Account/GetUserid",
+        url: "/AccountEn/GetUserid",
         success: function (response) {
             console.log("取得的 UserId:", response.userid);
 
             // 發送更新密碼請求
             $.ajax({
                 type: "POST",
-                url: "/Account/UpdatePassword",
+                url: "/AccountEn/UpdatePassword",
                 data: {
                     userid: response.userid,
                     o_password: currentPwd,
@@ -274,29 +310,29 @@ $('.UpdateBtn').on('click', function (e) {
                 success: function (updateResponse) {
                     console.log(updateResponse)
                     if (updateResponse === "0") {
-                        alert("密碼更新成功！");
+                        alert("Succeeded!");
 
                         // 新增
                         $.ajax({
                             type: "GET",
-                            url: "/Account/Logout",
+                            url: "/AccountEn/Logout",
                             success: function () {
-                                window.location.href = '/Account/Login';
+                                window.location.href = '/AccountEn/Login';
                             },
                             error: function () {
-                                alert("登出失敗");
+                                alert("Fail");
                             }
                         });
 
-                        window.location.href = '/Account/Member';
+                        window.location.href = '/AccountEn/Member';
                     } else if (updateResponse === "1") {
-                        alert("舊密碼錯誤！");
+                        alert("Incorrect current password.");
                     } else {
-                        alert("密碼更新失敗，請稍後再試！");
+                        alert("Password update failed. Please try again later.");
                     }
                 },
                 error: function () {
-                    alert("密碼更新失敗，請稍後再試！");
+                    alert("Password update failed. Please try again later.");
                 }
             });
 
