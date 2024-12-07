@@ -48,7 +48,7 @@ namespace Coffee.Controllers
             }
             else
             {
-                var name = _context.Customers.Where(c => c.UserId == userid).Select(c => c.Name);
+                string name = _context.Customers.Where(c => c.UserId == userid).Select(c => c.Name).SingleOrDefault()!;
                 return Json(new { Name = name });
             }
         }
