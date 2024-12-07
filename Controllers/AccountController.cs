@@ -99,6 +99,7 @@ namespace Coffee.Controllers
                 {
                     HttpContext.Session.SetString("userid", userid);
                     HttpContext.Session.SetString("password", n_password);
+                    HttpContext.Session.SetString("CustomerId", member.CustomerId);
                     return new ContentResult() { Content = "0" };
                 }
                 //密碼不正確
