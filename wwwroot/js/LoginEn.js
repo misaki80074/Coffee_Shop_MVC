@@ -21,9 +21,10 @@ $('.LoginBtn').on('click', function () {
                 window.location.href = '/Home/IndexEn';  
             } else if (data === "1") {
                 alert('Invalid password. Please try again.');
-                window.location.href = '/AccountEn/Register';  
+                  
             } else if (data === "2") {
                 alert('You need to create an account to continue.');
+                window.location.href = '/AccountEn/Register';
             }
         },
         error: function () {
