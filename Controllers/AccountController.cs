@@ -130,14 +130,8 @@ namespace Coffee.Controllers
         /// <param name="email"></param> 信箱
         /// <returns>註冊成功</returns>
         [HttpPost]
-<<<<<<< HEAD
-        public IActionResult Register([FromForm] string userid, [FromForm] string password,  [FromForm] string name, [FromForm] string phone, [FromForm] string email)
-        { 
-=======
         public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string name, [FromForm] string phone, [FromForm] string email)
         {
->>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
-            //產生新的CustomerId
             string customerId = _context.Customers.OrderByDescending(c => c.Id).Select(c => c.CustomerId).FirstOrDefault()!;
             string en = customerId.Substring(0, 4);
             int num = int.Parse(customerId.Substring(4)) + 1;
@@ -269,11 +263,6 @@ namespace Coffee.Controllers
         public IActionResult UpdatePassword(string userid, string o_password, string n_password)
         {
             string sessionid = HttpContext.Session.GetString("userid")!;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
             if (userid == sessionid)
             {
                 using (var transaction = _context.Database.BeginTransaction())

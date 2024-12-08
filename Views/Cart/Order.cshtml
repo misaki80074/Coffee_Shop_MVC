@@ -157,21 +157,12 @@
                     @foreach (var item in Model.OrderALL)
 
                     {
-<<<<<<< HEAD
                         <tr>
                             <td><b>@item.ProductName</b></td>
                             <td><b>@item.Qty</b></td>
                             <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.UnitPrice))</b></td>
                             <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.Totle))</b></td>
                         </tr>
-=======
-                    <tr>
-                        <td><b>@item.ProductName</b></td>
-                        <td><b>@item.Qty</b></td>
-                        <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.UnitPrice))</b></td>
-                        <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.Totle))</b></td>
-                    </tr>
->>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
                     }
             </table>
         </td>
