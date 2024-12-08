@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Security.Cryptography;
 using System.Text;
-using Microsoft.AspNetCore.Http;
 
 namespace Coffee.Controllers
 {
@@ -34,6 +33,25 @@ namespace Coffee.Controllers
         }
 
         //-------------------------------------------------------------
+        
+        /// <summary>
+        /// 取得帳號名稱
+        /// </summary>
+        /// <returns>0:沒有帳號，Json(Name):使用者姓名</returns>
+        [HttpGet]
+        public IActionResult GetUserid()
+        {
+            string userid = HttpContext.Session.GetString("userid")!;
+            if (userid == null)
+            {
+                return new ContentResult() { Content = "0" };
+            }
+            else
+            {
+                string name = _context.Customers.Where(c => c.UserId == userid).Select(c => c.Name).SingleOrDefault()!;
+                return Json(new { Name = name , Userid = userid});
+            }
+        }
 
         /// <summary>
         /// 將密碼雜湊轉換
@@ -75,14 +93,13 @@ namespace Coffee.Controllers
             //帳號存在
             if (member != null)
             {
-                //var n_password = HashPassword(password); // 之後取消註解
-                var n_password = (password); // 之後刪掉
+                var n_password = HashPassword(password);
                 //密碼正確
                 if (member.Password == n_password)
                 {
-                    HttpContext.Session.SetString("CustomerId", member.CustomerId);
                     HttpContext.Session.SetString("userid", userid);
                     HttpContext.Session.SetString("password", n_password);
+                    HttpContext.Session.SetString("CustomerId", member.CustomerId);
                     return new ContentResult() { Content = "0" };
                 }
                 //密碼不正確
@@ -130,8 +147,10 @@ namespace Coffee.Controllers
         /// <param name="email"></param> 信箱
         /// <returns>註冊成功</returns>
         [HttpPost]
-        public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string name, [FromForm] string phone, [FromForm] string email)
+        public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string password2, [FromForm] string name, [FromForm] string phone, [FromForm] string email)
         {
+            Console.WriteLine($"Received data: userid={userid}, password={password}, name={name}, phone={phone}, email={email}");
+            //產生新的CustomerId
             string customerId = _context.Customers.OrderByDescending(c => c.Id).Select(c => c.CustomerId).FirstOrDefault()!;
             string en = customerId.Substring(0, 4);
             int num = int.Parse(customerId.Substring(4)) + 1;
@@ -183,6 +202,7 @@ namespace Coffee.Controllers
                                 join c in _context.Customers on o.CustomerId equals c.CustomerId
                                 join a in _context.Admlookups on o.Status equals a.Lookupid into statusLookup
                                 from status in statusLookup
+                                    // ****************************** 這邊先血死
                                 where c.UserId == userid
                                 select new
                                 {
@@ -263,6 +283,11 @@ namespace Coffee.Controllers
         public IActionResult UpdatePassword(string userid, string o_password, string n_password)
         {
             string sessionid = HttpContext.Session.GetString("userid")!;
+            Console.WriteLine($"userid: '{userid}'");
+            Console.WriteLine($"sessionid: '{sessionid}'");
+            Console.WriteLine(o_password);
+
+
             if (userid == sessionid)
             {
                 using (var transaction = _context.Database.BeginTransaction())
@@ -322,6 +347,7 @@ namespace Coffee.Controllers
 
             //總計
             var total = _context.Orderheaders.Where(o => o.OrderId == orderid).Select(t => t.Total);
+            Console.WriteLine("Order Details: " + orderdetails.Count);  // 查看有多少筆資料
             return Json(new { orderdetails, Total = total });
         }
     }

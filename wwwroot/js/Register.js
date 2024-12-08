@@ -29,14 +29,14 @@ $('#InputUserId').on('blur', function () {
     $.ajax({
         url: '/Account/CheckUserid',
         type: 'POST',
-        contentType: 'application/json',
+        //contentType: 'application/json',
         // 帳號轉成 JSON 格式
         data: { userId: UserId }, 
         success: function (data) {
             // 0 帳號存在 | 1帳號尚未註冊
-            if (data === "1") {
+            if (data === "0") {
                 $('#InputUserIdResult').text('帳號已存在').css('color', 'red');
-            } else if (data === "0") {
+            } else if (data === "1") {
                 $('#InputUserIdResult').text('帳號尚未註冊').css('color', 'green');
             }
         },
@@ -119,7 +119,7 @@ $('#SubmitButton').on('click', function (e) {
 
     // 序列化表單資料  ( 後端要用FROMFROM
     const FormData = $('#registerForm').serialize();  
-    //console.log(FormData)
+    console.log(FormData)
     $.ajax({
         url: '/Account/Register',
         type: 'POST',

@@ -133,12 +133,6 @@
         //-------------------------------------------------------
         // 更新 localStorage 中的購物車資料
         localStorage.setItem('cart', JSON.stringify(cart));
-
-        const V_userId = "@Context.Session.GetString("userid")";
-        // 呼叫加入購物車函數
-        JsonToDB(V_userId)
-
-
         // 顯示彈出消息
         const popup = document.getElementById('popup');
         popup.style.display = 'block';

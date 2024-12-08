@@ -15,9 +15,8 @@
             margin: 0;
             padding: 0;
         }
-
         table {
-            font-size: px;
+            font-size: 23px;
             width: 100%;
             margin: 20px auto;
             border-collapse: collapse;
@@ -26,7 +25,6 @@
             border-radius: 10px;
             overflow: hidden;
         }
-
         th, td {
             padding: 10px;
             text-align: center;
@@ -105,11 +103,9 @@
                         <tr>
                             @{
                                 int tdwidth = 100 / ViewBag.OrderCount; // 訂單筆數
-
                                 int count = 0;
                             }
                             @foreach (var item in Model.Orderhistory)
-
                             {
                                 <td style="border:none;padding:5px;width:@tdwidth%;background-color:#dad7cd;">
                                     <table width="100%" style="">
@@ -128,9 +124,7 @@
                                     </table>
                                     @{
                                         count += 1;
-
                                         if (count < ViewBag.OrderCount)
-
                                         {
                                         <td style="border:none;background-color:#dad7cd;">⇨</td>
                                         }
@@ -142,28 +136,29 @@
     </table>
     </td>
     </tr>
+
     <tr>
         <td colspan="4" class="section-title"><b>購買商品</b></td>
     </tr>
     <tr>
         <td colspan="4" style="background-color:#e9ecef;border:none;">
             <table style="width:100%;background-color:#e9ecef;">
-                <tr style="background-color:#669bbc;">
-                    <th>商品</th>
-                    <th>數量</th>
-                    <th>單價</th>
-                    <th>總和</th>
-                </tr>
+                    <tr style="background-color:#669bbc;">
+                        <th>商品</th>
+                        <th>數量</th>
+                        <th>單價</th>
+                        <th>總和</th>
+                    </tr>
                     @foreach (var item in Model.OrderALL)
-
                     {
                         <tr>
                             <td><b>@item.ProductName</b></td>
                             <td><b>@item.Qty</b></td>
-                            <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.UnitPrice))</b></td>
-                            <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.Totle))</b></td>
+                            <td><b>@item.UnitPrice</b></td>
+                            <td><b>@item.Totle</b></td>
                         </tr>
                     }
+                
             </table>
         </td>
     </tr>
@@ -172,7 +167,7 @@
         <td style="background-color:#e9ecef;"></td>
         <td style="background-color:#e9ecef;"></td>
         <td style="text-align:left;background-color:#e9ecef;"><b>訂單金額：</b><span class="highlight">$@string.Format("{0:N0}", Convert.ToInt32(orderdescription.Total))</span></td>
-
+        
         <td style="text-align:left;background-color:#e9ecef;"><b>付款方式：</b><span class="highlight">@orderdescription.PayMathod</span></td>
     </tr>
     <!-- 取貨與配送方式 -->

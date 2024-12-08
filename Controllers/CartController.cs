@@ -77,11 +77,11 @@ namespace Coffee.Controllers
         }
 
         [HttpPost]
+        [Route("Cart/Payment")]
         [AuthFilter]
-        [Route("Cart/PaymentCN")]
         public IActionResult Payment(IFormCollection form)
         {
-            ViewBag.CartId = form["CartID"];
+            ViewBag.CartId = form["CartID"].ToList();
             // 把表單資料放入 ViewBag，目前出現空集合，待修
             ViewBag.ID = form["itemNO"].ToList();
             ViewBag.ProductID = form["itemId"].ToList();
@@ -94,13 +94,16 @@ namespace Coffee.Controllers
             // 回傳視圖
             //var query = _context.Admlookups.ToList();
             var query = _context.Admlookups;
+
             var userdescription = _context.Customers
                 .Where(o => o.UserId == HttpContext.Session.GetString("userid"));
+
             var USER = new USERANDADMLOOKUP
             {
                 adm = query.ToList(),
                 user = userdescription.ToList()
             };
+
             return View(USER);
         }
 
@@ -259,8 +262,8 @@ namespace Coffee.Controllers
 
         // 傳送 訂單編號 至 Order的 VIEW
         [HttpPost]
+        [Route("Cart/OrderFormData")]
         [AuthFilter]
-        [Route("Cart/OrderFormDataCN")]
         public async Task<IActionResult> OrderFormData(IFormCollection form)
         {
             string? OrderNO = _dbcn.ItemNO("O");
@@ -282,7 +285,6 @@ namespace Coffee.Controllers
                 }
                 string updateCart = $"UPDATE CARTHEATER SET Status = 'N' WHERE CartId = '{form["CartID"]}'";
                 _dbcn.Insert(updateCart);
-                TempData["localcart"] = "N";
             });
             return RedirectToAction("Order", new { orderNo = OrderNO });
         }
@@ -307,7 +309,7 @@ namespace Coffee.Controllers
 
 
         [HttpPost]
-        [Route("/Cart/DeleteCartItemCN")]
+        [Route("/Cart/DeleteCartItem")]
         public async Task<IActionResult> DeleteCartItem([FromBody] SingelCartJson cart)
         {
             // 查找當前有效的購物車標題
@@ -329,6 +331,7 @@ namespace Coffee.Controllers
                     await _context.SaveChangesAsync();
                 }
             }
+
             // 重導回購物車頁面
             return RedirectToAction("ShoppingCart", "Cart");
         }
@@ -339,7 +342,7 @@ namespace Coffee.Controllers
 
 
         [HttpGet]
-        [Route("/Cart/getCN")]
+        [Route("/Product/get")]
         public IActionResult GetCart(string userId)
         {
             // 查詢購物車標題
@@ -358,21 +361,20 @@ namespace Coffee.Controllers
                     price = (decimal)cd.UnitPrice,
                     total = cd.TotalPrice,
                     image = cd.Img
-                }).ToList();
+                })
+                .ToList();
             // 確認 cartItems 是否有內容
             if (cartItems == null)
             {
                 return Ok(new {
-                    success = false, 
-                    message = "購物車為空", 
-                    Items = new List<object>()
+                    success = false, message = "購物車為空", Items = new List<object>() 
                 });
             }
             // 傳回 JSON
             return Ok(new
             {
                 success = true,
-                CartId = cartItems,
+                //CartId = cartItems,
                 UserId = cartHeader.UserId,
                 items = cartItems
             });
@@ -384,7 +386,7 @@ namespace Coffee.Controllers
 
 
         [HttpGet]
-        [Route("/Cart/RemoveCartCN/{userId}")]
+        [Route("/Cart/RemoveCart/{userId}")]
         public async Task<IActionResult> RemoveCart(string userId)
         {
             // 查詢該用戶的有效購物車標題
@@ -397,12 +399,7 @@ namespace Coffee.Controllers
                 removecart.Status = "N";
                 await _context.SaveChangesAsync();
             }
-            var Url = Request.Headers["Referer"].ToString();
 
-            if (!string.IsNullOrEmpty(Url))
-            {
-                return Redirect(Url); // 返回來源頁面
-            }
             // 重定向到購物車頁面，假設對應控制器與視圖
             return RedirectToAction("shopping_cart", "Cart");
         }
