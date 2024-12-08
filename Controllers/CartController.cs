@@ -113,6 +113,7 @@ namespace Coffee.Controllers
         }
 
         [HttpPost]
+        [Route("/Cart/AddToCartCN")]
         public async Task<IActionResult> AddToCart([FromBody] AddToCartJson cart)
         {
             // 檢查是否已存在有效的購物車標題
