@@ -333,6 +333,7 @@ namespace Coffee.Controllers
                                     p.ProductName,
                                     p.Price,
                                     od.Qty,
+                                    oh.OrderDate,
                                     od.Totle
                                 }).ToList();
 

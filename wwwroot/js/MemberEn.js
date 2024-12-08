@@ -20,9 +20,12 @@ $.ajax({
         ordersList.empty();  // 清空原有的訂單資料
         orderheaders.forEach(order => {
 
+            console.log(order.orderDate)
             // 格式化日期
             const orderDateParts = order.orderDate.split(' ');
-            const formattedDate = new Date(`${orderDateParts[2]}-${orderDateParts[0]}-${orderDateParts[1]}`).toLocaleDateString();
+            console.log(orderDateParts);
+            const formattedDate = new Date(`${orderDateParts[3]}-${orderDateParts[0]}-${orderDateParts[2]}`).toLocaleDateString();
+            console.log(formattedDate)
 
             let replaceStatus = "";
             switch (order.statusName) {
