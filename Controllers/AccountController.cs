@@ -93,7 +93,8 @@ namespace Coffee.Controllers
             //帳號存在
             if (member != null)
             {
-                var n_password = HashPassword(password);
+                //var n_password = HashPassword(password);
+                var n_password = (password); // 之後刪掉
                 //密碼正確
                 if (member.Password == n_password)
                 {
