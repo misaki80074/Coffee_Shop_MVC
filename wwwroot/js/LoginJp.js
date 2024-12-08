@@ -21,9 +21,9 @@ $('.LoginBtn').on('click', function () {
                 window.location.href = '/Home/IndexJp';  
             } else if (data === "1") {
                 alert('パスワードが一致しません。もう一度お試しください。');
-                window.location.href = '/AccountJp/Register';  
             } else if (data === "2") {
                 alert('まだ会員登録がお済みではありません。こちらから登録手続きをお願いします。');
+                window.location.href = '/AccountJp/Register';  
             }
         },
         error: function () {
