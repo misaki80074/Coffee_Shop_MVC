@@ -9,8 +9,77 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
+    <script>
+        // 使用者登入後，更新購物車 POST
+        function PostCartData() {
+            const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
+            // 如果 loginExecuted 不等於
+            if (localStorage.getItem("loginExecuted") != "true") {
+                if (V_userId != "") {
+                    localStorage.setItem("loginExecuted", "true");
+                    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    // 轉成控制器期望的格式
+                    let DetailCart = cart.map(item => ({
+                        productID: item.productId,
+                        //productID: item.productID || "",
+                        qty: item.qty,
+                        unitPrice: item.price
+                    }));
+                    $.ajax({
+                        url: "/Cart/AddToCart",
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify({
+                            Hmodel: {
+                                UserId: V_userId
+                            },
+                            Dmodels: DetailCart
+                        })
+                    });
+                }
+            }
+        }
+        // 使用者登入後，取得 DB購物車資料 JSON ，並傳到 localStorage
+        function GetCartData() {
+            const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
+            $.ajax({
+                url: `/Cart/getCN?userId=${V_userId}`,
+                type: "GET",
+                success: function (response) {
+                    // console.log("回應資料:", response);
+                    if (response.success) {
+                        localStorage.setItem("cart", JSON.stringify(response.items));
+                        localStorage.setItem("cartID", JSON.stringify(response.items[0].cartId));
+                        // alert("成功獲取資料");
+                        console.log(response.items);
+                        //alert("成功獲取資料 ! ");
+                    } else {
+                        alert("錯誤，請通知系統管理員 !!!!! ");
+                    }
+                }
+            });
+        }
+        function mergesCart() {
+            if (localStorage.getItem("loginExecuted") != "true") {
+                PostCartData()  // 執行 PostCartData
+                    .then(() => {
+                        // PostCartData 完成，執行 GetCartData
+                        return GetCartData();
+                    })
+                    .then(() => {
+                        // GetCartData 完成後的操作
+                        console.log("所有操作完成！");
+                    })
+                    .catch((error) => {
+                        console.error("發生錯誤:", error);
+                    });
+            } else {
+                GetCartData();
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="mergesCart();">
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <header>
         <nav>
@@ -34,7 +103,6 @@
             <!-- 導覽列右邊 -->
             <div id="nav-right">
                 <!-- 會員 -->
-                <span class="loginStatus"></span>
                 <a href="/AccountEn/Member"><img src="~/img/customer_white.png" id="customer_icon"></a>
 
                 <!-- 購物車 -->
@@ -83,15 +151,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
-
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js"></script>
-    <script src="~/js/ListEn.js"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 </html>
 <script>
-    AddCartHTML()
+    const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
+    AddCartHTML(V_userId);
 </script>

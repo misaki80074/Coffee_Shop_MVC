@@ -262,7 +262,6 @@ namespace Coffee.Controllers
         // 傳送 訂單編號 至 Order的 VIEW
         [HttpPost]
         [Route("CartEn/OrderFormData")]
-        [AuthFilterEn]
         public async Task<IActionResult> OrderFormData(IFormCollection form)
         {
             string? OrderNO = _dbcn.ItemNO("O");
@@ -274,7 +273,7 @@ namespace Coffee.Controllers
                 {
                     Commet = null; // 轉型
                 }
-                string sql = $"INSERT INTO ORDERHEADER(OrderId,CustomerID,OrderDate,Total,Name,Mail,Phone,Comment,CreateDate,UpdateDate,Payment,Status,ShipStatus,ShippingMethod,address) VALUES ('{OrderNO}','{HttpContext.Session.GetString("CustomerId")}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}','{form["totle"]}','{form["name"]}','{form["email"]}','{form["phone"]}',N'{Commet}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}','{form["paymentmethod"]}','NEW','NEW','{form["transportmethod"]}',N'{form["address"]}')";
+                string sql = $"INSERT INTO ORDERHEADER(OrderId,OrderDate,Total,Name,Mail,Phone,Comment,CreateDate,UpdateDate,Payment,Status,ShipStatus,ShippingMethod,address) VALUES ('{OrderNO}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}','{form["totle"]}','{form["name"]}','{form["email"]}','{form["phone"]}',N'{Commet}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}','{form["paymentmethod"]}','NEW','NEW','{form["transportmethod"]}',N'{form["address"]}')";
                 _dbcn.Insert(sql);
                 for (int i = 0; i < Request.Form["itemNO"].Count; i++)
                 {

@@ -62,7 +62,41 @@
 					<td scope="row">O2411201159</td>                         @* 訂單編號 *@
 					<td>2024-11-20</td>                                      @* 訂單日期 *@
 					<td>680</td>                                            @* 合計 *@
-					<td>New Order</td>                                            @* 訂單狀況 *@
+					@{
+						string replaceText = "";
+						switch ("新單")        @* 要改成變數 *@
+						{
+							case "新單":
+								replaceText = "New Order";
+								break;
+							case "賣家已確認":
+								replaceText = "Comfirmed";
+								break;
+							case "已取消":
+								replaceText = "Canceled";
+								break;
+							case "已送達":
+								replaceText = "Arrived";
+								break;
+							case "已取貨":
+								replaceText = "Picked up";
+								break;
+							case "付款完成":
+								replaceText = "Payment completed";
+								break;
+							case "已出貨":
+								replaceText = "Shipped";
+								break;
+							case "已完成":
+								replaceText = "Finished";
+								break;
+							default:
+								replaceText = "NA";
+								break;
+
+						}
+					}
+					<td>@replaceText</td>                                            @* 訂單狀況 *@
 					<td><button class="OrderCheckBtn" data-bs-toggle="modal" data-bs-target="#OrderCheckModal">Browse</button></td>     @* 查閱button *@
 				</tr>
 			</tbody>
@@ -119,7 +153,7 @@
 			</div>
 			<div class="modal-body">
 				<h2>Order Information</h2>
-				<table class="table orderDetailsTable">
+				<table class="table">
 					<thead>
 						<tr>
 							<th scope="col">Products</th>
@@ -145,7 +179,7 @@
 					<table>
 						<tr>
 							<th>Subtotal&nbsp;：&nbsp; </th>
-							<td class="small-total">680</td>
+							<td>680</td>
 						</tr>
 						<tr>
 							<th>Delivery fee&nbsp;：&nbsp; </th>
@@ -153,7 +187,7 @@
 						</tr>
 						<tr>
 							<th>Total&nbsp;：&nbsp;</th>
-							<td class="big-total">680</td>
+							<td>680</td>
 						</tr>
 					</table>
 				</div>
@@ -166,4 +200,11 @@
 
 
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/MemberEn.js"></script>
+<script>
+	var myModal = document.getElementById('myModal')
+	var myInput = document.getElementById('myInput')
+
+	myModal.addEventListener('shown.bs.modal', function () {
+		myInput.focus()
+	})
+</script>

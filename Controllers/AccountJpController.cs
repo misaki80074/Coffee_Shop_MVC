@@ -33,25 +33,6 @@ namespace Coffee.Controllers
         //-------------------------------------------------------------
 
         /// <summary>
-        /// 取得帳號名稱
-        /// </summary>
-        /// <returns>0:沒有帳號，Json(Name):使用者姓名</returns>
-        [HttpGet]
-        public IActionResult GetUserid()
-        {
-            string userid = HttpContext.Session.GetString("userid")!;
-            if (userid == null)
-            {
-                return new ContentResult() { Content = "0" };
-            }
-            else
-            {
-                string name = _context.Customers.Where(c => c.UserId == userid).Select(c => c.Name).SingleOrDefault()!;
-                return Json(new { Name = name, Userid = userid });
-            }
-        }
-
-        /// <summary>
         /// 將密碼雜湊轉換
         /// </summary>
         /// <param name="password"></param> 前端傳送過來的密碼
@@ -97,7 +78,6 @@ namespace Coffee.Controllers
                 {
                     HttpContext.Session.SetString("userid", userid);
                     HttpContext.Session.SetString("password", n_password);
-                    HttpContext.Session.SetString("CustomerId", member.CustomerId);
                     return new ContentResult() { Content = "0" };
                 }
                 //密碼不正確

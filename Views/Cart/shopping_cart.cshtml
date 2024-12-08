@@ -102,29 +102,35 @@
             font-size: 18px;
             font-weight: bold;
         }
+
+
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 跳出位置 平移等... */
+            background-color: red;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            z-index: 9999;
+        }
     </style>
 </head>
-
 @{
-
-    var loginId = Context.Session.GetString("loginId"); // 取得會員
-
     string? userid = Context.Session.GetString("userid");
 }
-
 <body>
     <script>
-
     </script>
-    @*     <h1>會員: @userid</h1>
-    <h1 id="cartNO"></h1>
+    @* <h1>會員: @userid</h1> *@
+    @*     <h1 id="cartNO"></h1>
     <h1 id="loginExecuted"></h1> *@
-
-
-
+    <div id="popup"></div>
     <div class="PJ" id="PJ">
         <h1>購物車</h1>
-        <form action="/Cart/Payment" method="post">
+        <form action="/Cart/PaymentCN" method="post" id="ToPayment" onclick="CKBTN();">
             <input type="hidden" name="CartID" id="CartID" value="" />
             <table>
                 <tr>
@@ -136,36 +142,75 @@
                     <th>操作</th>
                 </tr>
                 <tbody id="cart-items">
-                    @* <input type="type" name="cartId" value="" /> *@
                 </tbody>
             </table>
             <br />
             <table>
                 <tr>
-                    @* 超連結至控制器 *@
+                    @* 判斷使用者是否登入 *@
                     <td colspan="2" style="text-align: left;">
-                        @* A 會自動導向，修改 *@
-                        <a href="/Cart/RemoveCart/@userid" onclick="clearCart()" class="btn btn-clear">清空購物車</a>
+                        @{
+                            if (!string.IsNullOrEmpty(userid))
+                            {
+                                <a href="/Cart/RemoveCart/@userid" onclick="clearCart()" class="btn btn-clear">清空購物車</a>
+                            }
+                            else
+                            {
+                                <button type="button" onclick="clearCart()" class="btn btn-clear">清空購物車</button>
+                            }
+                        }
                     </td>
                     <td colspan="3">
                         <div class="total-price"><input type="hidden" name="totalprice" id="totalprice" value="" /></div>
                     </td>
                     <td colspan="7" style="text-align: right;">
-                        <button type="submit" class="btn btn-checkout"> 立即結帳 </button>
+                        @{
+                            // 使用者未登入，type設定為button，讓JS進行判斷
+
+                            if (string.IsNullOrEmpty(userid))
+
+                            {
+                                <button type="button" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
+                            }
+                            else
+
+                            {
+                                <button type="submit" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
+                            }
+                        }
                     </td>
                 </tr>
             </table>
         </form>
     </div>
     <script>
+        function CKBTN() {
+            let UserID = "@userid";
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // 購物車是空的不能跳轉
+            if (cart.length == 0) {
+                const form = document.getElementById('ToPayment');
+                // 為表單綁定提交事件
+                form.addEventListener('submit', function (event) {
+                    // 使用 preventDefault() 阻止表單的預設提交行為
+                    event.preventDefault();
+                });
+                const popup = document.getElementById('popup');
+                document.getElementById('popup').innerHTML = "購物車是空的 ! 請先加入商品";
+                popup.style.display = 'block';
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 3000);
+                return false;
+            }
+            if (UserID.length == 0) {
+                location.href = "/Account/Login";
+            }
+        }
         // 從 localStorage 讀取購物車資料並轉換成陣列或物件 如果找不到回傳空陣列
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let cartID = JSON.parse(localStorage.getItem('cartID')) || [];
         let loginExecuted = JSON.parse(localStorage.getItem('loginExecuted')) || [];
-        // document.getElementById("cartNO").innerHTML = "購物車編號: " + cartID;
-        // document.getElementById("loginExecuted").innerHTML = "登入狀態: " + loginExecuted;
-
-
         document.getElementById("CartID").value = cartID;
 
         // 取得 tbody ，用於插入 cart 的商品資料
@@ -197,11 +242,11 @@
                 // 圖片
                 const imgCell = document.createElement('td');
                 // 購物車編號
-                const cartId = document.createElement('input');
-                cartId.type = 'hidden';
-                cartId.name = 'cartId';
-                cartId.value = item.cartId;
-                imgCell.appendChild(cartId);
+                // const cartId = document.createElement('input');
+                // cartId.type = 'hidden';
+                // cartId.name = 'cartId';
+                // cartId.value = item.cartId;
+                // imgCell.appendChild(cartId);
                 const inputNO = document.createElement('input');
                 inputNO.type = 'hidden';
                 inputNO.name = 'itemNO';
@@ -314,7 +359,6 @@
         // }
         // 移除的 某 項商品
         function removeFromCart(index, ProductID) {
-
             cart.splice(index, 1); // 移除索引上的這一個元素
             localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage，轉成字串
             window.location.reload();

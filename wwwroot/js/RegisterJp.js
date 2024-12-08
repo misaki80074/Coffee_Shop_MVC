@@ -29,7 +29,7 @@ $('#InputUserId').on('input', function () {
     $.ajax({
         url: '/AccountJp/CheckUserid',
         type: 'POST',
-        //contentType: 'application/json',
+        contentType: 'application/json',
         // 帳號轉成 JSON 格式
         data: JSON.stringify(UserId), 
         success: function (data) {

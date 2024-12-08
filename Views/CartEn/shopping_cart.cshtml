@@ -319,10 +319,10 @@
         // }
         // 移除的 某 項商品
         function removeFromCart(index, ProductID) {
-
             cart.splice(index, 1); // 移除索引上的這一個元素
             localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage，轉成字串
             window.location.reload();
+
             Deletecartitem(ProductID, "@userid");
         }
         // 清空購物車
