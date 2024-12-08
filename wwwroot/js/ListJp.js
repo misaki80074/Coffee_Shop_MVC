@@ -17,15 +17,10 @@ window.onscroll = function () {
 
 //瀏覽器載入
 window.onload = function () {
-    var pathname = window.location.pathname
-    if (pathname.includes("List")) {
-        console.log("這是清單頁面")
-        setUI()
-        getProData(getAjaxUrl())
-        // RWD初次執行檢查
-        handleMediaChange(mediaQuery);
-    }
-    GetUseridJP()
+    setUI()
+    getProData(getAjaxUrl())
+    // RWD初次執行檢查
+    handleMediaChange(mediaQuery);
 }
 
 //瀏覽器歷史紀錄切換
@@ -35,22 +30,6 @@ window.onpopstate = function () {
 }
 
 /////////////////////////下方為主要功能//////////////////////////////////
-//導覽列顯示姓名
-function GetUseridJP() {
-    $.ajax({
-        url: "/AccountJp/GetUserid",
-        method: "GET",
-        success: function (data) {
-            if (data != "0") {
-                $('.loginStatus').text(`Hi! ${data.name}`)
-            } else {
-                return
-            }
-        }
-    })
-}
-
-
 //篩選的關閉按鈕
 function filterBtnClose(self) {
     $(self).closest('.dropdown-menu').removeClass('show');

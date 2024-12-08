@@ -29,14 +29,14 @@ $('#InputUserId').on('blur', function () {
     $.ajax({
         url: '/AccountEn/CheckUserid',
         type: 'POST',
-        //contentType: 'application/json',
+        contentType: 'application/json',
         // 帳號轉成 JSON 格式
         data: JSON.stringify(UserId), 
         success: function (data) {
             // 0 帳號存在 | 1帳號尚未註冊
-            if (data === "0") {
+            if (data === "1") {
                 $('#InputUserIdResult').text('This account is already in use.').css('color', 'red');
-            } else if (data === "1") {
+            } else if (data === "0") {
                 $('#InputUserIdResult').text('This account can be used.').css('color', 'green');
             }
         },

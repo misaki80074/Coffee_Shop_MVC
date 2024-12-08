@@ -62,7 +62,41 @@
                     <td scope="row">O2411201159</td>                         @* 訂單編號 *@
                     <td>2024-11-20</td>                                      @* 訂單日期 *@
                     <td>6420</td>                                            @* 合計 *@
-                    <td>新注文</td>                                            @* 訂單狀況 *@
+                    @{
+                        string replaceText = "";
+                        switch ("新單")　　　 @* 要記得改成變數 *@
+                        {
+                            case "新單":
+                                replaceText = "新注文";
+                                break;
+                            case "賣家已確認":
+                                replaceText = "確認";
+                                break;
+                            case "已取消":
+                                replaceText = "キャンセル";
+                                break;
+                            case "已送達":
+                                replaceText = "到着";
+                                break;
+                            case "已取貨":
+                                replaceText = "受け取り完了";
+                                break;
+                            case "付款完成":
+                                replaceText = "決済完了";
+                                break;
+                            case "已出貨":
+                                replaceText = "発送済み";
+                                break;
+                            case "已完成":
+                                replaceText = "取引完了";
+                                break;
+                            default:
+                                replaceText = "NA";
+                                break;
+
+                        }
+                    }
+                    <td>@replaceText</td>                                            @* 訂單狀況 *@
                     <td><button class="OrderCheckBtn" data-bs-toggle="modal" data-bs-target="#OrderCheckModal">チェック</button></td>     @* 查閱button *@
                 </tr>
             </tbody>
@@ -119,7 +153,7 @@
             </div>
             <div class="modal-body">
                 <h2>購入履歴</h2>
-                <table class="table orderDetailsTable">
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">商品</th>
@@ -145,7 +179,7 @@
                     <table>
                         <tr>
                             <th>小計&nbsp;：&nbsp; </th>
-                            <td class="small-total">680</td>
+                            <td>680</td>
                         </tr>
                         <tr>
                             <th>送料&nbsp;：&nbsp; </th>
@@ -153,7 +187,7 @@
                         </tr>
                         <tr>
                             <th>合計&nbsp;：&nbsp;</th>
-                            <td class="big-total">680</td>
+                            <td>680</td>
                         </tr>
                     </table>
                 </div>
@@ -166,4 +200,11 @@
 
 
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/MemberJp.js"></script>
+<script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+    })
+</script>
