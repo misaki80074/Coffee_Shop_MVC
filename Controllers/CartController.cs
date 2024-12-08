@@ -77,6 +77,10 @@ namespace Coffee.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
+        [AuthFilter]
+=======
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
         [Route("Cart/PaymentCN")]
         public IActionResult Payment(IFormCollection form)
         {
@@ -258,6 +262,10 @@ namespace Coffee.Controllers
 
         // 傳送 訂單編號 至 Order的 VIEW
         [HttpPost]
+<<<<<<< HEAD
+        [AuthFilter]
+=======
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
         [Route("Cart/OrderFormDataCN")]
         public async Task<IActionResult> OrderFormData(IFormCollection form)
         {
@@ -360,11 +368,18 @@ namespace Coffee.Controllers
             // 確認 cartItems 是否有內容
             if (cartItems == null)
             {
+<<<<<<< HEAD
+                return Ok(new {
+                    success = false, 
+                    message = "購物車為空", 
+                    Items = new List<object>() 
+=======
                 return Ok(new
                 {
                     success = false,
                     message = "購物車為空",
                     Items = new List<object>()
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
                 });
             }
             // 傳回 JSON

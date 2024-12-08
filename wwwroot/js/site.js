@@ -171,6 +171,31 @@
         cart.splice(index, 1); // 移除索引上的這一個元素
         localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage，轉成字串
         //window.location.reload();
+<<<<<<< HEAD
+
+        Deletecartitem(ProductID, V_userId);
+
+    }
+
+    function Deletecartitem(ProductID, V_userId) {
+        $.ajax({
+            url: "/Cart/DeleteCartItemCN",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                Hmodel:
+                {
+                    UserId: V_userId
+                },
+                Dmodels:
+                {
+                    ProductId: ProductID
+                }
+            })
+        });
+    }
+
+=======
         Deletecartitem(ProductID, V_userId);
     }
     document.getElementById("totalprice").value = totalPrice;
@@ -192,6 +217,7 @@ function Deletecartitem(ProductID, V_userId) {
         })
     });
 }
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
 // 清空購物車
 function clearCart() {
     // 清空 localStorage 中的購物車資料
@@ -199,6 +225,31 @@ function clearCart() {
     // 重新加載頁面
     document.location.reload();
 }
+<<<<<<< HEAD
+    function JsonToDB(V_userId) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        // 轉成控制器期望的格式
+        let DetailCart = cart.map(item => ({
+            productID: item.productId,
+            //productID: item.productID || "",
+            qty: item.qty,
+            unitPrice: item.price
+        }));
+
+        if (V_userId != "") {
+            $.ajax({
+                url: "/Cart/AddToCartOne",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    Hmodel: {
+                        UserId: V_userId
+                    },
+                    Dmodels: DetailCart
+                })
+            });
+        }
+=======
 function JsonToDB(V_userId) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     // 轉成控制器期望的格式
@@ -228,3 +279,4 @@ function JsonToDB(V_userId) {
 //document.getElementById("totalprice").value = totalPrice;
 //totle.append(`總和為: $ ${totalPrice.toLocaleString()}`);
 // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd

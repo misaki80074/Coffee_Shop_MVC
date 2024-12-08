@@ -103,7 +103,10 @@
             font-weight: bold;
         }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
         #popup {
             position: fixed;
             top: 50%;
@@ -149,6 +152,11 @@
                 <tr>
                     @* 判斷使用者是否登入 *@
                     <td colspan="2" style="text-align: left;">
+<<<<<<< HEAD
+                        @* A 會自動導向，修改 *@
+                        <a href="/Cart/RemoveCart/@userid" onclick="clearCart()" class="btn btn-clear">清空購物車</a>
+=======
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
                         @{
                             if (!string.IsNullOrEmpty(userid))
                             {
@@ -166,14 +174,21 @@
                     <td colspan="7" style="text-align: right;">
                         @{
                             // 使用者未登入，type設定為button，讓JS進行判斷
+<<<<<<< HEAD
+                            if (string.IsNullOrEmpty(userid))
+=======
 
                             if (string.IsNullOrEmpty(userid))
 
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
                             {
                                 <button type="button" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
                             }
                             else
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
                             {
                                 <button type="submit" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
                             }

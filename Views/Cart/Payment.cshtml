@@ -182,6 +182,16 @@
             let address = document.getElementById("Shipping-method").value; // 取得運送值
             if (address == "tran0002") {
                 // 宅配到府
+<<<<<<< HEAD
+                document.getElementById("add").innerHTML = `
+                            <table>
+                                <tr>
+                                    <td><label for= "Pickupaddress" > 取貨地址：</label></td >
+                                    <td><input type="text" name = "address" id = "Pickupaddress" value = "" class="input-field" style = "width:100%;" > </td>
+                                </tr>
+                            </table>
+                        `;
+=======
                 document.getElementById("add").innerHTML =`
                     <table>
                         <tr>
@@ -190,10 +200,32 @@
                         </tr>
                     </table>
                 `;
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
             } else if (address == "tran0001") {
                 // 超商取貨
                 // <td><a href="https://emap.presco.com.tw/c2cemap.ashx?eshopid=870&&servicetype=1&url=https://localhost:7199/Cart/Payment">開啟門市選擇</a></td>
                 document.getElementById("add").innerHTML = `
+<<<<<<< HEAD
+                                <table>
+                                    <tr>
+                                        <td><label for= "Pickupaddress" > 門市地址：</label></td >
+                                        <td><input type="text" name = "address" id = "Pickupaddress" value = "" class="input-field" style = "width:100%;" ></td>
+                                    </tr>
+                                </table>
+                            `;
+            } else if (address == "tran0003") {
+                // 帶出店家位置
+                document.getElementById("add").innerHTML = `
+                            <table>
+                                <tr>
+                                    <td><label for= "Pickupaddress" > 取貨地址：</label></td >
+                                    <td><input type="text" name = "address" id = "Pickupaddress" readonly value = "100台北市中正區重慶南路一段122號" class="input-field" style = "width:100%;" > </td>
+                                </tr>
+                            </table>
+                        `;
+            }
+        }
+=======
                         <table>
                             <tr>
                                 <td><label for= "Pickupaddress" > 門市地址：</label></td >
@@ -216,6 +248,7 @@
 
 
 
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
         function PAY() {
             let pay = document.getElementById("paymentmethod").value;
             if (pay == "Pay0001") {
@@ -225,6 +258,16 @@
                 $("#PayMethod").css("display", "none");
             }
         }
+<<<<<<< HEAD
+
+        // function inputaddress() {
+            //     let address = document.getElementById("Shipping-method").value;
+            //     console.log(address.length);
+            //     if (address.length != 0) {
+            //         $("#add").css("display", "block");
+            //     }
+            // }
+=======
         // function inputaddress() {
         //     let address = document.getElementById("Shipping-method").value;
         //     console.log(address.length);
@@ -232,6 +275,7 @@
         //         $("#add").css("display", "block");
         //     }
         // }
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
     </script>
 
 @*     <h1>主視窗</h1>
@@ -268,7 +312,11 @@
                                         <tbody>
 
                                             @* 這一段沒接到 *@
+<<<<<<< HEAD
+                                            <input type="hidden" name="CartID" value="@ViewBag.CartId[0]" />
+=======
                                             <input type="hidden" name="CartID" value="@ViewBag.CartId[1]" />
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
                                             @for (int i = 0; i < ViewBag.ProductID.Count; i++)
                                             {
                                                 <tr>
@@ -330,7 +378,11 @@
                 </div>
                 @* 地址 *@
                 <div id="add" style="display:none;">
+<<<<<<< HEAD
+                    @* <table>
+=======
 @*                     <table>
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
                         <tr>
                             <td><label for="Pickupaddress">取貨地址：</label></td>
                             <td><input type="text" name="address" id="Pickupaddress" value="" class="input-field" style="width:100%;"></td>

@@ -24,8 +24,14 @@ $('.LoginBtn').on('click', function () {
                 window.location.href = '/Account/Register';  
             } else if (data === "2") {
                 alert('該帳號未註冊，請註冊!');
+<<<<<<< HEAD
+                window.location.href = '/Account/Register';
+                alert('登入失敗，密碼錯誤!');   
+            } 
+=======
             }
         },
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
         error: function () {
             alert('伺服器錯誤');
         }

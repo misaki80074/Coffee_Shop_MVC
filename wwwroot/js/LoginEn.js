@@ -20,11 +20,19 @@ $('.LoginBtn').on('click', function () {
                 alert(`Welcome! Let's go shopping!`);
                 window.location.href = '/Home/IndexEn';  
             } else if (data === "1") {
+<<<<<<< HEAD
+                alert('Invalid password. Please try again.');           
+            } else if (data === "2") {
+                alert('You need to create an account to continue.');
+                window.location.href = '/AccountEn/Register';
+            } 
+=======
                 alert('Invalid password. Please try again.');
                 window.location.href = '/AccountEn/Register';  
             } else if (data === "2") {
                 alert('You need to create an account to continue.');
             }
+>>>>>>> 1b05320a2ef143c6f9057d83050129a8bfc832dd
         },
         error: function () {
             alert('Error');
