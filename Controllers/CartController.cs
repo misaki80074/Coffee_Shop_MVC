@@ -77,8 +77,8 @@ namespace Coffee.Controllers
         }
 
         [HttpPost]
-        [Route("Cart/Payment")]
         [AuthFilter]
+        [Route("Cart/PaymentCN")]
         public IActionResult Payment(IFormCollection form)
         {
             ViewBag.CartId = form["CartID"].ToList();
@@ -262,8 +262,8 @@ namespace Coffee.Controllers
 
         // 傳送 訂單編號 至 Order的 VIEW
         [HttpPost]
-        [Route("Cart/OrderFormData")]
         [AuthFilter]
+        [Route("Cart/OrderFormDataCN")]
         public async Task<IActionResult> OrderFormData(IFormCollection form)
         {
             string? OrderNO = _dbcn.ItemNO("O");
@@ -366,8 +366,11 @@ namespace Coffee.Controllers
             // 確認 cartItems 是否有內容
             if (cartItems == null)
             {
-                return Ok(new {
-                    success = false, message = "購物車為空", Items = new List<object>() 
+                return Ok(new
+                {
+                    success = false,
+                    message = "購物車為空",
+                    Items = new List<object>()
                 });
             }
             // 傳回 JSON

@@ -151,12 +151,12 @@
                     </tr>
                     @foreach (var item in Model.OrderALL)
                     {
-                        <tr>
-                            <td><b>@item.ProductName</b></td>
-                            <td><b>@item.Qty</b></td>
-                            <td><b>@item.UnitPrice</b></td>
-                            <td><b>@item.Totle</b></td>
-                        </tr>
+                    <tr>
+                        <td><b>@item.ProductName</b></td>
+                        <td><b>@item.Qty</b></td>
+                        <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.UnitPrice))</b></td>
+                        <td><b>$@string.Format("{0:N0}", Convert.ToInt32(item.Totle))</b></td>
+                    </tr>
                     }
                 
             </table>
