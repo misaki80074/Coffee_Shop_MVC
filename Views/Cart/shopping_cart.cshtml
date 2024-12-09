@@ -153,6 +153,7 @@
                             if (!string.IsNullOrEmpty(userid))
                             {
                                 <a href="/Cart/RemoveCartCN/@userid" onclick="clearCart()" class="btn btn-clear">清空購物車</a>
+
                             }
                             else
                             {
@@ -168,12 +169,10 @@
                             // 使用者未登入，type設定為button，讓JS進行判斷
 
                             if (string.IsNullOrEmpty(userid))
-
                             {
                                 <button type="button" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
                             }
                             else
-
                             {
                                 <button type="submit" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
                             }

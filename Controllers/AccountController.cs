@@ -49,7 +49,7 @@ namespace Coffee.Controllers
             else
             {
                 string name = _context.Customers.Where(c => c.UserId == userid).Select(c => c.Name).SingleOrDefault()!;
-                return Json(new { Name = name , Userid = userid});
+                return Json(new { Name = name ,Userid = userid});
             }
         }
 
@@ -147,7 +147,7 @@ namespace Coffee.Controllers
         /// <param name="email"></param> 信箱
         /// <returns>註冊成功</returns>
         [HttpPost]
-        public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string  name, [FromForm] string phone, [FromForm] string email)
+        public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string name, [FromForm] string phone, [FromForm] string email)
         {
             //產生新的CustomerId
             string customerId = _context.Customers.OrderByDescending(c => c.Id).Select(c => c.CustomerId).FirstOrDefault()!;
@@ -201,7 +201,6 @@ namespace Coffee.Controllers
                                 join c in _context.Customers on o.CustomerId equals c.CustomerId
                                 join a in _context.Admlookups on o.Status equals a.Lookupid into statusLookup
                                 from status in statusLookup
-                                    // ****************************** 這邊先血死
                                 where c.UserId == userid
                                 select new
                                 {
@@ -282,11 +281,6 @@ namespace Coffee.Controllers
         public IActionResult UpdatePassword(string userid, string o_password, string n_password)
         {
             string sessionid = HttpContext.Session.GetString("userid")!;
-            Console.WriteLine($"userid: '{userid}'");
-            Console.WriteLine($"sessionid: '{sessionid}'");
-            Console.WriteLine(o_password);
-
-
             if (userid == sessionid)
             {
                 using (var transaction = _context.Database.BeginTransaction())
