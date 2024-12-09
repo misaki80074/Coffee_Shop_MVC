@@ -147,9 +147,8 @@ namespace Coffee.Controllers
         /// <param name="email"></param> 信箱
         /// <returns>註冊成功</returns>
         [HttpPost]
-        public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string password2, [FromForm] string name, [FromForm] string phone, [FromForm] string email)
+        public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string  name, [FromForm] string phone, [FromForm] string email)
         {
-            Console.WriteLine($"Received data: userid={userid}, password={password}, name={name}, phone={phone}, email={email}");
             //產生新的CustomerId
             string customerId = _context.Customers.OrderByDescending(c => c.Id).Select(c => c.CustomerId).FirstOrDefault()!;
             string en = customerId.Substring(0, 4);
