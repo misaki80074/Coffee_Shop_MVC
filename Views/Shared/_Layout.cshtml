@@ -9,8 +9,6 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js"></script>
     <script>
         // 訂單成立刪除
         let localcart = "@TempData["localcart"]";
@@ -87,6 +85,7 @@
     </script>
 </head>
 <body onload="mergesCart();">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <header>
         <nav>
             <!-- 導覽列左邊 -->
@@ -109,6 +108,7 @@
             <!-- 導覽列右邊 -->
             <div id="nav-right">
                 <!-- 會員 -->
+                <span class="loginStatus"></span>
                 <a href="/Account/Member"><img src="~/img/customer_white.png" id="customer_icon"></a>
 
                 <!-- 購物車 -->
@@ -142,7 +142,6 @@
                                 <hr style="margin:0;">
                                 <div id="checkoutArea">
                                     <button class="checkoutBtn" type="submit">結帳</button>
-                                    @* <button class="checkoutBtn"><a href="#" class="chechoutLink">結帳</a></button> *@
                                 </div>
                             </div>
                         </form>
@@ -365,9 +364,3 @@ else
         // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
     </script>
 }
-<script>
-    // let cartID = JSON.parse(localStorage.getItem('cartID')) || [];
-    // document.getElementById("CartID").value = cartID;
-    // const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
-    // AddCartHTML(V_userId);
-</script>
