@@ -42,22 +42,23 @@
                 <label for="chart-toggle"><img src="~/img/shopping-cart_white.png" id="chart_icon"></label>
                 <div class="shoppingList">
                     <form action="~/CartJp/Payment" method="post">
-                    <div class="wanttobuy_div">
-                        <div id="wantToBuy">
+                        <input type="hidden" name="CartID" id="CartID" value="" />
+                        <input type="hidden" name="totalprice" id="totalprice" value="" />
+                        <div class="wanttobuy_div">
+                            <div id="wantToBuy">
                                 <table>
                                     <tbody id="shop">
                                     </tbody>
                                 </table>
                                 <p id="defulttext"></p>
-                        </div>
+                            </div>
 
-                        <hr style="margin:0;">
+                            <hr style="margin:0;">
 
-                        <div id="checkoutArea">
+                            <div id="checkoutArea">
                                 <button class="checkoutBtn" type="submit">レジ</button>
-                            @* <a href="#" class="chechoutLink"><button class="checkoutBtn">結帳</button></a> *@
+                            </div>
                         </div>
-                    </div>
                     </form>
                 </div>
 

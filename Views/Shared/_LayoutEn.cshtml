@@ -42,6 +42,8 @@
                 <label for="chart-toggle"><img src="~/img/shopping-cart_white.png" id="chart_icon"></label>
                 <div class="shoppingList">
                     <form action="/CartEn/Payment" method="post">
+                        <input type="hidden" name="CartID" id="CartID" value="" />
+                        <input type="hidden" name="totalprice" id="totalprice" value="" />
                     <div class="wanttobuy_div">
                         <div id="wantToBuy">
                                 <table>
@@ -53,7 +55,6 @@
                         <hr style="margin:0;">
                         <div id="checkoutArea">
                                 <button class="checkoutBtn" type="submit">Check out</button>
-                            @* <a href="#" class="chechoutLink"><button class="checkoutBtn">結帳</button></a> *@
                         </div>
                     </div>
                     </form>
