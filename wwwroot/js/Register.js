@@ -119,7 +119,7 @@ $('#SubmitButton').on('click', function (e) {
 
     // 序列化表單資料  ( 後端要用FROMFROM
     const FormData = $('#registerForm').serialize();  
-    console.log(FormData)
+    //console.log(FormData)
     $.ajax({
         url: '/Account/Register',
         type: 'POST',

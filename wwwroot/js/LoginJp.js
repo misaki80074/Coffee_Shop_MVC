@@ -1,7 +1,7 @@
 ﻿// ------------------------------------------------------- 登入按鈕 ------------------------------------------------------- //
 
 $('.LoginBtn').on('click', function () {
-    console.log(12648)
+    //console.log(12648)
 
     const UserId = $('#InputUserId').val();
     const Password = $('#InputPassword').val();
@@ -15,7 +15,7 @@ $('.LoginBtn').on('click', function () {
             password: Password
         },
         success: function (data) {
-            console.log(data)
+            //console.log(data)
             if (data === "0") {
                 alert('ログイン完了！お買い物をお楽しみください！');
                 window.location.href = '/Home/IndexJp';  

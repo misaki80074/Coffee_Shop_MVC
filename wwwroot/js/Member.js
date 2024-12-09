@@ -4,7 +4,7 @@ $.ajax({
     type: 'GET',
     dataType: 'json',
     success: function (data) {
-        console.log(data);
+        //console.log(data);
         //console.log(data.customer[0].name);
 
         $('#InputName').val(data.customer[0].name);
@@ -73,13 +73,13 @@ $.ajax({
 
         $('.OrderCheckBtn').on('click', function () {
             var orderId = $(this).data('orderid');
-            console.log(orderId)
+            //console.log(orderId)
             $.ajax({
                 url: '/Account/GetOrderDetail',  
                 type: 'POST',
                 data: { orderid: orderId },  
                 success: function (response) {
-                    console.log(response.total[0])
+                    //console.log(response.total[0])
                     // 當成功取得資料後，顯示訂單明細
                     var orderdetails = response.orderdetails;
                     var total = response.Total;
@@ -89,7 +89,7 @@ $.ajax({
 
                     // 顯示訂單明細
                     orderdetails.forEach(function (item) {
-                        console.log(item)
+                        //console.log(item)
 
                         var row = `<tr>
                             <td class="productTd"><img src="${item.img}">
@@ -130,8 +130,8 @@ $.ajax({
         });
     },
     error: function (xhr, status, error) {
-        console.error('錯誤訊息:', error);
-        alert('錯誤訊息，看主控台');
+        //console.error('錯誤訊息:', error);
+        alert('error');
     }
 });
 
@@ -142,7 +142,7 @@ $('.SignOutBtn').on('click', function () {
         url: '/Account/Logout',
         type: 'GET',
         success: function (response) {
-            console.log(response)
+            //console.log(response)
             alert(response);                     // 顯示登出成功訊息
             window.location.href = '/Home/Index';
         },
@@ -202,7 +202,7 @@ $('.SaveChangeBtn').on('click', function (e) {
         success: function (response) {
             if (response.userid) {
                 var userid = response.userid;
-                console.log("取得的 UserId:", userid);
+                //console.log("取得的 UserId:", userid);
 
                 // 再送更新資料的請求
                 $.ajax({
@@ -262,7 +262,7 @@ $('.UpdateBtn').on('click', function (e) {
         type: "GET",
         url: "/Account/GetUserid",
         success: function (response) {
-            console.log("取得的 UserId:", response.userid);
+            //console.log("取得的 UserId:", response.userid);
 
             // 發送更新密碼請求
             $.ajax({
@@ -274,7 +274,7 @@ $('.UpdateBtn').on('click', function (e) {
                     n_password: newPwd
                 },
                 success: function (updateResponse) {
-                    console.log(updateResponse)
+                    //console.log(updateResponse)
                     if (updateResponse === "0") {
                         alert("密碼更新成功！");
 

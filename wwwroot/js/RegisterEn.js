@@ -126,7 +126,7 @@ $('#SubmitButton').on('click', function (e) {
         data: FormData,  // 發送序列化後的表單資料
         success: function (data) {
             // 如果註冊成功，顯示成功訊息並導向首頁
-            console.log(data.status)
+            //console.log(data.status)
             if (data.status === "註冊成功") {
                 alert('Registration complete.');
                 window.location.href = '/Home/IndexEn';  

@@ -1,7 +1,7 @@
 ﻿// ------------------------------------------------------- 登入按鈕 ------------------------------------------------------- //
 
 $('.LoginBtn').on('click', function () {
-    console.log(12648)
+    //console.log(12648)
 
     const UserId = $('#InputUserId').val();
     const Password = $('#InputPassword').val();
@@ -15,7 +15,7 @@ $('.LoginBtn').on('click', function () {
             password: Password
         },
         success: function (data) {
-            console.log(data)
+            //console.log(data)
             if (data === "0") {
                 alert(`Welcome! Let's go shopping!`);
                 window.location.href = '/Home/IndexEn';  
@@ -24,10 +24,7 @@ $('.LoginBtn').on('click', function () {
             } else if (data === "2") {
                 alert('You need to create an account to continue.');
                 window.location.href = '/AccountEn/Register';
-            } else if (data === "2") {
-                alert('You need to create an account to continue.');
-                window.location.href = '/AccountEn/Register';  
-            }
+            } 
         },
         error: function () {
             alert('Error');

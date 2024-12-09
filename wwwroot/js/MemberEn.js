@@ -4,7 +4,7 @@ $.ajax({
     type: 'GET',
     dataType: 'json',
     success: function (data) {
-        console.log(data);
+        //console.log(data);
         //console.log(data.customer[0].name);
 
         $('#InputName').val(data.customer[0].name);
@@ -20,12 +20,12 @@ $.ajax({
         ordersList.empty();  // 清空原有的訂單資料
         orderheaders.forEach(order => {
 
-            console.log(order.orderDate)
+            //console.log(order.orderDate)
             // 格式化日期
             const orderDateParts = order.orderDate.split(' ');
-            console.log(orderDateParts);
+            //console.log(orderDateParts);
             const formattedDate = new Date(`${orderDateParts[3]}-${orderDateParts[0]}-${orderDateParts[2]}`).toLocaleDateString();
-            console.log(formattedDate)
+            //console.log(formattedDate)
 
             let replaceStatus = "";
             switch (order.statusName) {
@@ -105,13 +105,13 @@ $.ajax({
 
         $('.OrderCheckBtn').on('click', function () {
             var orderId = $(this).data('orderid');
-            console.log(orderId)
+            //console.log(orderId)
             $.ajax({
                 url: '/AccountEn/GetOrderDetail',  
                 type: 'POST',
                 data: { orderid: orderId },  
                 success: function (response) {
-                    console.log(response.total[0])
+                    //console.log(response.total[0])
                     // 當成功取得資料後，顯示訂單明細
                     var orderdetails = response.orderdetails;
                     var total = response.Total;
@@ -121,7 +121,7 @@ $.ajax({
 
                     // 顯示訂單明細
                     orderdetails.forEach(function (item) {
-                        console.log(item)
+                        //console.log(item)
 
                         var row = `<tr>
                             <td class="productTd"><img src="${item.img}">
@@ -167,7 +167,7 @@ $.ajax({
         });
     },
     error: function (xhr, status, error) {
-        console.error('錯誤訊息:', error);
+        //console.error('錯誤訊息:', error);
         alert('Error');
     }
 });
@@ -179,7 +179,7 @@ $('.SignOutBtn').on('click', function () {
         url: '/AccountEn/Logout',
         type: 'GET',
         success: function (response) {
-            console.log(response)
+            //console.log(response)
             alert("Logout successful.");                     // 顯示登出成功訊息
             window.location.href = '/Home/IndexEn';
         },
@@ -239,7 +239,7 @@ $('.SaveChangeBtn').on('click', function (e) {
         success: function (response) {
             if (response.userid) {
                 var userid = response.userid;
-                console.log("取得的 UserId:", userid);
+                //console.log("取得的 UserId:", userid);
 
                 // 再送更新資料的請求
                 $.ajax({
@@ -299,7 +299,7 @@ $('.UpdateBtn').on('click', function (e) {
         type: "GET",
         url: "/AccountEn/GetUserid",
         success: function (response) {
-            console.log("取得的 UserId:", response.userid);
+            //console.log("取得的 UserId:", response.userid);
 
             // 發送更新密碼請求
             $.ajax({
