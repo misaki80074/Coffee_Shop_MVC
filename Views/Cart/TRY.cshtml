@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Coffee.Models.Product>
+﻿@model IEnumerable<Coffee.Models.VOrderheaderOrderdetail>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -7,6 +7,22 @@
 <h1> @ViewBag.aaa </h1>
 
 
+<style>
+    .a > img{
+        max-width:100px;
+        max-height:100px;
+    }
+</style>
+<table>
+    @foreach (var item in Model){
+        <tr>
+            <td class="a"><img  src="@item.ImgSrc"/></td>
+            <td>@item.ProductName</td>
+            <td>@item.Qty</td>
+            <td>@item.UnitPrice</td>
+        </tr>
+    }
+</table>
 
 <h1>門市選擇</h1>
 <!-- 開啟新視窗 -->
@@ -15,7 +31,7 @@
     開啟門市選擇
 </button>
 <br />
-<h1>@ViewBag.StoreNAME</h1>
+<h1>@ViewBag.StoreNAME</h1> *@
 
 
 

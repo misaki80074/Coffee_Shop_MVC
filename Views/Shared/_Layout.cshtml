@@ -271,6 +271,8 @@ else
                 inputnumber.name = 'itemQTY';
                 inputnumber.value = item.qty;
                 inputnumber.style.width = '50px';
+
+                inputnumber.style.textAlign = 'center';
                 inputnumber.min = '1';
                 inputnumber.onchange = function () { updateQTY(index, this.value); };
                 QTYCell.appendChild(inputnumber);
@@ -293,7 +295,7 @@ else
                 inputprice.name = 'itemprice';
                 inputprice.value = item.price;
                 priceCell.appendChild(inputprice);
-                priceCell.innerHTML += `$${item.price.toLocaleString()}`;
+
                 row.appendChild(priceCell);
                 //-------------------------------------------------------
                 // 總價 (數量 * 單價)
@@ -363,4 +365,3 @@ else
         totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
         // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
     </script>
-}
