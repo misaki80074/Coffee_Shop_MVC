@@ -5,8 +5,8 @@
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
 <h1>アカウントを作成</h1>
-<form>
-    <div class="FormDiv" id="registerForm">
+<form id="registerForm">
+    <div class="FormDiv" >
         <div class="mb-3">
             <label for="InputUserId" class="form-label">アカウント</label>
             <input type="text" class="form-control" id="InputUserId" name="userid">
@@ -27,7 +27,7 @@
         </div>
         <div class="mb-3">
             <label for="CheckPassword" class="form-label">パスワードをもう一度入力してください。</label>
-            <input type="password" class="form-control" id="CheckPassword" name="password">
+            <input type="password" class="form-control" id="CheckPassword">
 
             @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
             <span id="CheckPasswordResult"></span>

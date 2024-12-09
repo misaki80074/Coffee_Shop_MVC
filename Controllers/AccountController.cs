@@ -149,29 +149,41 @@ namespace Coffee.Controllers
         [HttpPost]
         public IActionResult Register([FromForm] string userid, [FromForm] string password, [FromForm] string name, [FromForm] string phone, [FromForm] string email)
         {
-            //產生新的CustomerId
-            string customerId = _context.Customers.OrderByDescending(c => c.Id).Select(c => c.CustomerId).FirstOrDefault()!;
-            string en = customerId.Substring(0, 4);
-            int num = int.Parse(customerId.Substring(4)) + 1;
-            string s_num = num.ToString("D8");
-            string n_customerId = en + s_num;
-
-            //密碼轉換
-            var n_password = HashPassword(password);
-
-            var customer = new Customer()
+            if (userid == null || password == null || name == null || phone == null || email == null)
             {
-                CustomerId = n_customerId,
-                UserId = userid,
-                Password = n_password,
-                Name = name,
-                Phone = phone,
-                Email = email
-            };
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
+                return new ContentResult() { Content = "格式錯誤" };
+            }
+            var db_userid = _context.Customers.Where(c => c.UserId == userid).FirstOrDefault();
+            if (db_userid == null)
+            {
+                //產生新的CustomerId
+                string customerId = _context.Customers.OrderByDescending(c => c.Id).Select(c => c.CustomerId).FirstOrDefault()!;
+                string en = customerId.Substring(0, 4);
+                int num = int.Parse(customerId.Substring(4)) + 1;
+                string s_num = num.ToString("D8");
+                string n_customerId = en + s_num;
 
-            return new ContentResult() { Content = "註冊成功" };
+                //密碼轉換
+                var n_password = HashPassword(password);
+
+                var customer = new Customer()
+                {
+                    CustomerId = n_customerId,
+                    UserId = userid,
+                    Password = n_password,
+                    Name = name,
+                    Phone = phone,
+                    Email = email
+                };
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
+
+                return new ContentResult() { Content = "註冊成功" };
+            }
+            else
+            {
+                return new ContentResult() { Content = "該帳號已存在" };
+            }
         }
 
         /// <summary>

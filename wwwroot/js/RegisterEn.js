@@ -127,7 +127,7 @@ $('#SubmitButton').on('click', function (e) {
         success: function (data) {
             // 如果註冊成功，顯示成功訊息並導向首頁
             //console.log(data.status)
-            if (data.status === "註冊成功") {
+            if (data === "註冊成功") {
                 alert('Registration complete.');
                 window.location.href = '/Home/IndexEn';  
             } else {
