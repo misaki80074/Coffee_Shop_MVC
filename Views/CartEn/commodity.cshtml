@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Coffee.Models.ProductEn>
+
+@{
+    Layout = "_LayoutEn";
+
+    int count = 1;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/js/site.js"></script>
+    <title>Product</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* 使邊框線融合 */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2d8c91;
+        }
+        td {
+            height: 80px;
+        }
+        /* 彈出視窗的樣式 */
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 跳出位置 平移等... */
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+            width: auto;
+            height: auto;
+        }
+
+        .PJ {
+            max-width: 500px;
+            margin: auto;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+
+    @* <h1> @DateTime.Now.ToString("yyyy-MM-ddHH:mm:ss") </h1> *@
+
+    <div class="PJ">
+
+        <table>
+            <h1>Product</h1>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>操作</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <!-- 商品1 -->
+                <tr class="product" data-product-id="@Html.DisplayFor(modelitem => item.ProductId)" data-name="@Html.DisplayFor(modelitem => item.ProductName)" data-price="@Html.DisplayFor(modelitem => item.Price)" data-image-src="@Html.DisplayFor(modeleitem => item.Img)">
+                    <td><img src="@Html.DisplayFor(modeleitem => item.Img)" alt="咖啡 @count"></td>
+                    <td> @Html.DisplayFor(modelitem => item.ProductName) </td>
+                    <td><input type="hidden" value="@Html.DisplayFor(modelitem => item.Price)" />@Html.DisplayFor(modelitem => item.Price)</td>
+                    <td><a href="#" onclick="AddToCart(this)">加入購物車</a></td>
+                </tr>
+                count += 1;
+            }
+
+        </table>
+
+    </div>
+    <!-- 彈出消息的區域 -->
+    <div id="popup">已加入購物車 ！ </div>
+
+    <script>
+        function AddToCart(button) {
+            // 找到 <tr class="product">
+            const product = button.closest('.product');
+            // 從 <tr> 元素中獲取商品屬性
+            const userID = "C11070"; // 為使用者登入的資料
+            const productId = product.getAttribute('data-product-id');
+            const name = product.getAttribute('data-name');
+            const price = product.getAttribute('data-price');
+            const imgsrc = product.getAttribute('data-image-src');
+            //-------------------------------------------------------
+            // 創建一個 商品 物件 Key : Value
+            const cartItem = {
+                productId: productId,
+                name: name,
+                price: parseInt(price),
+                image: imgsrc,
+                qty: 1
+            };
+            // JsonToDB(userID, productID, 1, price); // 同步 DB
+            //-------------------------------------------------------
+            let cart = JSON.parse(localStorage.getItem('cart')) || []; // 獲取購物車資料
+            // 檢查該商品是否已經存在（名稱 和 圖片 比對)，如果找不到傳回 -1，之後需要以名稱、單位等作條件
+            const ItemIndex = cart.findIndex(item => item.name === name);
+            if (ItemIndex >= 0) {
+                cart[ItemIndex].qty += 1; // 商品已存在，增加數量
+            } else {
+                cart.push(cartItem); // 商品不在購物車內，新增商品
+            }
+            //-------------------------------------------------------
+            // 更新 localStorage 中的購物車資料
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // 顯示彈出消息
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 1500);
+            // 加入瞬間觸發，比對localstorage資料與資料庫交互
+            // mergesCart();
+        }
+    </script>
+
+</body>
+</html>

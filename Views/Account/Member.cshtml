@@ -1,0 +1,178 @@
+﻿@{
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+@* ----------------- 主畫面 ----------------- *@
+
+<button class="SignOutBtn">登出</button>
+
+
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info" type="button" role="tab" aria-controls="nav-info" aria-selected="true" style="color: #2e724a;">個人資訊</button>
+    <button class="nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false" style="color: #2e724a;">訂單資訊</button>
+</div>
+
+<div class="tab-content" id="nav-tabContent">
+    <div class="infoDiv tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+        <form>
+            <div class="mb-3">
+                <label for="InputName" class="form-label">姓&nbsp;名</label>
+                <input type="text" class="form-control" id="InputName">
+            </div>
+            <div class="mb-3">
+                <label for="InputPhone" class="form-label">手機號碼</label>
+                <input type="tel" class="form-control" id="InputPhone">
+            </div>
+            <div class="mb-3">
+                <label for="InputEmail" class="form-label">電子信箱</label>
+                <input type="email" class="form-control" id="InputEmail">
+            </div>
+            <div class="mb-3">
+                <label for="InputAddress" class="form-label">寄送地址</label>
+                <input type="text" class="form-control" id="InputAddress">
+            </div>
+            <label for="ResetPwd" class="form-label ResetPwd">密&nbsp;碼</label>
+            <button type="button" id="ResetPwdBtn" data-bs-toggle="modal" data-bs-target="#ChangePwdModal">設定新密碼</button>
+            <br />
+            <div class="mb-3 changeBtnDiv">
+                <button type="reset" class="CancelChangeBtn">取消</button>
+                <button type="submit" class="SaveChangeBtn">儲存變更</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="oderDiv tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">訂單編號</th>
+                    <th scope="col">訂單日期</th>
+                    <th scope="col">合計</th>
+                    <th scope="col">訂單狀況</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">O2411201159</td>                         @* 訂單編號 *@
+                    <td>2024-11-20</td>                                      @* 訂單日期 *@
+                    <td>6420</td>                                            @* 合計 *@
+                    <td>新單</td>                                            @* 訂單狀況 *@
+                    <td><button class="OrderCheckBtn" data-bs-toggle="modal" data-bs-target="#OrderCheckModal">查閱</button></td>     @* 查閱button *@
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@* ----------------- 主畫面 ----------------- *@
+
+@* ----------------- 設定新密碼 Modal ----------------- *@
+<div class="modal fade" id="ChangePwdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ChangePwdModal_body">
+                <h2>編輯密碼</h2>
+                <form>
+                    <div>
+                        <label for="CurrentPwd" class="form-label"></label>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <input type="password" class="form-control" id="CurrentPwd" placeholder="舊密碼"><br />
+                        <label for="NewPwd" class="form-label"></label>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <input type="password" class="form-control" id="NewPwd" placeholder="新密碼（包含英文大小寫、數字，至少8個字元）"><br />
+                        <label for="CheckNewPwd" class="form-label"></label>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <input type="password" class="form-control" id="CheckNewPwd" placeholder="確認新密碼"><br />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="CloseBtn" data-bs-dismiss="modal">關閉</button>
+                <button type="submit" class="UpdateBtn">更新</button>
+            </div>
+        </div>
+    </div>
+</div>
+@* ----------------- 設定新密碼 Modal ----------------- *@
+
+@* ----------------- 訂單查閱 Modal ----------------- *@
+<div class="modal fade" id="OrderCheckModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                @* <h5 class="modal-title" id="exampleModalLabel">訂單資訊</h5> *@
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2>訂單資訊</h2>
+                <table class="table orderDetailsTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">商品資料</th>
+                            <th scope="col">單件價格</th>
+                            <th scope="col">數量</th>
+                            <th scope="col">小計</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="productTd">
+                                <img src="/img/Product/CB001.jpg"></img>
+                                <span>天堂</span>
+                            </td>
+                            <td>680</td>
+                            <td>1</td>
+                            <td>680</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="totalDiv">
+                    <table>
+                        <tr>
+                            <th>小計&nbsp;：&nbsp; </th>
+                            <td class="small-total">680</td>
+                        </tr>
+                        <tr>
+                            <th>運費&nbsp;：&nbsp; </th>
+                            <td>免運</td>
+                        </tr>
+                        <tr>
+                            <th>合計&nbsp;：&nbsp;</th>
+                            <td class="big-total">680</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* ----------------- 訂單查閱 Modal ----------------- *@
+
+
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@* <script>
+     var myModal = document.getElementById('myModal')
+     var myInput = document.getElementById('myInput')
+
+     myModal.addEventListener('shown.bs.modal', function () {
+         myInput.focus()
+     })
+</script>*@
+
+@* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+<script src="~/js/Member.js"></script>
+@* ------------------------------------------------------------------------------------------------ *@

@@ -1,0 +1,145 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@* Modal 產品資訊互動視窗 *@
+@model Coffee.Models.ProductEn
+<div class="modalFixed">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" onclick="modalBtnClose(this)"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6">
+                            @* 產品圖 *@
+                            <div class="productImg">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false" style="height:350px">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="@Model.Img" class="d-block w-100">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/Product/product_img_1.jpg" class="d-block w-100">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/Product/product_img_2.jpg" class="d-block w-100">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                @* 產品縮圖 *@
+                                <div class="smallImg">
+                                    <div class="row">
+                                        <img src="@Model.Img" class="col-4 subImg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1" />
+                                        <img src="/img/Product/product_img_1.jpg" class="col-4 subImg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" />
+                                        <img src="/img/Product/product_img_2.jpg" class="col-4 subImg" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            @* 產品規格 *@
+                            <div class="productFormat">
+                                <h1>@Model.ProductName</h1>
+                                <p><span>Country : </span>@Model.Country</p>
+                                <p><span>Flavor : </span>@Model.Flavor</p>
+                                <p><span>Processing Methods : </span>@Model.Method</p>
+                                <p><span>Roasting Grades : </span>@Model.Baking</p>
+                                <p><span>Price : </span>NT.@Model.Price</p>
+                                @* 數量 *@
+                                <div class="modalUOMcomponent">
+                                    @* 可在函式裡設定最大最小值 *@
+                                    <button onclick="modalBtnUom(this)" name="minus">-</button>
+                                    <input type="number" value="1" readonly />
+                                    <button onclick="modalBtnUom(this)" name="plus">+</button>
+                                </div>
+                                @* 加入購物車 *@
+                                <div class="modalBtn">
+                                    <button class="btn btn-primary"
+                                            data-product-id="@Model.ProductId"
+                                            data-image-src="@Model.Img"
+                                            data-name="@Model.ProductName"
+                                            data-price="@Model.Price"
+                                            onclick="AddToCart(this)">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="productDesc">
+                            <div class="productDescText">
+                                <div>
+                                    <h3>Description</h3>
+                                </div>
+                                <div>
+                                    <p>@Model.Description</p>
+                                </div>
+                                <hr />
+                                <div>
+                                    <a href="/DetailEn/DetailEn/@Model.Id">more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup">Added to Cart</div>
+<script>
+    function AddToCart(button) {
+        // 找到 <tr class="product">
+        const product = button.closest('.modalBtn button');
+        // 從 <tr> 元素中獲取商品屬性
+        // const userID = "C11070"; // 為使用者登入的資料
+        const productId = product.getAttribute('data-product-id');
+        const name = product.getAttribute('data-name');
+        const price = product.getAttribute('data-price');
+        const imgsrc = product.getAttribute('data-image-src');
+        var qtyint = parseInt($('.modalUOMcomponent').find('input').val())
+        //-------------------------------------------------------
+        // 創建一個 商品 物件 Key : Value
+        const cartItem = {
+            productId: productId,
+            name: name,
+            price: parseInt(price),
+            image: imgsrc,
+            qty: qtyint
+        };
+        // JsonToDB(userID, productID, 1, price); // 同步 DB
+        //-------------------------------------------------------
+        let cart = JSON.parse(localStorage.getItem('cart')) || []; // 獲取購物車資料
+        // 檢查該商品是否已經存在（名稱 和 圖片 比對)，如果找不到傳回 -1，之後需要以名稱、單位等作條件
+        const ItemIndex = cart.findIndex(item => item.name === name);
+        if (ItemIndex >= 0) {
+            cart[ItemIndex].qty += 1; // 商品已存在，增加數量
+        } else {
+            cart.push(cartItem); // 商品不在購物車內，新增商品
+        }
+        //-------------------------------------------------------
+        // 更新 localStorage 中的購物車資料
+        localStorage.setItem('cart', JSON.stringify(cart));
+        // 顯示彈出消息
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 1500);
+        // 加入瞬間觸發，比對localstorage資料與資料庫交互
+        // mergesCart();
+    }
+</script>

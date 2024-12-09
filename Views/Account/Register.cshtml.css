@@ -1,0 +1,56 @@
+﻿h1 {
+    display: grid;
+    place-content: center;
+    margin: 60px 0;
+    color: #2e724a;
+    font-weight: bolder;
+}
+
+label {
+    font-size: 18px;
+}
+
+.FormDiv {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: auto;
+}
+
+button {
+    font-size: 20px;
+    background-color: #2e724a;
+    border: 1px solid #2e724a;
+    color: white;
+    border-radius: 3px;
+    padding: 1.5px 0;
+    height: 40px;
+    margin: 20px 0;
+}
+
+    button:hover {
+        background-color: white;
+        color: #2e724a;
+        border: 1px solid #2e724a;
+        font-weight: bold;
+    }
+
+.form-control:focus {
+    border-color: #2e724a;
+    box-shadow: none;
+
+}
+
+/* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 */
+/* 格式檢查提示 */
+span[id*="Result"] {
+    font-size:12px; 
+}
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+/*RWD*/
+@media screen and (max-width: 768px) {
+    .FormDiv {
+        width:60%;
+    }
+}

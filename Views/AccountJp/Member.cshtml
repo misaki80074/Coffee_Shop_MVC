@@ -1,0 +1,169 @@
+﻿@{
+    Layout = "_LayoutJp";
+
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+@* ----------------- 主畫面 ----------------- *@
+
+<button class="SignOutBtn">サインアウト</button>
+
+
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info" type="button" role="tab" aria-controls="nav-info" aria-selected="true" style="color: #2e724a;">個人情報</button>
+    <button class="nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false" style="color: #2e724a;">注文履歴</button>
+</div>
+
+<div class="tab-content" id="nav-tabContent">
+    <div class="infoDiv tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+        <form>
+            <div class="mb-3">
+                <label for="InputName" class="form-label">名前</label>
+                <input type="text" class="form-control" id="InputName">
+            </div>
+            <div class="mb-3">
+                <label for="InputPhone" class="form-label">電話番号</label>
+                <input type="tel" class="form-control" id="InputPhone">
+            </div>
+            <div class="mb-3">
+                <label for="InputEmail" class="form-label">メールアドレス</label>
+                <input type="email" class="form-control" id="InputEmail">
+            </div>
+            <div class="mb-3">
+                <label for="InputAddress" class="form-label">お届け先</label>
+                <input type="text" class="form-control" id="InputAddress">
+            </div>
+            <label for="ResetPwd" class="form-label ResetPwd">パスワード</label>
+            <button type="button" id="ResetPwdBtn" data-bs-toggle="modal" data-bs-target="#ChangePwdModal">パスワードを変更する</button>
+            <br />
+            <div class="mb-3 changeBtnDiv">
+                <button type="reset" class="CancelChangeBtn">キャンセル</button>
+                <button type="submit" class="SaveChangeBtn">確認</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="oderDiv tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">取引 ID</th>
+                    <th scope="col">購入日時</th>
+                    <th scope="col">合計</th>
+                    <th scope="col">注文処理状況</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">O2411201159</td>                         @* 訂單編號 *@
+                    <td>2024-11-20</td>                                      @* 訂單日期 *@
+                    <td>6420</td>                                            @* 合計 *@
+                    <td>新注文</td>                                            @* 訂單狀況 *@
+                    <td><button class="OrderCheckBtn" data-bs-toggle="modal" data-bs-target="#OrderCheckModal">チェック</button></td>     @* 查閱button *@
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@* ----------------- 主畫面 ----------------- *@
+
+@* ----------------- 設定新密碼 Modal ----------------- *@
+<div class="modal fade" id="ChangePwdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ChangePwdModal_body">
+                <h2>パスワード更新</h2>
+                <form>
+                    <div>
+                        <label for="CurrentPwd" class="form-label"></label>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <input type="password" class="form-control" id="CurrentPwd" placeholder="今のパスワード"><br />
+                        <label for="NewPwd" class="form-label"></label>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <input type="password" class="form-control" id="NewPwd" placeholder="更新したいパスワード（大文字小文字と数字を混ぜて、8文字以上で）"><br />
+                        <label for="CheckNewPwd" class="form-label"></label>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <input type="password" class="form-control" id="CheckNewPwd" placeholder="もう一度入力してください。"><br />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="CloseBtn" data-bs-dismiss="modal">閉じる</button>
+                <button type="submit" class="UpdateBtn">更新</button>
+            </div>
+        </div>
+    </div>
+</div>
+@* ----------------- 設定新密碼 Modal ----------------- *@
+
+@* ----------------- 訂單查閱 Modal ----------------- *@
+<div class="modal fade" id="OrderCheckModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                @* <h5 class="modal-title" id="exampleModalLabel">訂單資訊</h5> *@
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2>購入履歴</h2>
+                <table class="table orderDetailsTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">商品</th>
+                            <th scope="col">単価</th>
+                            <th scope="col">数量</th>
+                            <th scope="col">小計</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="productTd">
+                                <img src="/img/Product/CB001.jpg"></img>
+                                <span>Paradise</span>
+                            </td>
+                            <td>680</td>
+                            <td>1</td>
+                            <td>680</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="totalDiv">
+                    <table>
+                        <tr>
+                            <th>小計&nbsp;：&nbsp; </th>
+                            <td class="small-total">680</td>
+                        </tr>
+                        <tr>
+                            <th>送料&nbsp;：&nbsp; </th>
+                            <td>無料</td>
+                        </tr>
+                        <tr>
+                            <th>合計&nbsp;：&nbsp;</th>
+                            <td class="big-total">680</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* ----------------- 訂單查閱 Modal ----------------- *@
+
+
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/MemberJp.js"></script>

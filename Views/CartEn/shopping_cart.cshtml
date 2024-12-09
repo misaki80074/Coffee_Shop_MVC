@@ -1,0 +1,344 @@
+﻿@model IEnumerable<Coffee.Models.ProductEn>
+
+@{
+    Layout = "_LayoutEn";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .PJ {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .PJ > h1 {
+                text-align: center;
+                color: #333;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #00AEAE;
+            font-weight: bold;
+        }
+
+        .PJ > img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-update {
+            background-color: #FF5151;
+            color: white;
+        }
+
+            .btn-update:hover {
+                background-color: #EA0000;
+                color: white;
+            }
+
+        .btn-checkout {
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+            .btn-checkout:hover {
+                color: white;
+                background-color: #218838;
+            }
+
+        .btn-clear {
+            background-color: #FF2D2D;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+            .btn-clear:hover {
+                color: white;
+                background-color: #AE0000;
+            }
+
+        .cart-summary {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+@{
+
+    var loginId = Context.Session.GetString("loginId"); // 取得會員
+
+    string? userid = Context.Session.GetString("userid");
+}
+
+<body>
+    <script>
+
+    </script>
+    @*     <h1>會員: @userid</h1>
+    <h1 id="cartNO"></h1>
+    <h1 id="loginExecuted"></h1> *@
+
+
+
+    <div class="PJ" id="PJ">
+        <h1>Shopping Cart</h1>
+        <form action="/CartEn/Payment" method="post">
+            <input type="hidden" name="CartID" id="CartID" value="" />
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+                <tbody id="cart-items">
+                    @* <input type="type" name="cartId" value="" /> *@
+                </tbody>
+            </table>
+            <br />
+            <table>
+                <tr>
+                    @* 超連結至控制器 *@
+                    <td colspan="2" style="text-align: left;">
+                        @* A 會自動導向，修改 *@
+                        <a href="/Cart/RemoveCart/@userid" onclick="clearCart()" class="btn btn-clear">Clear</a>
+                    </td>
+                    <td colspan="3">
+                        <div class="total-price"><input type="hidden" name="totalprice" id="totalprice" value="" /></div>
+                    </td>
+                    <td colspan="7" style="text-align: right;">
+                        <button type="submit" class="btn btn-checkout"> Check Out </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        // 從 localStorage 讀取購物車資料並轉換成陣列或物件 如果找不到回傳空陣列
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartID = JSON.parse(localStorage.getItem('cartID')) || [];
+        let loginExecuted = JSON.parse(localStorage.getItem('loginExecuted')) || [];
+        // document.getElementById("cartNO").innerHTML = "購物車編號: " + cartID;
+        // document.getElementById("loginExecuted").innerHTML = "登入狀態: " + loginExecuted;
+
+
+        document.getElementById("CartID").value = cartID;
+
+        // 取得 tbody ，用於插入 cart 的商品資料
+        const cartItemsContainer = document.getElementById('cart-items');
+        let totalPrice = 0;
+        // 檢查 cart 是否為空陣列
+        if (cart.length === 0) {
+            const emptyRow = document.createElement('tr');
+            const emptyMessage = document.createElement('td');
+            emptyMessage.setAttribute('colspan', '7');
+            emptyMessage.innerHTML = 'Empty';
+            emptyRow.appendChild(emptyMessage);
+            cartItemsContainer.appendChild(emptyRow);
+        } else {
+            // 如果 cart 不為空，則將資料加入到Table。item為物件(內有name、price、image)，index為索引
+            cart.forEach((item, index) => {
+                const row = document.createElement('tr');
+                //-------------------------------------------------------
+                // 存入 OrderDetail item
+                // const itemCell = document.createElement('td');
+                // const inputNO = document.createElement('input');
+                // inputNO.type = 'hidden';
+                // inputNO.name = 'itemNO';
+                // inputNO.value = index + 1;
+                // itemCell.appendChild(inputNO);
+                // itemCell.innerHTML += index + 1;
+                // row.appendChild(itemCell);
+                //-------------------------------------------------------
+                // 圖片
+                const imgCell = document.createElement('td');
+                // 購物車編號
+                const cartId = document.createElement('input');
+                cartId.type = 'hidden';
+                cartId.name = 'cartId';
+                cartId.value = item.cartId;
+                imgCell.appendChild(cartId);
+                const inputNO = document.createElement('input');
+                inputNO.type = 'hidden';
+                inputNO.name = 'itemNO';
+                inputNO.value = index + 1;
+                imgCell.appendChild(inputNO);
+                const inputIMGSRC = document.createElement('input');
+                inputIMGSRC.type = 'hidden';
+                inputIMGSRC.name = "imgsrc";
+                inputIMGSRC.value = item.image;
+                const inputIMG = document.createElement('img');
+                inputIMG.name = 'itemimg';
+                inputIMG.src = item.image;
+                inputIMG.style.width = "100px"; // 之後要刪 我一定會忘記
+                inputIMG.style.hight = "100px"; // 之後要刪 我一定會忘記
+                imgCell.appendChild(inputIMG);
+                imgCell.appendChild(inputIMGSRC);
+                row.appendChild(imgCell);
+                //-------------------------------------------------------
+                const nameCell = document.createElement('td');
+                const inputName = document.createElement('input');
+                inputName.type = 'hidden';
+                inputName.name = 'itemNane';
+                inputName.value = item.name;
+                nameCell.appendChild(inputName);
+                // -------------------------------------
+                const inputProductId = document.createElement('input');
+                inputProductId.type = 'hidden';
+                inputProductId.name = 'itemId';
+                inputProductId.value = item.productId;
+                nameCell.appendChild(inputProductId);
+                nameCell.innerHTML += item.name;
+                // 插入 name 到 td
+                row.appendChild(nameCell);
+                //----------------------------------------------
+                const QTYCell = document.createElement('td');
+                const inputnumber = document.createElement('input');
+                inputnumber.type = 'number';
+                inputnumber.name = 'itemQTY';
+                inputnumber.value = item.qty;
+                inputnumber.style.width = '50px';
+                inputnumber.min = '1';
+                inputnumber.onchange = function () { updateQTY(index, this.value); };
+                QTYCell.appendChild(inputnumber);
+                row.appendChild(QTYCell);
+                // const QTYCell = document.createElement('td');
+                // const inputQTY = document.createElement('input');
+                // inputQTY.type = 'hidden';
+                // inputQTY.name = 'itemQTY';
+                // inputQTY.value = item.qty;
+                // QTYCell.appendChild(inputQTY);
+                // const QTY = document.createElement('span');
+                // QTY.innerHTML += item.qty;
+                // QTY.id = `QTY-${index}`; // 設定該 span 的id，函數 changeQTY 使用
+                // QTYCell.appendChild(QTY);
+                // row.appendChild(QTYCell); // 將結果插入 td
+                // 單價
+                const priceCell = document.createElement('td');
+                const inputprice = document.createElement('input');
+                inputprice.type = 'hidden';
+                inputprice.name = 'itemprice';
+                inputprice.value = item.price;
+                priceCell.appendChild(inputprice);
+                priceCell.innerHTML += `$${item.price.toLocaleString()}`;
+                row.appendChild(priceCell);
+                //-------------------------------------------------------
+                // 總價 (數量 * 單價)
+                const totalCell = document.createElement('td');
+                const inputtotal = document.createElement('input');
+                inputtotal.type = 'hidden';
+                inputtotal.name = 'itemtotal';
+                inputtotal.value = item.price * item.qty;
+                totalCell.appendChild(inputtotal);
+                totalCell.innerHTML += `$${(item.price * item.qty).toLocaleString()}`;
+                totalCell.id = `total-${index}`;
+                row.appendChild(totalCell);
+                //-------------------------------------------------------
+                // 操作（移除按鈕）
+                const actionCell = document.createElement('td');
+                const removeButton = document.createElement('button');
+                removeButton.type = 'button';
+                removeButton.classList.add("btn", "btn-update");
+                removeButton.innerHTML = 'Delete';
+                removeButton.onclick = function () {
+                    removeFromCart(index, item.productId); // 點擊按鈕時調用移除函數
+                };
+                actionCell.appendChild(removeButton);
+                row.appendChild(actionCell);
+                //-------------------------------------------------------
+                // 新增一筆資料 tr
+                cartItemsContainer.appendChild(row);
+                totalPrice += item.price * item.qty; // 全部總和
+            });
+        }
+        function updateQTY(index, newQty) {
+            if (newQty < 1) return;
+            cart[index].qty = parseInt(newQty);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();
+        }
+        // 改變商品數量
+        // function changeQTY(index, change) {
+        //     // index 第幾個索引、- 還是 +
+        //     if (cart[index].qty + change > 0) {
+        //         cart[index].qty += change;
+        //         document.getElementById(`QTY-${index}`).innerHTML = cart[index].qty;
+        //         document.getElementById(`total-${index}`).innerHTML = `$${(cart[index].price * cart[index].qty).toLocaleString()}`;
+        //         localStorage.setItem('cart', JSON.stringify(cart)); // 將結果重新記錄到 本機儲存
+        //     }
+        //     document.location.reload();
+        // }
+        // 移除的 某 項商品
+        function removeFromCart(index, ProductID) {
+
+            cart.splice(index, 1); // 移除索引上的這一個元素
+            localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage，轉成字串
+            window.location.reload();
+            Deletecartitem(ProductID, "@userid");
+        }
+        // 清空購物車
+        function clearCart() {
+            let ckclear = confirm("Would you like to clear your cart?");
+            if (ckclear) {
+                // 清空 localStorage 中的購物車資料
+                localStorage.removeItem('cart');
+                // 重新加載頁面
+                document.location.reload();
+            }
+        }
+        const totle = document.querySelector(".total-price");
+        document.getElementById("totalprice").value = totalPrice;
+        totle.append(`Total: $${totalPrice.toLocaleString()}`);
+        // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+﻿<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" />
+@model ProductJp
+
+@{
+	Layout = "_LayoutJp";
+
+	var all_country = ViewBag.all_country;
+	var all_baking = ViewBag.all_baking;
+	var all_flavor = ViewBag.all_flavor;
+	var all_method = ViewBag.all_method;
+	var all_weight = ViewBag.all_weight;
+	var all_time_limit = ViewBag.all_time_limit;
+	var shareid = ViewBag.shareid;
+}
+
+<style>
+
+</style>
+<br />
+<br />
+<body>
+	<div class="row">
+		<div id="carouselExample" class="carousel carousel-dark slide col-5" data-bs-ride="carousel">
+			@* 主要圖片 *@
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="3000">
+					<img src="@Model.Img" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item" data-bs-interval="3000">
+					<img src="~/img/Product/product_img_1.jpg" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item" data-bs-interval="3000">
+					<img src="~/img/Product/product_img_2.jpg" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			@* 上一張下一張按鈕 *@
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+			@* 縮圖按鈕 *@
+			<div class="carousel-thumbnails d-flex justify-content-center mt-3">
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active">
+					<img src="@Model.Img" class="thumbnail-img" alt="...">
+				</button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1">
+					<img src="~/img/Product/product_img_1.jpg" class="thumbnail-img" alt="...">
+				</button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2">
+					<img src="~/img/Product/product_img_2.jpg" class="thumbnail-img" alt="...">
+				</button>
+			</div>
+		</div>
+
+		<div class="col-6">
+			@* 產品規格 *@
+			<div class="productFormat">
+				<h1>@Model.ProductName</h1>
+				<hr />
+				<div class="top-title-description-block">
+					<p class="top-title-description">@Model.Description</p>
+				</div>
+				<br />
+				<div>
+					<p class="price-title">NT$ @Model.Price</p>
+				</div>
+				@* <br /> *@
+
+				@* 數量 + - *@
+				<p>数量</p>
+				<div class="uom-component">
+					<button class="reduce-btn">-</button>
+					<input type="number" class="uom-input text-center" value="1" readonly />
+					<button class="add-btn">+</button>
+				</div>
+
+				@* 加入購物車 *@
+				<div class="modalBtn">
+					<button class="btn btn-success add-cart-btn" data-product-id="@Model.ProductId"
+							data-image-src="@Model.Img" data-name="@Model.ProductName"
+							data-price="@Model.Price" onclick="AddToCart(this)">
+						申し込み
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+
+
+
+	<div class="row">
+
+		@* 產品特色介紹 *@
+		<div class="col-6">
+			<div class="detail-title text-center">
+				<h1 class="detail-title-introduction">この商品について</h1>
+				@* <small class="detail-title-small">商品特色</small> *@
+			</div>
+			<br />
+			<p class="bottom-title-description">自然の恵みと、匠の技で焙煎。産地から味覚まで、細心のこだわりがスペシャルティコーヒーを形作ります。</p>
+
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;原産地</div>
+				<div class="card-body">
+					@foreach (var country in all_country)
+					{
+						if (Model.Country!.Contains(country))
+						{
+							<span class="badge bg-success ">@country</span>
+						}
+						else
+						{
+							<span class="badge bg-light text-dark">@country</span>
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;焙煎度</div>
+				<div class="card-body">
+					@foreach (var baking in all_baking)
+					{
+						if (baking == Model.Baking)
+						{
+							<span class="badge bg-success baking-level-answer">@baking</span>
+						}
+						else
+						{
+							<span class="badge bg-light text-dark">@baking</span>
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;風味</div>
+				<div class="card-body">
+					@{
+						var flavor_array = @Model.Flavor!.Split(',');
+						foreach (var flavor in all_flavor)
+						{
+							bool is_have_flavor = Array.Exists(flavor_array, element => element == flavor);
+							if (is_have_flavor)
+							{
+								<span class="badge bg-success ">@flavor</span>
+							}
+							else
+							{
+								<span class="badge bg-light text-dark">@flavor</span>
+							}
+
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;精製方法</div>
+				<div class="card-body">
+					@foreach (var method in all_method)
+					{
+						if (method == Model.Method)
+						{
+							<span class="badge bg-success method-answer">@method</span>
+						}
+						else
+						{
+							<span class="badge bg-light text-dark">@method</span>
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;重量と賞味期限</div>
+				<div class="card-body row">
+					<div class="col-6">
+						<span class="badge bg-success">重&nbsp;&nbsp;量</span>
+						@foreach (var weight in all_weight)
+						{
+							if (weight == Model.Weight)
+							{
+								<span class="badge bg-success">@weight</span>
+							}
+							else
+							{
+								<span class="badge bg-light text-dark">@weight</span>
+							}
+						}
+					</div>
+					<div class="col-6">
+						<span class="badge bg-success">賞味期限</span>
+						@foreach (var time_limit in all_time_limit)
+						{
+							if (time_limit == Model.Timelimit)
+							{
+								<span class="badge bg-success">@time_limit</span>
+							}
+							else
+							{
+								<span class="badge bg-light text-dark">@time_limit</span>
+							}
+						}
+					</div>
+				</div>
+			</div>
+
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;フレーバーチャット</div>
+				<div class="card-body">
+					@* <p>味道分布圖</p> *@
+					<canvas id="polarAreaChart"></canvas>
+				</div>
+			</div>
+
+		</div>
+
+
+		@* 手沖咖啡計算機 *@
+		<div class="col-6 left-divider">
+			<div class="detail-title text-center">
+				<h1 class="detail-title-howtouse">ハンドドリップ電卓</h1>
+			</div>
+			<br />
+			<p class="bottom-title-description">あなただけのコーヒーを、簡単に、そしてパーフェクトに。</p>
+
+
+			@* 參數設定區 *@
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;パラメータ設定</div>
+				<div class="card-body">
+					<div class="input-group mb-3 ">
+						<label class="input-group-text" for="inputGroupSelect01">飲む量</label>
+						<select class="form-select text-center cooffee-drink-select" id="inputGroupSelect01" onchange="Select_Choose()">
+							<option selected disabled>選択肢</option>
+							<option value="50">ワンショット</option>
+							<option value="250">ショート</option>
+							<option value="500">グランデ</option>
+							<option value="other">その他</option>
+						</select>
+						<input type="number" class="form-control text-center coffee-drink-input" aria-label="Text input with dropdown button" min="50" disabled>
+						<span class="input-group-text">ml</span>
+					</div>
+
+					<div class="custom-block">カスタマイズ設定</div>
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="inputGroupSelect01">好み</label>
+						<select class="form-select text-center taste-preference" id="inputGroupSelect01">
+							<option value="1">やや酸っぱい</option>
+							<option value="2" selected>ディフォルト</option>
+							<option value="3">やや苦い</option>
+						</select>
+					</div>
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="inputGroupSelect01">厚味</label>
+						<select class="form-select text-center strong-light-preference" id="inputGroupSelect01">
+							<option value="1">濃い</option>
+							<option value="2" selected>ディフォルト</option>
+							<option value="3">薄い</option>
+						</select>
+					</div>
+					<div>
+						<button type="button" class="btn-calculate bg-success" id="btn-calculate" onclick="calculateParameters()"><span>提出！</span></button>
+					</div>
+				</div>
+			</div>
+			<br />
+			@* 計算結果區 *@
+			<div class="card border-light mb-3">
+				<div class="card-header Aicoffee-blank-revision" id="target">&nbsp;計算結果</div>
+				<div class="card-body">
+					@* 第一排 (水量、咖啡粉、沖煮時間) *@
+					<div class="row Aicoffee-blank-revision">
+						<div class="col-4">
+							<div class="gaugeChart" id="waterChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/水量.png">
+								<span>お湯の量</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="coffeeWeightChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/咖啡粉.png">
+								<span>コーヒー粉</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="brewTimeChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/沖煮時間.png">
+								<span>注ぐ時間</span>
+							</div>
+						</div>
+						@* 第二排(水溫、悶蒸水量、悶煮時間) *@
+						<div class="col-4">
+							<div class="gaugeChart" id="waterTemperatureChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/水溫.png">
+								<span>お湯の温度</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="simmerWaterChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/悶蒸水量.png">
+								<span>蒸らしの量</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="simmerTimeChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/悶蒸時間.png">
+								<span>蒸らしの時間</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			@* 計算結果區 *@
+			<div class="card border-light mb-3">
+				<div class="card-header Aicoffee-blank-revision" id="target">&nbsp;オススメの抽出方法</div>
+				<div class="card-body">
+					@* 第四排( 研磨粗細 ) *@
+					<div class="accordion" id="accordionPanelsStayOpenExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+									<strong>コーヒー豆の挽き方</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+								<div class="accordion-body">
+									<p class="grind-size-result"></p>
+								</div>
+							</div>
+						</div>
+						@* 第五排( 萃取係數 ) *@
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+								<button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+									<strong>抽出比率</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+								<div class="accordion-body">
+									<p class="extraction-conditions-result"></p>
+								</div>
+							</div>
+						</div>
+						@* 第六排( 注水方式 ) *@
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+									<strong>淹れ方</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+								<div class="accordion-body">
+									<p class="add-water-result"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div>
+		<ul>
+			<li>ご希望に添えず大変申し訳ございませんが、コーヒー豆の鮮度を保つため、挽きサービスは行っておりません。</li>
+			<li>
+				コーヒー豆は焙煎することで、内部の油分が表面に現れ、油っぽくなることがあります。これは、焙煎によって豆が膨張し、
+				二酸化炭素が放出される過程で起こる自然な現象です。特に中煎りと深煎りの豆ではこの現象が顕著に見られます。
+			</li>
+		</ul>
+	</div>
+	<button class="topbtn">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="#b6d7a8" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5" />
+		</svg>
+	</button>
+
+	<div id="popup">カートに入れました</div>
+
+	@await Html.PartialAsync("_PartialChatBotJp")
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>  @*引用APEXCHARTS.js*@
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    @*引用CHARTS.js*@
+	<script type="text/javascript">
+		var shareid = @shareid
+	</script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/DetailJp.js" asp-append-version="true"></script>
+	<script src="~/js/chatbotJp.js" asp-append-version="true"></script>
+
+</body>

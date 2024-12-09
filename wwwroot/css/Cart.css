@@ -1,0 +1,53 @@
+﻿
+.PJ > img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-update {
+    background-color: #FF5151;
+    color: white;
+}
+.btn-update:hover {
+    background-color: #EA0000;
+    color: white;
+}
+.btn-checkout {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.btn-checkout:hover {
+    color: white;
+    background-color: #218838;
+}
+.btn-clear {
+    background-color: #FF2D2D;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.btn-clear:hover {
+    color: white;
+    background-color: #AE0000;
+}
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

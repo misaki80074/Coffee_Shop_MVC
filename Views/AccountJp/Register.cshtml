@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "_LayoutJp";
+
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<h1>アカウントを作成</h1>
+<form id="registerForm">
+    <div class="FormDiv" >
+        <div class="mb-3">
+            <label for="InputUserId" class="form-label">アカウント</label>
+            <input type="text" class="form-control" id="InputUserId" name="userid">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="InputUserIdResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="InputPassword" class="form-label">パスワード</label>
+            <input type="password" class="form-control" id="InputPassword" name="password">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="InputPasswordResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="CheckPassword" class="form-label">パスワードをもう一度入力してください。</label>
+            <input type="password" class="form-control" id="CheckPassword">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="CheckPasswordResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="InputName" class="form-label">名前</label>
+            <input type="text" class="form-control" id="InputName" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="InputPhone" class="form-label">電話番号</label>
+            <input type="tel" class="form-control" id="InputPhone" name="phone">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="InputPhoneResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="InputEmail" class="form-label">メールアドレス</label>
+            <input type="email" class="form-control" id="InputEmail" name="email">
+            <span id="InputEmailResult"></span>
+        </div>
+        <button type="submit" id="SubmitButton">続ける</button>
+    </div>
+</form>
+
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+<script src="~/js/RegisterJp.js"></script>
+@* ------------------------------------------------------------------------------------------------ *@

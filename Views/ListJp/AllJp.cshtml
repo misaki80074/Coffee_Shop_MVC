@@ -1,0 +1,249 @@
+﻿@model Coffee.Controllers.DocLoad
+
+@{
+    Layout = "_LayoutJp";
+}
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" />
+<link href="~/css/List.css" rel="stylesheet" />
+
+<div class="productList" style="margin:2.5%;">
+    @* Breadcrumb 麵包屑 *@
+    <div aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        </ol>
+    </div>
+    <div>
+        <div class="row">
+            @* Sidebar 側邊欄 *@
+            <div class="col-12 col-sm-3">
+                <div class="navSm">
+                    <div aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        </ol>
+                    </div>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionSidebar" aria-controls="accordionSidebar" aria-expanded="true" aria-label="Toggle navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="17.5" fill="#464646" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="accordion classAccordion" id="accordionSidebar">
+                    <div class="accordion-item">
+                        <a href="/ListJp" class="accordion-header accordion-button">すべて</a>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">原産地</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionSidebar">
+                            <div class="accordion-body">
+                                @foreach (string c in Model.Country!)
+                                {
+                                    <a>@c</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">風味</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSidebar">
+                            <div class="accordion-body">
+                                @foreach (string f in Model.Flavor!)
+                                {
+                                    <a>@f</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a class="accordion-header accordion-button">ドリップコーヒー</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-9">
+                @* 數量和排序 *@
+                <div class="ItemSort row">
+                    <button class="navbar-toggler col-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filter" aria-controls="filter" aria-expanded="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="17.5" fill="#464646" class="bi bi-filter-left" viewBox="0 0 16 16">
+                            <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </button>
+                    @* 數量 *@
+                    <div class="col">
+                    </div>
+                    @* Dropdown 排序 *@
+                    <div class="col-auto">
+                        <div class="d-inline-flex">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle"
+                                        type="button"
+                                        id="dropdownMenuButtonPriceSort"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        data-bs-reference="parent">
+                                    並べ替え
+                                </button>
+                                <ul class="dropdown-menu priceSort" aria-labelledby="dropdownMenuButtonPriceSort">
+                                    <li class="dropdown-item">オススメ</li>
+                                    <li class="dropdown-item">価格:安い順</li>
+                                    <li class="dropdown-item">価格:高い順</li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle"
+                                        type="button"
+                                        id="dropdownMenuButtonItemShow"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        data-bs-reference="parent">
+                                    1ページに12件
+                                </button>
+                                <ul class="dropdown-menu itemShow" aria-labelledby="dropdownMenuButtonItemShow">
+                                    <li class="dropdown-item f-show-item" data-num="12">1ページに12件</li>
+                                    <li class="dropdown-item f-show-item" data-num="18">1ページに18件</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @* Dropdown 篩選 *@
+                <div class="filter row" id="filter">
+                    <div class="col-3">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    id="dropdownMenuButtonPrice"
+                                    data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside"
+                                    aria-expanded="false"
+                                    data-bs-reference="parent">
+                                価格
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrice">
+                                <div class="dropdown-item" style="display:flex;justify-content:right">
+                                    <button type="button" class="btn-close" aria-label="Close" onclick="filterBtnClose(this)"></button>
+                                </div>
+                                <div class="dropdown-item filterPriceItem">
+                                    <input type="number" name="min" placeholder="最小値" />
+                                    <span> - </span>
+                                    <input type="number" name="max" placeholder="最大値" />
+                                    <input type="submit" value="Go" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    id="dropdownMenuButtonBaking"
+                                    data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside"
+                                    aria-expanded="false"
+                                    data-bs-reference="parent">
+                                焙煎度
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonBaking">
+                                <div class="dropdown-item" style="display:flex;justify-content:right">
+                                    <button type="button" class="btn-close" aria-label="Close" onclick="filterBtnClose(this)"></button>
+                                </div>
+                                <div class="dropdown-item filter-baking-item">
+                                    @foreach (string b in Model.Baking!)
+                                    {
+                                        <div>
+                                            <label for="@b" class="CBcontainer"><input type="checkbox" id="@b" /><span class="checkmark"></span>@b</label>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    id="dropdownMenuButtonMethod"
+                                    data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside"
+                                    aria-expanded="false"
+                                    data-bs-reference="parent">
+                                精製方法
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonMethod">
+                                <div class="dropdown-item" style="display:flex;justify-content:right">
+                                    <button type="button" class="btn-close" aria-label="Close" onclick="filterBtnClose(this)"></button>
+                                </div>
+                                <div class="dropdown-item filter-method-item">
+                                    @foreach (string m in Model.Method!)
+                                    {
+                                        <div>
+                                            <label for="@m" class="CBcontainer"><input type="checkbox" id="@m" /><span class="checkmark"></span>@m</label>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle"
+                                    type="button"
+                                    id="dropdownMenuButtonTaste"
+                                    data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside"
+                                    aria-expanded="false"
+                                    data-bs-reference="parent">
+                                味覚
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonTaste">
+                                <div class="dropdown-item" style="display:flex;justify-content:right">
+                                    <button type="button" class="btn-close" aria-label="Close" onclick="filterBtnClose(this)"></button>
+                                </div>
+                                <div class="dropdown-item filterTasteItem">
+                                    <div>
+                                        香り<input type="range" min="1" max="5" value="1" id="fragrance" /><span>1</span>
+                                    </div>
+                                    <div>
+                                        酸み<input type="range" min="1" max="5" value="1" id="sour" /><span>1</span>
+                                    </div>
+                                    <div>
+                                        苦み<input type="range" min="1" max="5" value="1" id="bitter" /><span>1</span>
+                                    </div>
+                                    <div>
+                                        甘み<input type="range" min="1" max="5" value="1" id="sweet" /><span>1</span>
+                                    </div>
+                                    <div>
+                                        厚味<input type="range" min="1" max="5" value="1" id="strong" /><span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @* Card 產品卡 *@
+                <div class="cardContainer row">
+                </div>
+                @* 分頁 (Pagination) *@
+                <div class="page">
+                    <ul class="pageul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* 到頂部 *@
+<button class="topbtn">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#b6d7a8" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5" />
+    </svg>
+</button>
+@await Html.PartialAsync("_PartialChatBotJp")
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/chatbotJp.js" asp-append-version="true"></script>
+<script src="~/js/ListJp.js"></script>

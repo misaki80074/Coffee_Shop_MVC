@@ -1,0 +1,411 @@
+﻿<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/Detail.css" asp-append-version="true" />
+@model ProductEn
+
+@{
+	Layout = "_LayoutEn";
+
+	var all_country = ViewBag.all_country;
+	var all_baking = ViewBag.all_baking;
+	var all_flavor = ViewBag.all_flavor;
+	var all_method = ViewBag.all_method;
+	var all_weight = ViewBag.all_weight;
+	var all_time_limit = ViewBag.all_time_limit;
+	var shareid = ViewBag.shareid;
+}
+
+<br />
+<br />
+<body>
+	<div class="row">
+		<div id="carouselExample" class="carousel carousel-dark slide col-6" data-bs-ride="carousel">
+			@* 主要圖片 *@
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="3000">
+					<img src="@Model.Img" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item" data-bs-interval="3000">
+					<img src="~/img/Product/product_img_1.jpg" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item" data-bs-interval="3000">
+					<img src="~/img/Product/product_img_2.jpg" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			@* 上一張下一張按鈕 *@
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+			@* 縮圖按鈕 *@
+			<div class="carousel-thumbnails d-flex justify-content-center mt-3">
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active">
+					<img src="@Model.Img" class="thumbnail-img" alt="...">
+				</button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1">
+					<img src="~/img/Product/product_img_1.jpg" class="thumbnail-img" alt="...">
+				</button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2">
+					<img src="~/img/Product/product_img_2.jpg" class="thumbnail-img" alt="...">
+				</button>
+			</div>
+		</div>
+
+		<div class="col-6">
+			@* 產品規格 *@
+			<div class="productFormat">
+				<h1>@Model.ProductName</h1>
+				<hr />
+				<div class="top-title-description-block">
+					<p class="top-title-description">@Model.Description</p>
+				</div>
+				<br />
+				<div>
+					<p class="price-title">NT$ @Model.Price</p>
+				</div>
+				@* <br /> *@
+
+				@* 數量 + - *@
+				<p>Quantity</p>
+				<div class="uom-component">
+					<button class="reduce-btn">-</button>
+					<input type="number" class="uom-input text-center" value="1" readonly />
+					<button class="add-btn">+</button>
+				</div>
+
+				@* 加入購物車 *@
+				<div class="modalBtn">
+					<button class="btn btn-success add-cart-btn" data-product-id="@Model.ProductId"
+							data-image-src="@Model.Img" data-name="@Model.ProductName"
+							data-price="@Model.Price" onclick="AddToCart(this)">
+						Add to Cart
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+
+
+
+	<div class="row">
+
+		@* 產品特色介紹 *@
+		<div class="col-6">
+			<div class="detail-title text-center">
+				<h1 class="detail-title-introduction">Introduction</h1>
+				@* <small class="detail-title-small">商品特色</small> *@
+			</div>
+			<br />
+			<p class="bottom-title-description">Sourced from nature, meticulously roasted, from origin to taste, every element sets the standard for a premium cup of coffee.</p>
+
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;Country</div>
+				<div class="card-body">
+					@foreach (var country in all_country)
+					{
+						if (Model.Country!.Contains(country))
+						{
+							<span class="badge bg-success ">@country</span>
+						}
+						else
+						{
+							<span class="badge bg-light text-dark">@country</span>
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;Roasting Grades</div>
+				<div class="card-body">
+					@foreach (var baking in all_baking)
+					{
+						if (baking == Model.Baking)
+						{
+							<span class="badge bg-success baking-level-answer">@baking</span>
+						}
+						else
+						{
+							<span class="badge bg-light text-dark">@baking</span>
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;Flavor</div>
+				<div class="card-body">
+					@{
+						var flavor_array = @Model.Flavor!.Split(',');
+						foreach (var flavor in all_flavor)
+						{
+							bool is_have_flavor = Array.Exists(flavor_array, element => element == flavor);
+							if (is_have_flavor)
+							{
+								<span class="badge bg-success ">@flavor</span>
+							}
+							else
+							{
+								<span class="badge bg-light text-dark">@flavor</span>
+							}
+
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;Processing Methods</div>
+				<div class="card-body">
+					@foreach (var method in all_method)
+					{
+						if (method == Model.Method)
+						{
+							<span class="badge bg-success method-answer">@method</span>
+						}
+						else
+						{
+							<span class="badge bg-light text-dark">@method</span>
+						}
+					}
+				</div>
+			</div>
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;About this item</div>
+				<div class="card-body row">
+					<div class="col-6">
+						<span class="badge bg-success">Weight</span>
+						@foreach (var weight in all_weight)
+						{
+							if (weight == Model.Weight)
+							{
+								<span class="badge bg-success">@weight</span>
+							}
+							else
+							{
+								<span class="badge bg-light text-dark">@weight</span>
+							}
+						}
+					</div>
+					<div class="col-6">
+						<span class="badge bg-success">EXP</span>
+						@foreach (var time_limit in all_time_limit)
+						{
+							if (time_limit == Model.Timelimit)
+							{
+								<span class="badge bg-success">@time_limit</span>
+							}
+							else
+							{
+								<span class="badge bg-light text-dark">@time_limit</span>
+							}
+						}
+					</div>
+				</div>
+			</div>
+
+
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;Taste Profile</div>
+				<div class="card-body">
+					@* <p>味道分布圖</p> *@
+					<canvas id="polarAreaChart"></canvas>
+				</div>
+			</div>
+
+		</div>
+
+
+		@* 手沖咖啡計算機 *@
+		<div class="col-6 left-divider">
+			<div class="detail-title text-center">
+				<h1 class="detail-title-howtouse">Pour-Over Coffee Calculator</h1>
+				@* <small class="detail-title-small">手沖咖啡計算器</small> *@
+			</div>
+			<br />
+			<p class="bottom-title-description">
+				Want to customize your coffee experience? Share your preferences,
+				and we'll tailor a brewing recipe just for you. It's like having a personal barista at home.
+			</p>
+
+
+			@* 參數設定區 *@
+			<div class="card border-light mb-3">
+				<div class="card-header">&nbsp;Parameters</div>
+				<div class="card-body">
+					<div class="input-group mb-3 ">
+						<label class="input-group-text" for="inputGroupSelect01">Size options</label>
+						<select class="form-select text-center cooffee-drink-select" id="inputGroupSelect01" onchange="Select_Choose()">
+							<option selected disabled>Choose</option>
+							<option value="50">1 shot</option>
+							<option value="250">Short</option>
+							<option value="500">Grande</option>
+							<option value="other">Other</option>
+						</select>
+						<input type="number" class="form-control text-center coffee-drink-input" aria-label="Text input with dropdown button" min="50" disabled>
+						<span class="input-group-text">ml</span>
+					</div>
+
+					<div class="custom-block">Customizable Options</div>
+					<div class="input-group mb-3">
+						<label class="input-group-text" for="inputGroupSelect01">Flavor Preference</label>
+						<select class="form-select text-center taste-preference" id="inputGroupSelect01">
+							<option value="1">More Sour</option>
+							<option value="2" selected>Normal</option>
+							<option value="3">More Bitter</option>
+						</select>
+					</div>
+					<div class="input-group mb-3">
+
+						<label class="input-group-text" for="inputGroupSelect01" style="width: 155.21px;">Robust or Light</label>
+						<select class="form-select text-center strong-light-preference" id="inputGroupSelect01">
+							<option value="1">Robust</option>
+							<option value="2" selected>Normal</option>
+							<option value="3">Light</option>
+						</select>
+					</div>
+					<div>
+						<button type="button" class="btn-calculate bg-success" id="btn-calculate" onclick="calculateParameters()"><span>Start!</span></button>
+					</div>
+				</div>
+			</div>
+			<br />
+			@* 計算結果區 *@
+			<div class="card border-light mb-3">
+				<div class="card-header Aicoffee-blank-revision" id="target">&nbsp;Suggestion of Pour-Over Coffee Ratio</div>
+				<div class="card-body">
+					@* 第一排 (水量、咖啡粉、沖煮時間) *@
+					<div class="row Aicoffee-blank-revision">
+						<div class="col-4">
+							<div class="gaugeChart" id="waterChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/水量.png">
+								<span style="font-size: 20px;">Amount of Water</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="coffeeWeightChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/咖啡粉.png">
+								<span style="font-size: 20px;">Coffee Powder</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="brewTimeChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/沖煮時間.png">
+								<span style="font-size: 20px;">Pouring Time</span>
+							</div>
+						</div>
+						@* 第二排(水溫、悶蒸水量、悶煮時間) *@
+						<div class="col-4">
+							<div class="gaugeChart" id="waterTemperatureChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/水溫.png">
+								<span style="font-size: 20px;">Water Temperature</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="simmerWaterChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/悶蒸水量.png">
+								<span style="font-size: 20px;">Blooming Volume</span>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="gaugeChart" id="simmerTimeChart"></div>
+							<div class="Aicoffee-result-title-6">
+								<img src="~/img/悶蒸時間.png">
+								<span style="font-size: 20px;">Blooming Time</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			@* 計算結果區 *@
+			<div class="card border-light mb-3">
+				<div class="card-header Aicoffee-blank-revision" id="target">&nbsp;Guide of Extraction</div>
+				<div class="card-body">
+					@* 第四排( 研磨粗細 ) *@
+					<div class="accordion" id="accordionPanelsStayOpenExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+									<strong>Grind Size</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+								<div class="accordion-body">
+									<p class="grind-size-result"></p>
+								</div>
+							</div>
+						</div>
+						@* 第五排( 萃取係數 ) *@
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+								<button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+									<strong>Extraction Rate</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+								<div class="accordion-body">
+									<p class="extraction-conditions-result"></p>
+								</div>
+							</div>
+						</div>
+						@* 第六排( 注水方式 ) *@
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+									<strong>Pouring Method</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+								<div class="accordion-body">
+									<p class="add-water-result"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div>
+		<ul>
+			<li>To ensure the freshness and food safety of our coffee beans, we are unable to offer any grinding service. We apologize for any inconvenience this may cause.</li>
+			<li>
+				Coffee beans naturally contain oils. During the roasting process, the beans expand and crack, allowing the oils to rise to the surface. After roasting,
+				coffee beans continue to release carbon dioxide, pushing more oil to the surface. This process is natural and can cause the beans to appear oily,
+				especially in medium and dark roasts.
+			</li>
+		</ul>
+	</div>
+	<button class="topbtn">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="#b6d7a8" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5" />
+		</svg>
+	</button>
+
+	<div id="popup">Added to Cart</div>
+
+	@await Html.PartialAsync("_PartialChatBotEn")
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>  @*引用APEXCHARTS.js*@
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    @*引用CHARTS.js*@
+	<script type="text/javascript">
+		var shareid = @shareid
+	</script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/DetailEn.js" asp-append-version="true"></script>
+	<script src="~/js/chatbotEn.js" asp-append-version="true"></script>
+
+</body>
+

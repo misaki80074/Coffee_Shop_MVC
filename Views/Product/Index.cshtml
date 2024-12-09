@@ -1,0 +1,11 @@
+﻿@{
+    List<Product> products = ViewBag.Demo;
+} 
+
+<h3>Product List</h3>
+@for (int i = 0; i < products.Count; i++)
+{
+    @: 商品名稱：@products[i].ProductName
+    @: 商品分類：@products[i].Category
+    <br />
+}

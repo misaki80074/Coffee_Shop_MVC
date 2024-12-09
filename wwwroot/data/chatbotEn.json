@@ -1,0 +1,93 @@
+{
+  "Branding Story": {
+    "Branding Timeline": [
+      {
+        "year": "2024.10.15",
+        "title": "Assembling a founding team",
+        "description": ""
+      },
+      {
+        "year": "2024.10.30",
+        "title": "Branding",
+        "description": ""
+      },
+      {
+        "year": "2024.11.04",
+        "title": "Website Setup",
+        "description": ""
+      },
+      {
+        "year": "2024.11.30",
+        "title": "Officially Launched",
+        "description": ""
+      }
+    ],
+    "About our team": [
+      {
+        "name": "Syu",
+        "position": "Order system coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": ""
+      },
+      {
+        "name": "Wei",
+        "position": "Product pages & charbot coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": ""
+      },
+      {
+        "name": "Liang",
+        "position": "Back-font system coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": ""
+      },
+      {
+        "name": "Chen",
+        "position": "Product catalog coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": ""
+      },
+      {
+        "name": "Lin",
+        "position": "Account system coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": ""
+      },
+      {
+        "name": "Chiang",
+        "position": "Homepage coordinator",
+        "image": "/img/Product/product_img_2.jpg",
+        "description": ""
+      }
+    ]
+  },
+  "Flavor Guide to Coffee Bean Selection": {
+    "Taste Preference": {
+      "Sourer": "~/ListEn?sour=5",
+      "Sweeter": "~/ListEn/?sweet=5",
+      "More bitter": "~/ListEn/?bitter=4"
+    },
+    "Flavor Preference": {
+      "flower": "~/ListEn/Flavor/flower",
+      "fruit": "~/ListEn/Flavor/fruit",
+      "tea": "~/ListEn/Flavor/tea",
+      "wine": "~/ListEn/Flavor/wine",
+      "nut": "~/ListEn/Flavor/nut",
+      "chocolate": "~/ListEn/Flavor/chocolate"
+    }
+  },
+  "Trivia of Coffee": {
+    "Random 10 Trivias": [
+      "Trivia 1：Coffee bean isn't bean, it's actually a type of fruit. It's often called coffee cherry because it resemble cherry and is red when ripe. Coffee beans are the seeds found inside the coffee berry.",
+      "Trivia 2：The world's most expensive coffee, civet coffee, is made from coffee beans that have been eaten and excreted by the Asian palm civet. These beans have a unique flavor but come at a high price of $160 per pound. Due to its high value, many manufacturers force-feed coffee beans to civets, leading to animal cruelty.",
+      "Trivia 3：It's astonishing to learn that some coffee trees can live for more than two hundred years!",
+      "Trivia 4：The worst coffee? Gotta be mine! No contest! 🤣 And then there are these crazy coffee trends like Japan's garlic coffee and Thailand's durian coffee.",
+      "Trivia 5：The Dutch are the world's biggest coffee lovers! They guzzle down about 2 cups a day and roast nearly 12 kilos of coffee beans each year. BTW, Taiwan comes in at number 72 in global coffee consumption.",
+      "Trivia 6：For Italians, coffee is a morning thing, like a tradition. So, in a classic Italian coffee shop, ordering a cappuccino after 11 AM is a bit strange. But hey, the younger crowd doesn't really care what time it is to grab a cup of coffee.",
+      "Trivia 7：Who knows coffee can be a plant doctor? Mixing used coffee grounds with sugar and watering your plants with it can work wonders! It's like giving your plants a second chance at life.",
+      "Trivia 8：Ever used coffee to soothe a headache? Well, you're not alone! Pharma companies have been adding caffeine to their painkillers for years because it can make them up to 40% more effective!",
+      "Trivia 9：Coffee is the world's biggest beverage business after oil! It's a huge export for many countries and keeps millions of people in business.",
+      "Trivia 10：Legend has it that around 1500 years ago, a shepherd noticed his goats were bouncing off the walls after snacking on some berries. Intrigued, he tried them himself and found he could stay up all night. He shared this amazing discovery with some monks who were looking for a way to stay awake during long prayers. Soon, coffee was born!"
+    ]
+  }
+}

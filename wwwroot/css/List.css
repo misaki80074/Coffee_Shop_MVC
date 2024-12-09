@@ -1,0 +1,286 @@
+﻿/*修改麵包屑樣式*/
+.breadcrumb-item a {
+    color: #464646;
+    text-decoration: none;
+}
+
+.breadcrumb-item::before {
+    color: #464646;
+}
+
+.breadcrumb-item.active, .breadcrumb li {
+    color: #b6d7a8;
+}
+
+/*修改bootstrap的樣式*/
+.row > * {
+    padding-top: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
+}
+/*修改Card 產品卡樣式*/
+.card {
+    border: none !important;
+    background-color: #b6d7a8;
+}
+
+.cardImgBody2 {
+    display: none;
+}
+
+.cardImgBody {
+    position: relative;
+}
+
+@media (max-width: 576px) {
+    .cardImgBody {
+        display: none;
+    }
+
+    .cardImgBody2 {
+        display: block;
+    }
+}
+
+.cardImgBody > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.25);
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+    .cardImgBody > div > * {
+        background-color: #b6d7a8;
+        width: 3rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.card:hover .cardImgBody > div {
+    opacity: 1;
+    transition: all 200ms ease-out;
+}
+
+/*修改Modal 產品資訊互動視窗樣式*/
+.modalFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    outline: 0;
+    background-color: rgb(0, 0, 0, .5);
+}
+
+    .modalFixed::-webkit-scrollbar {
+        display: none;
+    }
+
+.modal-content {
+    background-color: #FFF;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-header .btn-close {
+    box-shadow: none;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23464646'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+
+.carousel {
+    ;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b6d7a8'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b6d7a8'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.smallImg {
+    margin-top: 1rem;
+}
+
+    .smallImg .row {
+        background-color: white;
+        border-radius: 0.5rem;
+    }
+
+
+.subImg {
+    cursor: pointer;
+}
+
+    .subImg:hover {
+        outline: 2px solid #b6d7a8;
+        border-radius: 0.5rem;
+    }
+
+.productFormat p {
+    margin-bottom: 0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: #464646;
+}
+
+.productFormat h1 {
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #464646;
+    color: #464646;
+}
+
+.modalUOMcomponent {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+    .modalUOMcomponent * {
+        color: #464646;
+    }
+
+    .modalUOMcomponent button[name="minus"] {
+        padding: 0;
+        width: 2rem;
+        height: 2rem;
+        background-color: inherit;
+        border-top: 1px solid #464646;
+        border-right: none;
+        border-bottom: 1px solid #464646;
+        border-left: 1px solid #464646;
+        border-radius: 0.25rem 0 0 0.25rem;
+    }
+
+    .modalUOMcomponent button[name="plus"] {
+        padding: 0;
+        width: 2rem;
+        height: 2rem;
+        background-color: inherit;
+        border-top: 1px solid #464646;
+        border-right: 1px solid #464646;
+        border-bottom: 1px solid #464646;
+        border-left: none;
+        border-radius: 0 0.25rem 0.25rem 0;
+    }
+
+
+    .modalUOMcomponent input[type="number"] {
+        max-width: 8rem;
+        background-color: inherit;
+        border: 1px solid #464646;
+        border-radius: 0;
+        cursor: default;
+        text-align: center;
+    }
+
+        .modalUOMcomponent input[type="number"]:focus {
+            outline: none;
+        }
+
+.modalBtn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+    .modalBtn button {
+        color: #464646;
+    }
+
+    .modalBtn .btn-primary {
+        background-color: #b6d7a8;
+        border-color: #b6d7a8;
+        width: fit-content;
+        box-shadow: none;
+        font-size: 20px;
+    }
+
+        .modalBtn .btn-primary:active:hover, .modalBtn .btn-primary:focus {
+            box-shadow: none;
+            color: #464646;
+        }
+
+
+.productDesc {
+    border-top: 1px solid #464646;
+    color: #464646;
+    margin-top: 1rem;
+}
+
+.productDescText h3 {
+    margin-top: .5rem;
+}
+
+.productDescText hr {
+    width: 20rem;
+    margin: 0 auto;
+    color: #464646;
+}
+
+.productDescText div {
+    display: flex;
+    justify-content: center;
+}
+
+.productDescText a {
+    text-decoration: none;
+    transition: 100ms ease-out;
+    color: #464646;
+}
+
+    .productDescText a:hover {
+        color: #b6d7a8;
+        transition: 100ms ease-out;
+    }
+
+/*頁數*/
+.page {
+    background-color: inherit;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pageul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .pageul li {
+        display: inline-block;
+        margin: 0;
+        color: #464646;
+        font-size: large;
+    }
+
+        .pageul li a {
+            display: inline-block;
+            padding: 0px 5px;
+            text-decoration: none;
+            background-color: #b6d7a8;
+            cursor: pointer;
+        }
+
+        .pageul li.active a {
+            background-color: #2E724A;
+            color: #464646;
+        }
+

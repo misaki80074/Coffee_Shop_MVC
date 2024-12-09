@@ -1,0 +1,61 @@
+﻿@{
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<h1>註冊</h1>
+<form id="registerForm">
+    <div class="FormDiv">
+        <div class="mb-3">
+            <label for="InputUserId" class="form-label">帳號</label>
+            <input type="text" class="form-control" id="InputUserId" name="userid">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="InputUserIdResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="InputPassword" class="form-label">密碼</label>
+            <input type="password" class="form-control" id="InputPassword" name="password">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="InputPasswordResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="CheckPassword" class="form-label">再次輸入密碼</label>
+            <input type="password" class="form-control" id="CheckPassword" name="password2">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="CheckPasswordResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="InputName" class="form-label">姓名</label>
+            <input type="text" class="form-control" id="InputName" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="InputPhone" class="form-label">手機號碼</label>
+            <input type="tel" class="form-control" id="InputPhone" name="phone">
+
+            @* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+            <span id="InputPhoneResult"></span>
+            @* ------------------------------------------------------------------------------------------------ *@
+
+        </div>
+        <div class="mb-3">
+            <label for="InputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="InputEmail" name="email">
+            <span id="InputEmailResult"></span>
+        </div>
+        <button type="submit" id="SubmitButton">開始購物吧！</button>
+    </div>
+</form>
+
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@* 新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增新增 *@
+<script src="~/js/Register.js"></script>
+@* ------------------------------------------------------------------------------------------------ *@

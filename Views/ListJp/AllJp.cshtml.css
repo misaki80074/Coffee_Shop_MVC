@@ -1,0 +1,344 @@
+﻿/*修改bootstrap的樣式*/
+.row > * {
+    padding-top: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
+}
+
+.productList {
+    --font-color: #464646;
+    --font-color-hover: #cccccc;
+    --background-color: #fff; /*如果inherit失效就用此變數*/
+    --main-color: #2E724A;
+    --highlight-color: #b6d7a8;
+    --sub-color1: #E0732A;
+    --sub-color2: #A31313;
+    background-color: var(--background-color);
+}
+
+@media (max-width: 576px) {
+    .productList > div:first-child {
+        display: none;
+    }
+}
+
+/*修改Sidebar 側邊欄的樣式*/
+.navSm {
+    display: none;
+}
+
+    .navSm nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .navSm ol {
+        margin: 0;
+    }
+
+@media (max-width: 576px) {
+    .navSm {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.navSm .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navSm .navbar-toggler svg {
+    transform: rotate(-180deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.navSm .navbar-toggler.collapsed svg {
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.accordion a {
+    padding-bottom: 1rem;
+    color: var(--font-color);
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+    .accordion a:hover {
+        color: var(--font-color-hover);
+    }
+
+.accordion-body {
+    padding: 0 0 0 2rem;
+}
+
+
+    .accordion-body a:not([href]):not([class]):hover {
+        color: var(--font-color-hover);
+        text-decoration: none;
+    }
+
+
+.accordion-item {
+    border: none;
+    background-color: inherit;
+}
+
+.accordion-button {
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+    .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23464646'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+.classAccordion .accordion-button:not(.collapsed) {
+    background-color: inherit;
+    box-shadow: none;
+    color: var(--font-color);
+    font-weight: normal;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23464646'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:hover {
+    color: var(--font-color-hover);
+}
+
+.classAccordion .accordion-button:focus {
+    border-color: inherit;
+    background-color: inherit;
+    color: inherit;
+    font-weight: normal;
+}
+/*修改Dropdown 排序的樣式*/
+.ItemSort * {
+    color: var(--font-color);
+}
+
+.ItemSort > button {
+    display: none;
+}
+
+.ItemSort .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media(max-width: 576px) {
+    .ItemSort > button {
+        display: block;
+    }
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+    .dropdown-toggle:not(.show)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23464646'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        transform: rotate(180deg);
+    }
+
+    .dropdown-toggle::after {
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-left: 1rem;
+        content: "";
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23464646'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        border: none;
+        transition: transform 0.2s ease-in-out;
+    }
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: var(--font-color-hover);
+    background-color: inherit;
+}
+/*修改Dropdown 篩選的樣式*/
+.filter * {
+    color: var(--font-color);
+}
+
+.dropdown-menu {
+    background-color: var(--background-color);
+}
+
+@media(max-width: 576px) {
+    .dropdown-menu {
+        width: 500px;
+    }
+}
+
+.dropdown .btn {
+    padding: 0;
+    border: 0;
+    margin: 0 1rem;
+}
+
+    .dropdown .btn:focus {
+        box-shadow: none;
+    }
+
+.dropdown .btn-primary {
+    color: var(--font-color);
+    background-color: inherit;
+}
+
+    .dropdown .btn-primary:hover {
+        color: var(--font-color-hover);
+    }
+
+.dropdown .btn-close {
+    transition: all 100ms ease-out;
+}
+
+    .dropdown .btn-close:hover {
+        transition: all 200ms ease-out;
+    }
+
+    .dropdown .btn-close:focus {
+        box-shadow: none;
+        opacity: 0.75;
+    }
+
+.filterPriceItem, .filter-baking-item, .filter-method-item, .filterTasteItem {
+    padding-top: 1rem;
+}
+
+    .filterPriceItem input {
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: .25rem;
+        max-width: 6rem;
+        text-align: center;
+        color: var(--font-color);
+        font-size: 20px;
+    }
+
+        .filterPriceItem input[type="number"]::-webkit-outer-spin-button,
+        .filterPriceItem input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        .filterPriceItem input[type="number"]:focus {
+            outline: 0;
+        }
+
+        .filterPriceItem input[type="submit"] {
+            /*            margin-left: 4rem;*/
+            width: 100px;
+            /* position: absolute; */
+            /* bottom: 0; */
+            /*            font-size: 20px;*/
+            background-color: white;
+            border: #2e724a 1px solid;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .filterPriceItem input[type="submit"]:hover {
+                cursor: pointer;
+                background-color: #2e724a;
+                color: white;
+                font-weight: bold;
+            }
+
+.dropdown-item.filter-baking-item:hover, .dropdown-item.filter-method-item:hover, .dropdown-item.filterTasteItem:hover {
+    color: black;
+}
+
+.filter-baking-item div, .filter-method-item div, .filterTasteItem div {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.CBcontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+    .CBcontainer input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #eee;
+    border-radius: 0.25rem;
+}
+
+.CBcontainer input:checked ~ .checkmark {
+    background-color: var(--highlight-color);
+}
+
+    .CBcontainer input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+.filterTasteItem {
+    cursor: default;
+}
+
+    .filterTasteItem input[type="range"],
+    .filterTasteItem input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+    }
+
+    .filterTasteItem input[type="range"] {
+        cursor: pointer;
+        margin: 0 1rem;
+        height: .3rem;
+        border-radius: 0.25rem;
+        background: var(--highlight-color);
+    }
+
+@media(max-width: 576px) {
+    .filterTasteItem input[type="range"] {
+        width: 90%;
+    }
+}
+
+.filterTasteItem input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+/*到頂部*/
+.topbtn {
+    background-color: #2E724A;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    position: fixed;
+    bottom: 4.5rem;
+    right: 3rem;
+    display: none;
+}
+
+    .topbtn:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transition: 200ms ease-out;
+    }
