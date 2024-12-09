@@ -19,7 +19,6 @@ window.onscroll = function () {
 window.onload = function () {
     var pathname = window.location.pathname
     if (pathname.includes("List")) {
-        console.log("這是清單頁面")
         setUI()
         getProData(getAjaxUrl())
         // RWD初次執行檢查

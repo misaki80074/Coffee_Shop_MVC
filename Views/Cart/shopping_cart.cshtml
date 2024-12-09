@@ -146,12 +146,33 @@
                     <td colspan="2" style="text-align: left;">
                         @* A 會自動導向，修改 *@
                         <a href="/Cart/RemoveCart/@userid" onclick="clearCart()" class="btn btn-clear">清空購物車</a>
+                        @{
+                            if (!string.IsNullOrEmpty(userid))
+                            {
+                                <a href="/Cart/RemoveCart/@userid" onclick="clearCart()" class="btn btn-clear">清空購物車</a>
+                            }
+                            else
+                            {
+                                <button type="button" onclick="clearCart()" class="btn btn-clear">清空購物車</button>
+                            }
+                        }
                     </td>
                     <td colspan="3">
                         <div class="total-price"><input type="hidden" name="totalprice" id="totalprice" value="" /></div>
                     </td>
                     <td colspan="7" style="text-align: right;">
-                        <button type="submit" class="btn btn-checkout"> 立即結帳 </button>
+                        @{
+                            // 使用者未登入，type設定為button，讓JS進行判斷
+
+                            if (string.IsNullOrEmpty(userid))
+                            {
+                                <button type="button" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
+                            }
+                            else
+                            {
+                                <button type="submit" class="btn btn-checkout" id="btnck" onclick="return CKBTN();">立即結帳</button>
+                            }
+                        }
                     </td>
                 </tr>
             </table>

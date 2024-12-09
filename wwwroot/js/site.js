@@ -161,33 +161,27 @@
         localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage，轉成字串
 
         //window.location.reload();
-
-        Deletecartitem(ProductID);
-
+        Deletecartitem(ProductID, V_userId);
     }
-    var V_userId = "C11070"; // 使用者登入後的ID
-
-    function Deletecartitem(ProductID) {
-        $.ajax({
-            url: "/Cart/DeleteCartItem",
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({
-                Hmodel:
-                {
-                    UserId: V_userId
-                },
-                Dmodels:
-                {
-                    ProductId: ProductID
-                }
-            })
-        });
-    }
-
+    //document.getElementById("totalprice").value = totalPrice;
 }
-
-// 改變商品數量
+function Deletecartitem(ProductID, V_userId) {
+    $.ajax({
+        url: "/Cart/DeleteCartItemCN",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+            Hmodel:
+            {
+                UserId: V_userId
+            },
+            Dmodels:
+            {
+                ProductId: ProductID
+            }
+        })
+    });
+}
 // 清空購物車
 function clearCart() {
     // 清空 localStorage 中的購物車資料
@@ -195,6 +189,31 @@ function clearCart() {
     // 重新加載頁面
     document.location.reload();
 }
+function JsonToDB(V_userId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // 轉成控制器期望的格式
+    let DetailCart = cart.map(item => ({
+        productID: item.productId,
+        //productID: item.productID || "",
+        qty: item.qty,
+        unitPrice: item.price
+    }));
+    if (V_userId != "") {
+        $.ajax({
+            url: "/Cart/AddToCartOne",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                Hmodel: {
+                    UserId: V_userId
+                },
+                Dmodels: DetailCart
+            })
+        });
+    }
+}
+
+
 //const totle = document.querySelector(".total-price");
 //document.getElementById("totalprice").value = totalPrice;
 //totle.append(`總和為: $ ${totalPrice.toLocaleString()}`);
