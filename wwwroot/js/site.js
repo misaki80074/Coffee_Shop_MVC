@@ -1,4 +1,4 @@
-﻿function AddCartHTML() {
+﻿function AddCartHTML(V_userId) {
     // 從 localStorage 讀取購物車資料並轉換成陣列或物件 如果找不到回傳空陣列
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -32,6 +32,17 @@
             //-------------------------------------------------------
             // 圖片
             const imgCell = document.createElement('td');
+            // 購物車編號
+            const cartId = document.createElement('input');
+            cartId.type = 'hidden';
+            cartId.name = 'cartId';
+            cartId.value = item.cartId;
+            imgCell.appendChild(cartId);
+            const inputNO = document.createElement('input');
+            inputNO.type = 'hidden';
+            inputNO.name = 'itemNO';
+            inputNO.value = index + 1;
+            imgCell.appendChild(inputNO);
             const inputIMGSRC = document.createElement('input');
             inputIMGSRC.type = 'hidden';
             inputIMGSRC.name = "imgsrc";
@@ -159,11 +170,10 @@
     function removeFromCart(index, ProductID) {
         cart.splice(index, 1); // 移除索引上的這一個元素
         localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage，轉成字串
-
         //window.location.reload();
         Deletecartitem(ProductID, V_userId);
     }
-    //document.getElementById("totalprice").value = totalPrice;
+    document.getElementById("totalprice").value = totalPrice;
 }
 function Deletecartitem(ProductID, V_userId) {
     $.ajax({

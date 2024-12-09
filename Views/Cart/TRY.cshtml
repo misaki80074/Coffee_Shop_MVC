@@ -8,8 +8,6 @@
 
 
 
-
-
 <h1>門市選擇</h1>
 <!-- 開啟新視窗 -->
 <!-- 回傳將參數帶入畫面上 -->
@@ -27,10 +25,10 @@
 
 <button onclick="GetCartDATA();"> 取得ssssss </button>
 <br />
-
+@*
 <button onclick="aaa();">取得資料</button>
 
-<br />
+<br /> *@
 
 <button onclick="PostCartData();">傳送</button>
 
@@ -82,19 +80,20 @@
 
     // 使用者登入後，取得 DB購物車資料 JSON ，並傳到 localStorage
     function GetCartDATA() {
-        var V_userId = "@Context.Session.GetString("userid")";
+        const V_userId = "@Context.Session.GetString("userid")";
         $.ajax({
-            url: `/Product/get?userId=${V_userId}`,
+            url: `/Cart/getCN?userId=${V_userId}`,
             type: "GET",
             success: function (response) {
-                // console.log("回應資料:", response);
                 if (response.success) {
                     localStorage.setItem("cart", JSON.stringify(response.items));
-                    //console.log(response.items);
-                    //alert("成功獲取資料 ! ");
                 } else {
-                    // alert("SERVER 回傳錯誤 !!!!! ");
+                    alert("伺服器回傳錯誤！");
                 }
+            },
+            error: function (xhr, status, error) {
+                console.error("發生錯誤:", error);
+                alert("無法獲取資料，請稍後再試！");
             }
         });
     }
