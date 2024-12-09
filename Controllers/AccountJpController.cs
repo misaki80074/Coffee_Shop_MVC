@@ -6,8 +6,8 @@ using System.Text;
 
 namespace Coffee.Controllers
 {
-	public class AccountJpController : Controller
-	{
+    public class AccountJpController : Controller
+    {
         private ProjectContext _context;
 
         public AccountJpController(ProjectContext dbContext)
@@ -15,20 +15,20 @@ namespace Coffee.Controllers
             _context = dbContext;
         }
         public IActionResult Login()
-		{
-			return View();
-		}
+        {
+            return View();
+        }
 
-		public IActionResult Register()
-		{
-			return View();
-		}
+        public IActionResult Register()
+        {
+            return View();
+        }
 
-		[AuthFilterJp]
-		public IActionResult Member()
-		{
-			return View();
-		}
+        [AuthFilterJp]
+        public IActionResult Member()
+        {
+            return View();
+        }
 
         //-------------------------------------------------------------
 
@@ -342,7 +342,7 @@ namespace Coffee.Controllers
             return Json(new { orderdetails, Total = total });
         }
     }
-    
+
     /// <summary>
     /// 登入檢查
     /// </summary>

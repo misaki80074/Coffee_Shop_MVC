@@ -76,9 +76,12 @@
 
 				@* 加入購物車 *@
 				<div class="modalBtn">
-					<button class="btn btn-success add-cart-btn" data-product-id="@Model.ProductId"
-							data-image-src="@Model.Img" data-name="@Model.ProductName"
-							data-price="@Model.Price" onclick="AddToCart(this)">
+					<button class="btn btn-success add-cart-btn"
+							data-product-id="@Model.ProductId"
+							data-image-src="@Model.Img"
+							data-name="@Model.ProductName"
+							data-price="@Model.Price"
+							onclick="AddToCart(this)">
 						加入購物車
 					</button>
 				</div>
@@ -400,5 +403,53 @@
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/Detail.js" asp-append-version="true"></script>
 	<script src="~/js/chatbot.js" asp-append-version="true"></script>
-
+	<script>
+		function AddToCart(button) {
+			// 找到 <tr class="product">
+			const product = button.closest('.modalBtn button');
+			// 從 <tr> 元素中獲取商品屬性
+			// const userID = "C11070"; // 為使用者登入的資料
+			const productId = product.getAttribute('data-product-id');
+			const name = product.getAttribute('data-name');
+			const price = product.getAttribute('data-price');
+			const imgsrc = product.getAttribute('data-image-src');
+			var qtyint = parseInt($('.uom-component').find('input').val())
+			//-------------------------------------------------------
+			// 創建一個 商品 物件 Key : Value
+			const cartItem = {
+				productId: productId,
+				name: name,
+				price: parseInt(price),
+				image: imgsrc,
+				qty: qtyint
+			};
+			// JsonToDB(userID, productID, 1, price); // 同步 DB
+			//-------------------------------------------------------
+			let cart = JSON.parse(localStorage.getItem('cart')) || []; // 獲取購物車資料
+			// 檢查該商品是否已經存在（名稱 和 圖片 比對)，如果找不到傳回 -1，之後需要以名稱、單位等作條件
+			const ItemIndex = cart.findIndex(item => item.name === name);
+			if (ItemIndex >= 0) {
+				cart[ItemIndex].qty += 1; // 商品已存在，增加數量
+			} else {
+				cart.push(cartItem); // 商品不在購物車內，新增商品
+			}
+			//-------------------------------------------------------
+			// 更新 localStorage 中的購物車資料
+			localStorage.setItem('cart', JSON.stringify(cart));
+			//-------------------------------------------------------
+			// 同步資料庫(新增一筆送一筆到資料庫)
+			const V_userId = "@Context.Session.GetString("userid")";
+			// 呼叫加入購物車函數
+			JsonToDB(V_userId)
+			//-------------------------------------------------------
+			// 顯示彈出消息
+			const popup = document.getElementById('popup');
+			popup.style.display = 'block';
+			setTimeout(() => {
+				popup.style.display = 'none';
+			}, 1500);
+			// 加入瞬間觸發，比對localstorage資料與資料庫交互
+			// mergesCart();
+		}
+	</script>
 </body>

@@ -25,13 +25,13 @@ namespace Coffee.Controllers
             return View();
         }
 
-		[AuthFilterEn]
-		public IActionResult Member()
-		{
-			return View();
-		}
+        [AuthFilterEn]
+        public IActionResult Member()
+        {
+            return View();
+        }
         //-------------------------------------------------------------
-        
+
         /// <summary>
         /// 取得帳號名稱
         /// </summary>
@@ -196,7 +196,7 @@ namespace Coffee.Controllers
             //訂單紀錄
 
             var orderheaders = (from o in _context.Orderheaders
-            join c in _context.Customers on o.CustomerId equals c.CustomerId
+                                join c in _context.Customers on o.CustomerId equals c.CustomerId
                                 join a in _context.Admlookups on o.Status equals a.Lookupid into statusLookup
                                 from status in statusLookup
                                 where c.UserId == userid

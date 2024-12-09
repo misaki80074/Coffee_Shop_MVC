@@ -9,8 +9,82 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
+    <script>
+        // 訂單成立刪除
+        let localcart = "@TempData["localcart"]";
+        if (localcart == "N") {
+            localStorage.removeItem("cart");
+        }
+        // 使用者登入後，更新購物車 POST
+        function PostCartData() {
+            const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
+            // 如果 loginExecuted 不等於
+            if (localStorage.getItem("loginExecuted") != "true") {
+                if (V_userId != "") {
+                    localStorage.setItem("loginExecuted", "true");
+                    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    // 轉成控制器期望的格式
+                    let DetailCart = cart.map(item => ({
+                        productID: item.productId,
+                        //productID: item.productID || "",
+                        qty: item.qty,
+                        unitPrice: item.price
+                    }));
+                    $.ajax({
+                        url: "/Cart/AddToCart",
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify({
+                            Hmodel: {
+                                UserId: V_userId
+                            },
+                            Dmodels: DetailCart
+                        })
+                    });
+                }
+            }
+        }
+        // 使用者登入後，取得 DB購物車資料 JSON ，並傳到 localStorage
+        function GetCartData() {
+            const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
+            $.ajax({
+                url: `/Cart/getCN?userId=${V_userId}`,
+                type: "GET",
+                success: function (response) {
+                    // console.log("回應資料:", response);
+                    if (response.success) {
+                        localStorage.setItem("cart", JSON.stringify(response.items));
+                        localStorage.setItem("cartID", JSON.stringify(response.items[0].cartId));
+                        // alert("成功獲取資料");
+                        console.log(response.items);
+                        //alert("成功獲取資料 ! ");
+                    } else {
+                        alert("錯誤，請通知系統管理員 !!!!! ");
+                    }
+                }
+            });
+        }
+        function mergesCart() {
+            if (localStorage.getItem("loginExecuted") != "true") {
+                PostCartData()  // 執行 PostCartData
+                    .then(() => {
+                        // PostCartData 完成，執行 GetCartData
+                        return GetCartData();
+                    })
+                    .then(() => {
+                        // GetCartData 完成後的操作
+                        console.log("所有操作完成！");
+                    })
+                    .catch((error) => {
+                        console.error("發生錯誤:", error);
+                    });
+            } else {
+                GetCartData();
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="mergesCart();">
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <header>
         <nav>
@@ -40,9 +114,22 @@
                 <!-- 購物車 -->
                 <input type="checkbox" id="chart-toggle">
                 <label for="chart-toggle"><img src="~/img/shopping-cart_white.png" id="chart_icon"></label>
-                
+
+                @{
+                    var isCartPages = Context.Request.Path.Value.Contains("shopping_cart");
+                }
+
+                @if (isCartPages)
+                {
+                    <script>
+                        console.log("當前是購物車頁面");
+                    </script>
+                }
+                else
+                {
                     <div class="shoppingList">
                         <form action="/Cart/Payment" method="post">
+
                         <input type="hidden" name="CartID" id="CartID" value="" />
                         <input type="hidden" name="totalprice" id="totalprice" value="" />
                         <div class="wanttobuy_div">
@@ -56,14 +143,14 @@
                             <hr style="margin:0;">
                             <div id="checkoutArea">
                                 <button class="checkoutBtn" type="submit">結帳</button>
-                                @* <a href="#" class="chechoutLink"><button class="checkoutBtn">結帳</button></a> *@
+
                             </div>
-                        </div>
-                    </form>
+                        </form>
                     </div>
-                
-                
-                
+                }
+
+
+
                 <!-- 切換語言 -->
                 <input type="checkbox" id="language-toggle">
                 <label for="language-toggle"><img src="~/img/translate_white.png"></label>
@@ -87,11 +174,10 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
 
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js"></script>
     <script src="~/js/List.js"></script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 
@@ -209,7 +295,7 @@ else
                 inputprice.name = 'itemprice';
                 inputprice.value = item.price;
                 priceCell.appendChild(inputprice);
-                @* priceCell.innerHTML += `$${item.price.toLocaleString()}`; *@
+
                 row.appendChild(priceCell);
                 //-------------------------------------------------------
                 // 總價 (數量 * 單價)
@@ -276,13 +362,8 @@ else
         }
         const totle = document.querySelector(".total-price");
         document.getElementById("totalprice").value = totalPrice;
-        // totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
+
+        totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
         // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
     </script>
-}
-<script>
-    // let cartID = JSON.parse(localStorage.getItem('cartID')) || [];
-    // document.getElementById("CartID").value = cartID;
-    // const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
-    // AddCartHTML(V_userId);
-</script>
+

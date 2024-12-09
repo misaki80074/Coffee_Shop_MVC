@@ -49,11 +49,17 @@ public partial class ProjectContext : DbContext
 
     public virtual DbSet<VOrderheaderOrderdetail> VOrderheaderOrderdetails { get; set; }
 
+    public async Task<List<VOrderheaderOrderdetail>> sp_getOrder(string CusID)
+    {
+        return await VOrderheaderOrderdetails.FromSqlInterpolated($"EXEC [dbo].[sp_GetCustomerOrders] @CustomerID = {CusID}").ToListAsync();
+    }
+
+
     public virtual DbSet<VProductStock> VProductStocks { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=.\\sqlexpress; Database=PROJECT; User ID=sa; Password=12345; TrustServerCertificate=true");
+        => optionsBuilder.UseSqlServer("Server=127.0.0.1; Database=PROJECT; User ID=sa; Password=12345; TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
