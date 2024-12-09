@@ -129,20 +129,21 @@
                 {
                     <div class="shoppingList">
                         <form action="/Cart/Payment" method="post">
-                            <input type="hidden" name="CartID" id="CartID" value="" />
-                            <input type="hidden" name="totalprice" id="totalprice" value="" />
-                            <div class="wanttobuy_div">
-                                <div id="wantToBuy">
-                                    <table>
-                                        <tbody id="shop">
-                                        </tbody>
-                                    </table>
-                                    <p id="defulttext"></p>
-                                </div>
-                                <hr style="margin:0;">
-                                <div id="checkoutArea">
-                                    <button class="checkoutBtn" type="submit">結帳</button>
-                                </div>
+
+                        <input type="hidden" name="CartID" id="CartID" value="" />
+                        <input type="hidden" name="totalprice" id="totalprice" value="" />
+                        <div class="wanttobuy_div">
+                            <div id="wantToBuy">
+                                <table>
+                                    <tbody id="shop">
+                                    </tbody>
+                                </table>
+                                <p id="defulttext"></p>
+                            </div>
+                            <hr style="margin:0;">
+                            <div id="checkoutArea">
+                                <button class="checkoutBtn" type="submit">結帳</button>
+
                             </div>
                         </form>
                     </div>
@@ -271,7 +272,6 @@ else
                 inputnumber.name = 'itemQTY';
                 inputnumber.value = item.qty;
                 inputnumber.style.width = '50px';
-
                 inputnumber.style.textAlign = 'center';
                 inputnumber.min = '1';
                 inputnumber.onchange = function () { updateQTY(index, this.value); };
@@ -362,6 +362,8 @@ else
         }
         const totle = document.querySelector(".total-price");
         document.getElementById("totalprice").value = totalPrice;
+
         totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
         // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
     </script>
+
