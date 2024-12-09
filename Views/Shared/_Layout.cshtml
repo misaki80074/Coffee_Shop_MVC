@@ -269,6 +269,7 @@ else
                 const QTYCell = document.createElement('td');
                 const inputnumber = document.createElement('input');
                 inputnumber.type = 'number';
+                inputnumber.style.textAlign = 'center';
                 inputnumber.name = 'itemQTY';
                 inputnumber.value = item.qty;
                 inputnumber.style.width = '50px';
@@ -295,7 +296,6 @@ else
                 inputprice.name = 'itemprice';
                 inputprice.value = item.price;
                 priceCell.appendChild(inputprice);
-
                 row.appendChild(priceCell);
                 //-------------------------------------------------------
                 // 總價 (數量 * 單價)
@@ -362,8 +362,5 @@ else
         }
         const totle = document.querySelector(".total-price");
         document.getElementById("totalprice").value = totalPrice;
-
-        totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
-        // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
     </script>
 
