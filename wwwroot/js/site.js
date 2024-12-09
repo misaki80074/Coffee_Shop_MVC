@@ -1,4 +1,4 @@
-﻿function AddCartHTML() {
+﻿function AddCartHTML(V_userId) {
     // 從 localStorage 讀取購物車資料並轉換成陣列或物件 如果找不到回傳空陣列
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -32,6 +32,17 @@
             //-------------------------------------------------------
             // 圖片
             const imgCell = document.createElement('td');
+            // 購物車編號
+            const cartId = document.createElement('input');
+            cartId.type = 'hidden';
+            cartId.name = 'cartId';
+            cartId.value = item.cartId;
+            imgCell.appendChild(cartId);
+            const inputNO = document.createElement('input');
+            inputNO.type = 'hidden';
+            inputNO.name = 'itemNO';
+            inputNO.value = index + 1;
+            imgCell.appendChild(inputNO);
             const inputIMGSRC = document.createElement('input');
             inputIMGSRC.type = 'hidden';
             inputIMGSRC.name = "imgsrc";
@@ -159,35 +170,28 @@
     function removeFromCart(index, ProductID) {
         cart.splice(index, 1); // 移除索引上的這一個元素
         localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage，轉成字串
-
         //window.location.reload();
-
-        Deletecartitem(ProductID);
-
+        Deletecartitem(ProductID, V_userId);
     }
-    var V_userId = "C11070"; // 使用者登入後的ID
-
-    function Deletecartitem(ProductID) {
-        $.ajax({
-            url: "/Cart/DeleteCartItem",
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({
-                Hmodel:
-                {
-                    UserId: V_userId
-                },
-                Dmodels:
-                {
-                    ProductId: ProductID
-                }
-            })
-        });
-    }
-
+    document.getElementById("totalprice").value = totalPrice;
 }
-
-// 改變商品數量
+function Deletecartitem(ProductID, V_userId) {
+    $.ajax({
+        url: "/Cart/DeleteCartItemCN",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+            Hmodel:
+            {
+                UserId: V_userId
+            },
+            Dmodels:
+            {
+                ProductId: ProductID
+            }
+        })
+    });
+}
 // 清空購物車
 function clearCart() {
     // 清空 localStorage 中的購物車資料
@@ -195,6 +199,31 @@ function clearCart() {
     // 重新加載頁面
     document.location.reload();
 }
+function JsonToDB(V_userId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // 轉成控制器期望的格式
+    let DetailCart = cart.map(item => ({
+        productID: item.productId,
+        //productID: item.productID || "",
+        qty: item.qty,
+        unitPrice: item.price
+    }));
+    if (V_userId != "") {
+        $.ajax({
+            url: "/Cart/AddToCartOne",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                Hmodel: {
+                    UserId: V_userId
+                },
+                Dmodels: DetailCart
+            })
+        });
+    }
+}
+
+
 //const totle = document.querySelector(".total-price");
 //document.getElementById("totalprice").value = totalPrice;
 //totle.append(`總和為: $ ${totalPrice.toLocaleString()}`);
