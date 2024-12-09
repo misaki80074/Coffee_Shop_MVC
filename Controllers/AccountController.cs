@@ -49,7 +49,7 @@ namespace Coffee.Controllers
             else
             {
                 string name = _context.Customers.Where(c => c.UserId == userid).Select(c => c.Name).SingleOrDefault()!;
-                return Json(new { Name = name });
+                return Json(new { Name = name ,Userid = userid});
             }
         }
 
@@ -201,7 +201,6 @@ namespace Coffee.Controllers
                                 join c in _context.Customers on o.CustomerId equals c.CustomerId
                                 join a in _context.Admlookups on o.Status equals a.Lookupid into statusLookup
                                 from status in statusLookup
-                                    // ****************************** 這邊先血死
                                 where c.UserId == userid
                                 select new
                                 {
