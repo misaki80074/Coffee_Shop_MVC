@@ -424,10 +424,12 @@ namespace Coffee.Controllers
         }
 
 
-        public IActionResult TRY()
+        public async Task<IActionResult> TRY()
         {
-            ViewBag.aaa = _dbcn.ItemNO("C");
-            return View();
+            //ViewBag.aaa = _dbcn.ItemNO("C");
+            var orderget = await _context.sp_getOrder($"{HttpContext.Session.GetString("CustomerId")}");
+
+            return View(orderget);
         }
 
         // 711 操作

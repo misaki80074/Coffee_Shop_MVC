@@ -129,21 +129,21 @@
                 {
                     <div class="shoppingList">
                         <form action="/Cart/Payment" method="post">
-                            <input type="hidden" name="CartID" id="CartID" value="" />
-                            <input type="hidden" name="totalprice" id="totalprice" value="" />
-                            <div class="wanttobuy_div">
-                                <div id="wantToBuy">
-                                    <table>
-                                        <tbody id="shop">
-                                        </tbody>
-                                    </table>
-                                    <p id="defulttext"></p>
-                                </div>
-                                <hr style="margin:0;">
-                                <div id="checkoutArea">
-                                    <button class="checkoutBtn" type="submit">結帳</button>
-                                    @* <button class="checkoutBtn"><a href="#" class="chechoutLink">結帳</a></button> *@
-                                </div>
+
+                        <input type="hidden" name="CartID" id="CartID" value="" />
+                        <input type="hidden" name="totalprice" id="totalprice" value="" />
+                        <div class="wanttobuy_div">
+                            <div id="wantToBuy">
+                                <table>
+                                    <tbody id="shop">
+                                    </tbody>
+                                </table>
+                                <p id="defulttext"></p>
+                            </div>
+                            <hr style="margin:0;">
+                            <div id="checkoutArea">
+                                <button class="checkoutBtn" type="submit">結帳</button>
+
                             </div>
                         </form>
                     </div>
@@ -273,6 +273,7 @@ else
                 inputnumber.name = 'itemQTY';
                 inputnumber.value = item.qty;
                 inputnumber.style.width = '50px';
+                inputnumber.style.textAlign = 'center';
                 inputnumber.min = '1';
                 inputnumber.onchange = function () { updateQTY(index, this.value); };
                 QTYCell.appendChild(inputnumber);
@@ -295,7 +296,6 @@ else
                 inputprice.name = 'itemprice';
                 inputprice.value = item.price;
                 priceCell.appendChild(inputprice);
-                @* priceCell.innerHTML += `$${item.price.toLocaleString()}`; *@
                 row.appendChild(priceCell);
                 //-------------------------------------------------------
                 // 總價 (數量 * 單價)
@@ -362,13 +362,5 @@ else
         }
         const totle = document.querySelector(".total-price");
         document.getElementById("totalprice").value = totalPrice;
-        // totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
-        // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
     </script>
-}
-<script>
-    // let cartID = JSON.parse(localStorage.getItem('cartID')) || [];
-    // document.getElementById("CartID").value = cartID;
-    // const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
-    // AddCartHTML(V_userId);
-</script>
+

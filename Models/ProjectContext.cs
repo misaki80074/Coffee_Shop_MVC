@@ -49,6 +49,12 @@ public partial class ProjectContext : DbContext
 
     public virtual DbSet<VOrderheaderOrderdetail> VOrderheaderOrderdetails { get; set; }
 
+    public async Task<List<VOrderheaderOrderdetail>> sp_getOrder(string CusID)
+    {
+        return await VOrderheaderOrderdetails.FromSqlInterpolated($"EXEC [dbo].[sp_GetCustomerOrders] @CustomerID = {CusID}").ToListAsync();
+    }
+
+
     public virtual DbSet<VProductStock> VProductStocks { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

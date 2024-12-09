@@ -434,7 +434,7 @@ function calculateParameters() {
 }
 // 發送 API 請求到後端 GET改成用POST 取得對應的 研磨粗細、萃取係數、注水方式
 $.ajax({
-    url: '/Detail/Grinding_Thickness_Extraction_Coefficient_Wate_Injection_Method_Api_Jp',
+    url: '/DetailJp/Grinding_Thickness_Extraction_Coefficient_Wate_Injection_Method_Api_Jp',
     type: 'POST',
     data: { baking_level: baking_level },
     success: function (response) {
