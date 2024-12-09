@@ -77,8 +77,8 @@ namespace Coffee.Controllers
         }
 
         [HttpPost]
-        [Route("Cart/Payment")]
         [AuthFilter]
+        [Route("Cart/PaymentCN")]
         public IActionResult Payment(IFormCollection form)
         {
             ViewBag.CartId = form["CartID"].ToList();
@@ -113,6 +113,7 @@ namespace Coffee.Controllers
         }
 
         [HttpPost]
+        [Route("/Cart/AddToCartCN")]
         public async Task<IActionResult> AddToCart([FromBody] AddToCartJson cart)
         {
             // 檢查是否已存在有效的購物車標題
@@ -262,8 +263,8 @@ namespace Coffee.Controllers
 
         // 傳送 訂單編號 至 Order的 VIEW
         [HttpPost]
-        [Route("Cart/OrderFormData")]
         [AuthFilter]
+        [Route("Cart/OrderFormDataCN")]
         public async Task<IActionResult> OrderFormData(IFormCollection form)
         {
             string? OrderNO = _dbcn.ItemNO("O");
@@ -285,6 +286,7 @@ namespace Coffee.Controllers
                 }
                 string updateCart = $"UPDATE CARTHEATER SET Status = 'N' WHERE CartId = '{form["CartID"]}'";
                 _dbcn.Insert(updateCart);
+                TempData["localcart"] = "N";
             });
             return RedirectToAction("Order", new { orderNo = OrderNO });
         }
@@ -309,7 +311,7 @@ namespace Coffee.Controllers
 
 
         [HttpPost]
-        [Route("/Cart/DeleteCartItem")]
+        [Route("/Cart/DeleteCartItemCN")]
         public async Task<IActionResult> DeleteCartItem([FromBody] SingelCartJson cart)
         {
             // 查找當前有效的購物車標題
@@ -342,7 +344,7 @@ namespace Coffee.Controllers
 
 
         [HttpGet]
-        [Route("/Product/get")]
+        [Route("/Cart/getCN")]
         public IActionResult GetCart(string userId)
         {
             // 查詢購物車標題
@@ -361,20 +363,22 @@ namespace Coffee.Controllers
                     price = (decimal)cd.UnitPrice,
                     total = cd.TotalPrice,
                     image = cd.Img
-                })
-                .ToList();
+                }).ToList();
             // 確認 cartItems 是否有內容
             if (cartItems == null)
             {
-                return Ok(new {
-                    success = false, message = "購物車為空", Items = new List<object>() 
+                return Ok(new
+                {
+                    success = false,
+                    message = "購物車為空",
+                    Items = new List<object>()
                 });
             }
             // 傳回 JSON
             return Ok(new
             {
                 success = true,
-                //CartId = cartItems,
+                CartId = cartItems,
                 UserId = cartHeader.UserId,
                 items = cartItems
             });
@@ -386,7 +390,7 @@ namespace Coffee.Controllers
 
 
         [HttpGet]
-        [Route("/Cart/RemoveCart/{userId}")]
+        [Route("/Cart/RemoveCartCN/{userId}")]
         public async Task<IActionResult> RemoveCart(string userId)
         {
             // 查詢該用戶的有效購物車標題
