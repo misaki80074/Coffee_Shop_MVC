@@ -78,7 +78,7 @@ namespace Coffee.Controllers
 
         [HttpPost]
         [AuthFilter]
-        [Route("Cart/PaymentCN")]
+        [Route("Cart/Payment")]
         public IActionResult Payment(IFormCollection form)
         {
             ViewBag.CartId = form["CartID"].ToList();
@@ -264,7 +264,7 @@ namespace Coffee.Controllers
         // 傳送 訂單編號 至 Order的 VIEW
         [HttpPost]
         [AuthFilter]
-        [Route("Cart/OrderFormDataCN")]
+        [Route("Cart/OrderFormData")]
         public async Task<IActionResult> OrderFormData(IFormCollection form)
         {
             string? OrderNO = _dbcn.ItemNO("O");

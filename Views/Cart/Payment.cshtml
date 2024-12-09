@@ -337,7 +337,7 @@
                 <div class="checkout-summary">
                     <div class="summary-row">
                         <span>訂單總金額:</span>
-                        <span class="total-price"></span>
+                        <span class="total-price">$@string.Format("{0:N0}", Convert.ToInt32(ViewBag.Alltotle))</span>
                     </div>
                     <button type="submit" class="checkout-btn">確認付款</button>
                 </div>

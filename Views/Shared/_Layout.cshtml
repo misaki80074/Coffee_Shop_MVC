@@ -9,8 +9,6 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js"></script>
     <script>
         // 訂單成立刪除
         let localcart = "@TempData["localcart"]";
@@ -87,6 +85,7 @@
     </script>
 </head>
 <body onload="mergesCart();">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <header>
         <nav>
             <!-- 導覽列左邊 -->
@@ -109,6 +108,7 @@
             <!-- 導覽列右邊 -->
             <div id="nav-right">
                 <!-- 會員 -->
+                <span class="loginStatus"></span>
                 <a href="/Account/Member"><img src="~/img/customer_white.png" id="customer_icon"></a>
 
                 <!-- 購物車 -->
@@ -269,6 +269,7 @@ else
                 const QTYCell = document.createElement('td');
                 const inputnumber = document.createElement('input');
                 inputnumber.type = 'number';
+                inputnumber.style.textAlign = 'center';
                 inputnumber.name = 'itemQTY';
                 inputnumber.value = item.qty;
                 inputnumber.style.width = '50px';
@@ -294,7 +295,7 @@ else
                 inputprice.name = 'itemprice';
                 inputprice.value = item.price;
                 priceCell.appendChild(inputprice);
-                priceCell.innerHTML += `$${item.price.toLocaleString()}`;
+                @* priceCell.innerHTML += `$${item.price.toLocaleString()}`; *@
                 row.appendChild(priceCell);
                 //-------------------------------------------------------
                 // 總價 (數量 * 單價)
@@ -361,7 +362,7 @@ else
         }
         const totle = document.querySelector(".total-price");
         document.getElementById("totalprice").value = totalPrice;
-        totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
+        // totle.append(`金額小計: $${totalPrice.toLocaleString()}`);
         // totle.innerHTML = `總和為: $${totalPrice.toLocaleString()}`;
     </script>
 }
