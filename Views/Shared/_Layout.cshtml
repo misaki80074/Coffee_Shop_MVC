@@ -9,79 +9,79 @@
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Coffee.styles.css" asp-append-version="true" />
-    <script>
-        // 訂單成立刪除
-        let localcart = "@TempData["localcart"]";
-        if (localcart == "N") {
-            localStorage.removeItem("cart");
-        }
-        // 使用者登入後，更新購物車 POST
-        function PostCartData() {
-            const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
-            // 如果 loginExecuted 不等於
-            if (localStorage.getItem("loginExecuted") != "true") {
-                if (V_userId != "") {
-                    localStorage.setItem("loginExecuted", "true");
-                    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-                    // 轉成控制器期望的格式
-                    let DetailCart = cart.map(item => ({
-                        productID: item.productId,
-                        //productID: item.productID || "",
-                        qty: item.qty,
-                        unitPrice: item.price
-                    }));
-                    $.ajax({
-                        url: "/Cart/AddToCart",
-                        type: "POST",
-                        contentType: "application/json",
-                        data: JSON.stringify({
-                            Hmodel: {
-                                UserId: V_userId
-                            },
-                            Dmodels: DetailCart
-                        })
-                    });
-                }
-            }
-        }
-        // 使用者登入後，取得 DB購物車資料 JSON ，並傳到 localStorage
-        function GetCartData() {
-            const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
-            $.ajax({
-                url: `/Cart/getCN?userId=${V_userId}`,
-                type: "GET",
-                success: function (response) {
-                    // console.log("回應資料:", response);
-                    if (response.success) {
-                        localStorage.setItem("cart", JSON.stringify(response.items));
-                        localStorage.setItem("cartID", JSON.stringify(response.items[0].cartId));
-                        // alert("成功獲取資料");
-                        console.log(response.items);
-                        //alert("成功獲取資料 ! ");
-                    } else {
-                        alert("錯誤，請通知系統管理員 !!!!! ");
-                    }
-                }
-            });
-        }
-        function mergesCart() {
-            if (localStorage.getItem("loginExecuted") != "true") {
-                PostCartData()  // 執行 PostCartData
-                    .then(() => {
-                        // PostCartData 完成，執行 GetCartData
-                        return GetCartData();
-                    })
-                    .then(() => {
-                        // GetCartData 完成後的操作
-                        console.log("所有操作完成！");
-                    })
-                    .catch((error) => {
-                        console.error("發生錯誤:", error);
-                    });
-            } else {
-                GetCartData();
-            }
-        }
+     <script>
+    // 訂單成立刪除
+    let localcart = "@TempData["localcart"]";
+    if (localcart == "N") {
+    localStorage.removeItem("cart");
+    }
+    // 使用者登入後，更新購物車 POST
+    function PostCartData() {
+    const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
+    // 如果 loginExecuted 不等於
+    if (localStorage.getItem("loginExecuted") != "true") {
+    if (V_userId != "") {
+    localStorage.setItem("loginExecuted", "true");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // 轉成控制器期望的格式
+    let DetailCart = cart.map(item => ({
+    productID: item.productId,
+    //productID: item.productID || "",
+    qty: item.qty,
+    unitPrice: item.price
+    }));
+    $.ajax({
+    url: "/Cart/AddToCart",
+    type: "POST",
+    contentType: "application/json",
+    data: JSON.stringify({
+    Hmodel: {
+    UserId: V_userId
+    },
+    Dmodels: DetailCart
+    })
+    });
+    }
+    }
+    }
+    // 使用者登入後，取得 DB購物車資料 JSON ，並傳到 localStorage
+    function GetCartData() {
+    const V_userId = "@Context.Session.GetString("userid")"; // 使用者登入
+    $.ajax({
+    url: `/Cart/getCN?userId=${V_userId}`,
+    type: "GET",
+    success: function (response) {
+    // console.log("回應資料:", response);
+    if (response.success) {
+    localStorage.setItem("cart", JSON.stringify(response.items));
+    localStorage.setItem("cartID", JSON.stringify(response.items[0].cartId));
+    // alert("成功獲取資料");
+    console.log(response.items);
+    //alert("成功獲取資料 ! ");
+    } else {
+    alert("錯誤，請通知系統管理員 !!!!! ");
+    }
+    }
+    });
+    }
+    function mergesCart() {
+    if (localStorage.getItem("loginExecuted") != "true") {
+    PostCartData()  // 執行 PostCartData
+    .then(() => {
+    // PostCartData 完成，執行 GetCartData
+    return GetCartData();
+    })
+    .then(() => {
+    // GetCartData 完成後的操作
+    console.log("所有操作完成！");
+    })
+    .catch((error) => {
+    console.error("發生錯誤:", error);
+    });
+    } else {
+    GetCartData();
+    }
+    }
     </script>
 </head>
 <body onload="mergesCart();">
@@ -115,20 +115,8 @@
                 <input type="checkbox" id="chart-toggle">
                 <label for="chart-toggle"><img src="~/img/shopping-cart_white.png" id="chart_icon"></label>
 
-                @{
-                    var isCartPages = Context.Request.Path.Value.Contains("shopping_cart");
-                }
-
-                @if (isCartPages)
-                {
-                    <script>
-                        console.log("當前是購物車頁面");
-                    </script>
-                }
-                else
-                {
-                    <div class="shoppingList">
-                        <form action="/Cart/Payment" method="post">
+                <div class="shoppingList">
+                    <form action="/Cart/Payment" method="post">
 
                         <input type="hidden" name="CartID" id="CartID" value="" />
                         <input type="hidden" name="totalprice" id="totalprice" value="" />
@@ -145,19 +133,18 @@
                                 <button class="checkoutBtn" type="submit">結帳</button>
 
                             </div>
-                        </form>
-                    </div>
-                }
+                        </div>
+                    </form>
+                </div>
 
-
-
-                <!-- 切換語言 -->
-                <input type="checkbox" id="language-toggle">
-                <label for="language-toggle"><img src="~/img/translate_white.png"></label>
-                <ul class="language" style="padding: 0;">
-                    <li><a href="/Home/IndexEn">English</a></li>
-                    <li><a href="/Home/IndexJp">日本語</a></li>
-                </ul>
+                    <!-- 切換語言 -->
+                    <input type="checkbox" id="language-toggle">
+                    <label for="language-toggle"><img src="~/img/translate_white.png"></label>
+                    <ul class="language" style="padding: 0;">
+                        <li><a href="/Home/IndexEn">English</a></li>
+                        <li><a href="/Home/IndexJp">日本語</a></li>
+                    </ul>
+                
             </div>
         </nav>
     </header>
